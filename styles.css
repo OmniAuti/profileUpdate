@@ -29,7 +29,7 @@ body {
   animation-timing-function: linear;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
-  z-index: 1;
+  z-index: -1;
 }
 
 .intro {
@@ -47,7 +47,7 @@ body {
   text-align: left;
   padding-left: 50px;
   padding-top: 25px;
-  z-index: 99;
+
   color: #f8f8ff;
 }
 
