@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #252531;
+  font-family: "Padauk", sans-serif;
+  overflow-x: hidden;
+  background-image: url("https://www.transparenttextures.com/patterns/egg-shell.png");
+}
+
+#particles-js {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+
+.sun {
+  position: absolute;
+  background: radial-gradient(#e30c3d, transparent 50%);
+  width: 1000px;
+  height: 1000px;
+  top: -500px;
+  right: -450px;
+  animation-name: derp;
+  animation-timing-function: linear;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  z-index: -1;
+}
+
+.intro {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.intro-cont-hero {
+  width: 100vw;
+}
+
+.name-intro {
+  width: 100%;
+  text-align: left;
+  padding-left: 50px;
+  padding-top: 25px;
+  z-index: 99;
+  color: #fff;
+}
+
+.coa-intro {
+  text-align: left;
+  margin-left: 50px;
+  font-size: 4.5rem;
+  text-shadow: -0.025em 0.025em 0em #1e1e2a, -0.05em 0.05em 0em #1e1e2a,
+    -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
+  padding: 5px;
+  z-index: 99;
+  letter-spacing: 5px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 9rem;
+  text-shadow: -0.025em 0.025em 0em #1e1e2a, -0.05em 0.05em 0em #1e1e2a,
+    -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
+  letter-spacing: 5px;
+}
+
+.test-on {
+  color: transparent;
+  text-shadow: -0.025em 0.025em 0em transparent, -0.05em 0.05em 0em transparent,
+    -0.075em 0.075em 0em transparent, -0.1em 0.1em 0em #fff;
+  animation-name: co;
+  animation-duration: 175ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.test-off {
+  color: #fff;
+  text-shadow: -0.025em 0.025em 0em #1e1e2a, -0.05em 0.05em 0em #1e1e2a,
+    -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
+  animation-name: coa;
+  animation-duration: 175ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes co {
+  0% {
+    color: #fff;
+    text-shadow: -0.025em 0.025em 0em #1e1e2a, -0.05em 0.05em 0em #1e1e2a,
+      -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
+  }
+  25% {
+    color: transparent;
+    text-shadow: -0.025em 0.025em 0em #fff, -0.05em 0.05em 0em #1e1e2a,
+      -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
+  }
+  50% {
+    color: transparent;
+    text-shadow: -0.025em 0.025em 0em #fff, -0.05em 0.05em 0em #fff,
+      -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
+  }
+  75% {
+    color: transparent;
+    text-shadow: -0.025em 0.025em 0em transparent,
+      -0.05em 0.05em 0em transparent, -0.075em 0.075em 0em #fff,
+      -0.1em 0.1em 0em #1e1e2a;
+  }
+  100% {
+    color: transparent;
+    text-shadow: -0.025em 0.025em 0em transparent,
+      -0.05em 0.05em 0em transparent, -0.075em 0.075em 0em transparent,
+      -0.1em 0.1em 0em #fff;
+  }
+}
+
+@keyframes coa {
+  0% {
+    color: transparent;
+    text-shadow: -0.025em 0.025em 0em transparent,
+      -0.05em 0.05em 0em transparent, -0.075em 0.075em 0em transparent,
+      -0.1em 0.1em 0em #fff;
+  }
+  25% {
+    color: transparent;
+    text-shadow: -0.025em 0.025em 0em transparent,
+      -0.05em 0.05em 0em transparent, -0.075em 0.075em 0em #fff,
+      -0.1em 0.1em 0em #1e1e2a;
+  }
+  50% {
+    color: transparent;
+    text-shadow: -0.025em 0.025em 0em transparent, -0.05em 0.05em 0em #fff,
+      -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
+  }
+  75% {
+    color: transparent;
+    text-shadow: -0.025em 0.025em 0em #fff, -0.05em 0.05em 0em #1e1e2a,
+      -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
+  }
+  100% {
+    color: #fff;
+    text-shadow: -0.025em 0.025em 0em #1e1e2a, -0.05em 0.05em 0em #1e1e2a,
+      -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
+  }
+}
+
+.test-second {
+  width: 100vw;
+  height: 100vh;
+  background-color: ghostwhite;
+}
