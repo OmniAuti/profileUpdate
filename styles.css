@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #252531;
+  background-color: #1c1c25;
   font-family: "Padauk", sans-serif;
   overflow-x: hidden;
   background-image: url("https://www.transparenttextures.com/patterns/egg-shell.png");
@@ -48,41 +48,37 @@ body {
   padding-left: 50px;
   padding-top: 25px;
   z-index: 99;
-  color: #fff;
-}
-
-.coa-intro {
-  text-align: left;
-  margin-left: 50px;
-  font-size: 4.5rem;
-  text-shadow: -0.025em 0.025em 0em #1e1e2a, -0.05em 0.05em 0em #1e1e2a,
-    -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
-  padding: 5px;
-  z-index: 99;
-  letter-spacing: 5px;
+  color: #f8f8ff;
 }
 
 h1 {
-  color: #fff;
-  font-size: 9rem;
-  text-shadow: -0.025em 0.025em 0em #1e1e2a, -0.05em 0.05em 0em #1e1e2a,
-    -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
-  letter-spacing: 5px;
+    color: #f8f8ff;
+    font-size: 9rem;
+    text-shadow: -0.015em 0.015em 0em #CCCBD8, -0.03em 0.03em 0em #9B9BA7,
+      -0.045em 0.045em 0em #6D6D78, -0.06em 0.06em 0em #43424D;
+    letter-spacing: 5px;
+  }
+
+.coa-intro {
+  margin-left: 50px;
+  font-size: 4.5rem;
+  padding: 5px;
 }
+
 
 .test-on {
   color: transparent;
   text-shadow: -0.025em 0.025em 0em transparent, -0.05em 0.05em 0em transparent,
-    -0.075em 0.075em 0em transparent, -0.1em 0.1em 0em #fff;
+    -0.075em 0.075em 0em transparent, -0.1em 0.1em 0em #f8f8ff;
   animation-name: co;
   animation-duration: 175ms;
   animation-timing-function: linear;
   animation-iteration-count: 1;
 }
 .test-off {
-  color: #fff;
-  text-shadow: -0.025em 0.025em 0em #1e1e2a, -0.05em 0.05em 0em #1e1e2a,
-    -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
+  color: #f8f8ff;
+  text-shadow: -0.025em 0.025em 0em #000, -0.05em 0.05em 0em #000,
+    -0.075em 0.075em 0em #000, -0.1em 0.1em 0em #000;
   animation-name: coa;
   animation-duration: 175ms;
   animation-timing-function: linear;
@@ -91,31 +87,31 @@ h1 {
 
 @keyframes co {
   0% {
-    color: #fff;
-    text-shadow: -0.025em 0.025em 0em #1e1e2a, -0.05em 0.05em 0em #1e1e2a,
-      -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
+    color: #f8f8ff;
+    text-shadow: -0.025em 0.025em 0em #000, -0.05em 0.05em 0em #000,
+      -0.075em 0.075em 0em #000, -0.1em 0.1em 0em #000;
   }
   25% {
     color: transparent;
-    text-shadow: -0.025em 0.025em 0em #fff, -0.05em 0.05em 0em #1e1e2a,
-      -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
+    text-shadow: -0.025em 0.025em 0em #f8f8ff, -0.05em 0.05em 0em #000,
+      -0.075em 0.075em 0em #000, -0.1em 0.1em 0em #000;
   }
   50% {
     color: transparent;
-    text-shadow: -0.025em 0.025em 0em #fff, -0.05em 0.05em 0em #fff,
-      -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
+    text-shadow: -0.025em 0.025em 0em #f8f8ff, -0.05em 0.05em 0em #f8f8ff,
+      -0.075em 0.075em 0em #000, -0.1em 0.1em 0em #000;
   }
   75% {
     color: transparent;
     text-shadow: -0.025em 0.025em 0em transparent,
-      -0.05em 0.05em 0em transparent, -0.075em 0.075em 0em #fff,
-      -0.1em 0.1em 0em #1e1e2a;
+      -0.05em 0.05em 0em transparent, -0.075em 0.075em 0em #f8f8ff,
+      -0.1em 0.1em 0em #000;
   }
   100% {
     color: transparent;
     text-shadow: -0.025em 0.025em 0em transparent,
       -0.05em 0.05em 0em transparent, -0.075em 0.075em 0em transparent,
-      -0.1em 0.1em 0em #fff;
+      -0.1em 0.1em 0em #f8f8ff;
   }
 }
 
@@ -124,33 +120,33 @@ h1 {
     color: transparent;
     text-shadow: -0.025em 0.025em 0em transparent,
       -0.05em 0.05em 0em transparent, -0.075em 0.075em 0em transparent,
-      -0.1em 0.1em 0em #fff;
+      -0.1em 0.1em 0em #f8f8ff;
   }
   25% {
     color: transparent;
     text-shadow: -0.025em 0.025em 0em transparent,
-      -0.05em 0.05em 0em transparent, -0.075em 0.075em 0em #fff,
-      -0.1em 0.1em 0em #1e1e2a;
+      -0.05em 0.05em 0em transparent, -0.075em 0.075em 0em #f8f8ff,
+      -0.1em 0.1em 0em #000;
   }
   50% {
     color: transparent;
-    text-shadow: -0.025em 0.025em 0em transparent, -0.05em 0.05em 0em #fff,
-      -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
+    text-shadow: -0.025em 0.025em 0em transparent, -0.05em 0.05em 0em #f8f8ff,
+      -0.075em 0.075em 0em #000, -0.1em 0.1em 0em #000;
   }
   75% {
     color: transparent;
-    text-shadow: -0.025em 0.025em 0em #fff, -0.05em 0.05em 0em #1e1e2a,
-      -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
+    text-shadow: -0.025em 0.025em 0em #f8f8ff, -0.05em 0.05em 0em #000,
+      -0.075em 0.075em 0em #000, -0.1em 0.1em 0em #000;
   }
   100% {
-    color: #fff;
-    text-shadow: -0.025em 0.025em 0em #1e1e2a, -0.05em 0.05em 0em #1e1e2a,
-      -0.075em 0.075em 0em #1e1e2a, -0.1em 0.1em 0em #1e1e2a;
+    color: #f8f8ff;
+    text-shadow: -0.025em 0.025em 0em #000, -0.05em 0.05em 0em #000,
+      -0.075em 0.075em 0em #000, -0.1em 0.1em 0em #000;
   }
 }
 
 .test-second {
   width: 100vw;
   height: 100vh;
-  background-color: ghostwhite;
+  background-color: #f8f8ff;
 }
