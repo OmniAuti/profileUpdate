@@ -20,16 +20,45 @@ body {
 
 .sun {
   position: absolute;
-  background: radial-gradient(#e30c3d, transparent 50%);
+  background: radial-gradient(#ECC239 5%,#e30c3d, transparent 50%);
   width: 1000px;
   height: 1000px;
-  top: -500px;
-  right: -450px;
-  animation-name: derp;
+  top: -550px;
+  right: -500px;
+  animation-name: sun;
+  animation-duration: 15000ms;
   animation-timing-function: linear;
-  animation-duration: 5000ms;
   animation-iteration-count: infinite;
+  transform: rotate(0deg);
   z-index: -1;
+}
+
+@keyframes sun {
+    0% {
+        top: -550px;
+        right: -500px;
+        transform: rotate(0deg);
+    }
+    20% {
+        top: -525px;
+        right: -475px;
+        transform: rotate(90deg);
+    }
+    50% {
+        top: -500px;
+        right: -450px;
+        transform: rotate(180deg);
+    }
+    75% {
+        top: -525px;
+        right: -475px;
+        transform: rotate(270deg);
+    }
+    100% {
+        top: -550px;
+        right: -500px;
+        transform: rotate(360deg);
+    }
 }
 
 .intro {
