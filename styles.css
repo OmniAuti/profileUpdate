@@ -97,8 +97,8 @@ h1 {
 
 .test-on {
   color: transparent;
-  text-shadow: -0.025em 0.025em 0em transparent, -0.05em 0.05em 0em transparent,
-    -0.075em 0.075em 0em transparent, -0.1em 0.1em 0em #f8f8ff;
+  text-shadow: -0.015em 0.015em 0em transparent, -0.03em 0.03em 0em transparent,
+  -0.045em 0.045em 0em transparent, -0.06em 0.06em 0em #f8f8ff;
   animation-name: co;
   animation-duration: 175ms;
   animation-timing-function: linear;
@@ -106,8 +106,8 @@ h1 {
 }
 .test-off {
   color: #f8f8ff;
-  text-shadow: -0.025em 0.025em 0em #000, -0.05em 0.05em 0em #000,
-    -0.075em 0.075em 0em #000, -0.1em 0.1em 0em #000;
+  text-shadow: -0.015em 0.015em 0em #CCCBD8, -0.03em 0.03em 0em #9B9BA7,
+  -0.045em 0.045em 0em #6D6D78, -0.06em 0.06em 0em #43424D;
   animation-name: coa;
   animation-duration: 175ms;
   animation-timing-function: linear;
@@ -117,60 +117,56 @@ h1 {
 @keyframes co {
   0% {
     color: #f8f8ff;
-    text-shadow: -0.025em 0.025em 0em #000, -0.05em 0.05em 0em #000,
-      -0.075em 0.075em 0em #000, -0.1em 0.1em 0em #000;
+    text-shadow: -0.015em 0.015em 0em #CCCBD8, -0.03em 0.03em 0em #9B9BA7,
+      -0.045em 0.045em 0em #6D6D78, -0.06em 0.06em 0em #43424D;
   }
   25% {
-    color: transparent;
-    text-shadow: -0.025em 0.025em 0em #f8f8ff, -0.05em 0.05em 0em #000,
-      -0.075em 0.075em 0em #000, -0.1em 0.1em 0em #000;
+      color: transparent;
+    text-shadow: -0.015em 0.015em 0em #f8f8ff, -0.03em 0.03em 0em #CCCBD8,
+      -0.045em 0.045em 0em #9B9BA7, -0.06em 0.06em 0em #6D6D78;
   }
   50% {
     color: transparent;
-    text-shadow: -0.025em 0.025em 0em #f8f8ff, -0.05em 0.05em 0em #f8f8ff,
-      -0.075em 0.075em 0em #000, -0.1em 0.1em 0em #000;
+    text-shadow: -0.015em 0.015em 0em transparent, -0.03em 0.03em 0em #f8f8ff,
+      -0.045em 0.045em 0em #CCCBD8, -0.06em 0.06em 0em #9B9BA7;
   }
   75% {
     color: transparent;
-    text-shadow: -0.025em 0.025em 0em transparent,
-      -0.05em 0.05em 0em transparent, -0.075em 0.075em 0em #f8f8ff,
-      -0.1em 0.1em 0em #000;
+    text-shadow: -0.015em 0.015em 0em transparent, -0.03em 0.03em 0em transparent,
+      -0.045em 0.045em 0em #f8f8ff, -0.06em 0.06em 0em #CCCBD8;
   }
   100% {
     color: transparent;
-    text-shadow: -0.025em 0.025em 0em transparent,
-      -0.05em 0.05em 0em transparent, -0.075em 0.075em 0em transparent,
-      -0.1em 0.1em 0em #f8f8ff;
+    text-shadow: -0.015em 0.015em 0em transparent, -0.03em 0.03em 0em transparent,
+      -0.045em 0.045em 0em transparent, -0.06em 0.06em 0em #f8f8ff;
   }
 }
 
 @keyframes coa {
   0% {
     color: transparent;
-    text-shadow: -0.025em 0.025em 0em transparent,
-      -0.05em 0.05em 0em transparent, -0.075em 0.075em 0em transparent,
-      -0.1em 0.1em 0em #f8f8ff;
+    text-shadow: -0.015em 0.015em 0em transparent, -0.03em 0.03em 0em transparent,
+      -0.045em 0.045em 0em transparent, -0.06em 0.06em 0em #f8f8ff;
   }
   25% {
     color: transparent;
-    text-shadow: -0.025em 0.025em 0em transparent,
-      -0.05em 0.05em 0em transparent, -0.075em 0.075em 0em #f8f8ff,
-      -0.1em 0.1em 0em #000;
+    text-shadow: -0.015em 0.015em 0em transparent, -0.03em 0.03em 0em transparent,
+      -0.045em 0.045em 0em #f8f8ff, -0.06em 0.06em 0em #CCCBD8;
   }
   50% {
     color: transparent;
-    text-shadow: -0.025em 0.025em 0em transparent, -0.05em 0.05em 0em #f8f8ff,
-      -0.075em 0.075em 0em #000, -0.1em 0.1em 0em #000;
+    text-shadow: -0.015em 0.015em 0em transparent, -0.03em 0.03em 0em #f8f8ff,
+      -0.045em 0.045em 0em #CCCBD8, -0.06em 0.06em 0em #9B9BA7;
   }
   75% {
     color: transparent;
-    text-shadow: -0.025em 0.025em 0em #f8f8ff, -0.05em 0.05em 0em #000,
-      -0.075em 0.075em 0em #000, -0.1em 0.1em 0em #000;
+    text-shadow: -0.015em 0.015em 0em #f8f8ff, -0.03em 0.03em 0em #CCCBD8,
+      -0.045em 0.045em 0em #9B9BA7, -0.06em 0.06em 0em #6D6D78;
   }
   100% {
     color: #f8f8ff;
-    text-shadow: -0.025em 0.025em 0em #000, -0.05em 0.05em 0em #000,
-      -0.075em 0.075em 0em #000, -0.1em 0.1em 0em #000;
+    text-shadow: -0.015em 0.015em 0em #CCCBD8, -0.03em 0.03em 0em #9B9BA7,
+      -0.045em 0.045em 0em #6D6D78, -0.06em 0.06em 0em #43424D;
   }
 }
 
