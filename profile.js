@@ -6,6 +6,10 @@ function openingNight() {
     card.forEach(card => {
         card.addEventListener('click', () => {
             card.classList.toggle('theater')
+            card.classList.add('curtain-closed')
+            setTimeout(() => {
+                card.classList.remove('curtain-closed')
+            }, 1000)
         })
     })
 }
@@ -22,25 +26,30 @@ const contactCardTwo = document.querySelector('.stack')
 const contactCardThree = document.querySelector('.stacked')
 
 contactCard.addEventListener('click', () => {
-    contactCard.style.borderRadius = '0'
-    contactCardOn.style.borderRadius = '0'
+    contactCard.classList.remove('border-on');
+    contactCardOn.classList.remove('border-on');
+    contactCardTwo.classList.remove('border-on');
+    contactCardThree.classList.remove('border-on');
+
     contactCard.style.zIndex = '-1'
     contactCardOn.style.zIndex = '0'
-    contactCardTwo.style.borderRadius = '0'
-    contactCardThree.style.borderRadius = '0'
+
     particleCont.style.top = '0';
     contactCont.style.display = 'block';
+    
     window.scrollTo(0,document.body.scrollHeight);
     document.body.style.overflow = 'hidden'
 })
 
 contactCardOn.addEventListener('click', () => {
-    contactCard.style.borderRadius = '20px'
-    contactCardOn.style.borderRadius = '20px'
+    contactCard.classList.add('border-on');
+    contactCardOn.classList.add('border-on');
+    contactCardTwo.classList.add('border-on');
+    contactCardThree.classList.add('border-on');
+
     contactCard.style.zIndex = '0'
     contactCardOn.style.zIndex = '-1'
-    contactCardTwo.style.borderRadius = '20px'
-    contactCardThree.style.borderRadius = '20px'
+
     particleCont.style.top = '-50vh';
     contactCont.style.display = 'none';
     document.body.style.overflow = 'scroll'

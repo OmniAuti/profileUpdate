@@ -204,12 +204,12 @@ h1 {
   box-shadow: 0 0 5px #1c1c25;
   height: 100vh;
   width: 100vh;
-  border-radius: 20px;
   left: -50vh;
   top: 50vh;
   transform-origin: top right;
   transform: rotate(45deg);
-  transition: all ease-out 1000ms;
+  cursor: pointer;
+  transition: border-radius ease-out 1000ms;
 }
 
 .stuck {
@@ -218,12 +218,12 @@ h1 {
   box-shadow: 0 0 5px #1c1c25;
   height: 100vh;
   width: 100vh;
-  border-radius: 20px;
   left: -50vh;
   top: 50vh;
   transform-origin: top right;
   transform: rotate(45deg);
-  transition: all ease-out 1000ms;
+  cursor: pointer;
+  transition: border-radius ease-out 1000ms;
 }
 .stuck-on {
   position: absolute;
@@ -231,19 +231,20 @@ h1 {
   box-shadow: 0 0 5px #1c1c25;
   height: 100vh;
   width: 100vh;
-  border-radius: 20px;
   left: -50vh;
   top: 50vh;
   transform-origin: top right;
   transform: rotate(45deg);
-  transition: all ease-out 1000ms;
   z-index: -1;
+  cursor: pointer;
+  transition: border-radius ease-out 1000ms;
 }
 
 .stuck:hover,
+.stuck-on:hover,
 .stack:hover,
 .stacked:hover {
-  box-shadow: 0 0 5px #f8f8ff;
+  box-shadow: 0 0 5px #f8f8ff, 0 0 5px #f8f8ff;
 }
 
 .stuck h3 {
@@ -275,6 +276,10 @@ h1 {
   font-family: "Arapey", serif;
   color: #1c1c25;
   font-size: 25px;
+}
+
+.border-on {
+  border-radius: 20px;
 }
 
 .about-me-cont {
@@ -322,6 +327,11 @@ h1 {
   top: 0;
   transform-origin: top right;
   transform: rotate(0deg);
+  transition: all ease-out 1000ms;
+}
+
+.curtain-closed {
+  transition: all ease-out 1000ms;
 }
 /* ------------- Work Together Mode --------------- */
 
