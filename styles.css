@@ -227,7 +227,6 @@ h1 {
   transform: rotate(45deg);
   cursor: pointer;
   transition: border-radius ease-out 1000ms;
-
 }
 .stuck-on {
   position: absolute;
@@ -277,6 +276,7 @@ h1 {
 .stacked {
   background-color: #d87b6b;
   left: calc(-50vh - 100px);
+  transition: transform ease-out 1000ms;
 }
 
 .stacked h3 {
@@ -342,6 +342,43 @@ h1 {
   transition: all ease-out 1000ms;
   pointer-events: none;
 }
+
+.move-card-forward {
+  animation-name: moveCardFwd;
+  animation-iteration-count: 1;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveCardFwd {
+  0% {
+    transform: translateX(-25vw) rotate(45deg);
+  }
+
+  100% {
+    transform: translateX(0vw) rotate(45deg);
+  }
+}
+
+.move-card-back {
+  animation-name: moveCardBack;
+  animation-iteration-count: 1;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveCardBack {
+  0% {
+    transform: translateX(0vw) rotate(45deg);
+  }
+
+  100% {
+    transform: translateX(-25vw) rotate(45deg);
+  }
+}
+
 /* ------------- Work Together Mode --------------- */
 
 .work-together {
