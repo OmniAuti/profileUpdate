@@ -4,23 +4,28 @@
   box-sizing: border-box;
 }
 
+/*
+font-family: 'Catamaran', sans-serif;
+font-family: 'Arapey', serif;
+font-family: 'Forum', cursive;
+*/
+
 body {
   background-color: #1c1c25;
-  font-family: "Padauk", sans-serif;
   overflow-x: hidden;
   background-image: url("https://www.transparenttextures.com/patterns/egg-shell.png");
 }
 
 #particles-js {
   width: 100%;
-  height: 100%;
+  height: 200%;
   position: absolute;
   z-index: -1;
 }
 
 .sun {
   position: absolute;
-  background: radial-gradient(#ECC239 5%,#e30c3d, transparent 50%);
+  background: radial-gradient(#ecc239 5%, #e30c3d, transparent 50%);
   width: 1000px;
   height: 1000px;
   top: -550px;
@@ -34,31 +39,31 @@ body {
 }
 
 @keyframes sun {
-    0% {
-        top: -550px;
-        right: -500px;
-        transform: rotate(0deg);
-    }
-    20% {
-        top: -525px;
-        right: -475px;
-        transform: rotate(90deg);
-    }
-    50% {
-        top: -500px;
-        right: -450px;
-        transform: rotate(180deg);
-    }
-    75% {
-        top: -525px;
-        right: -475px;
-        transform: rotate(270deg);
-    }
-    100% {
-        top: -550px;
-        right: -500px;
-        transform: rotate(360deg);
-    }
+  0% {
+    top: -550px;
+    right: -500px;
+    transform: rotate(0deg);
+  }
+  20% {
+    top: -525px;
+    right: -475px;
+    transform: rotate(90deg);
+  }
+  50% {
+    top: -500px;
+    right: -450px;
+    transform: rotate(180deg);
+  }
+  75% {
+    top: -525px;
+    right: -475px;
+    transform: rotate(270deg);
+  }
+  100% {
+    top: -550px;
+    right: -500px;
+    transform: rotate(360deg);
+  }
 }
 
 .intro {
@@ -72,42 +77,42 @@ body {
 }
 
 .name-intro {
+  line-height: 11rem;
   width: 100%;
   text-align: left;
   padding-left: 50px;
   padding-top: 25px;
-
   color: #f8f8ff;
 }
 
 h1 {
-    color: #f8f8ff;
-    font-size: 9rem;
-    text-shadow: -0.015em 0.015em 0em #CCCBD8, -0.03em 0.03em 0em #9B9BA7,
-      -0.045em 0.045em 0em #6D6D78, -0.06em 0.06em 0em #43424D;
-    letter-spacing: 5px;
-  }
+  font-family: "Catamaran", sans-serif;
+  color: #f8f8ff;
+  font-size: 160px;
+  text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
+    -0.045em 0.045em 0em #6d6d78, -0.06em 0.06em 0em #43424d;
+}
 
 .coa-intro {
   margin-left: 50px;
-  font-size: 4.5rem;
-  padding: 5px;
+  font-size: 80px;
+  padding-left: 5px;
 }
-
 
 .test-on {
   color: transparent;
   text-shadow: -0.015em 0.015em 0em transparent, -0.03em 0.03em 0em transparent,
-  -0.045em 0.045em 0em transparent, -0.06em 0.06em 0em #f8f8ff;
+    -0.045em 0.045em 0em transparent, -0.06em 0.06em 0em #f8f8ff;
   animation-name: co;
   animation-duration: 175ms;
   animation-timing-function: linear;
   animation-iteration-count: 1;
 }
+
 .test-off {
   color: #f8f8ff;
-  text-shadow: -0.015em 0.015em 0em #CCCBD8, -0.03em 0.03em 0em #9B9BA7,
-  -0.045em 0.045em 0em #6D6D78, -0.06em 0.06em 0em #43424D;
+  text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
+    -0.045em 0.045em 0em #6d6d78, -0.06em 0.06em 0em #43424d;
   animation-name: coa;
   animation-duration: 175ms;
   animation-timing-function: linear;
@@ -117,61 +122,146 @@ h1 {
 @keyframes co {
   0% {
     color: #f8f8ff;
-    text-shadow: -0.015em 0.015em 0em #CCCBD8, -0.03em 0.03em 0em #9B9BA7,
-      -0.045em 0.045em 0em #6D6D78, -0.06em 0.06em 0em #43424D;
+    text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
+      -0.045em 0.045em 0em #6d6d78, -0.06em 0.06em 0em #43424d;
   }
   25% {
-      color: transparent;
-    text-shadow: -0.015em 0.015em 0em #f8f8ff, -0.03em 0.03em 0em #CCCBD8,
-      -0.045em 0.045em 0em #9B9BA7, -0.06em 0.06em 0em #6D6D78;
+    color: transparent;
+    text-shadow: -0.015em 0.015em 0em #f8f8ff, -0.03em 0.03em 0em #cccbd8,
+      -0.045em 0.045em 0em #9b9ba7, -0.06em 0.06em 0em #6d6d78;
   }
   50% {
     color: transparent;
     text-shadow: -0.015em 0.015em 0em transparent, -0.03em 0.03em 0em #f8f8ff,
-      -0.045em 0.045em 0em #CCCBD8, -0.06em 0.06em 0em #9B9BA7;
+      -0.045em 0.045em 0em #cccbd8, -0.06em 0.06em 0em #9b9ba7;
   }
   75% {
     color: transparent;
-    text-shadow: -0.015em 0.015em 0em transparent, -0.03em 0.03em 0em transparent,
-      -0.045em 0.045em 0em #f8f8ff, -0.06em 0.06em 0em #CCCBD8;
+    text-shadow: -0.015em 0.015em 0em transparent,
+      -0.03em 0.03em 0em transparent, -0.045em 0.045em 0em #f8f8ff,
+      -0.06em 0.06em 0em #cccbd8;
   }
   100% {
     color: transparent;
-    text-shadow: -0.015em 0.015em 0em transparent, -0.03em 0.03em 0em transparent,
-      -0.045em 0.045em 0em transparent, -0.06em 0.06em 0em #f8f8ff;
+    text-shadow: -0.015em 0.015em 0em transparent,
+      -0.03em 0.03em 0em transparent, -0.045em 0.045em 0em transparent,
+      -0.06em 0.06em 0em #f8f8ff;
   }
 }
 
 @keyframes coa {
   0% {
     color: transparent;
-    text-shadow: -0.015em 0.015em 0em transparent, -0.03em 0.03em 0em transparent,
-      -0.045em 0.045em 0em transparent, -0.06em 0.06em 0em #f8f8ff;
+    text-shadow: -0.015em 0.015em 0em transparent,
+      -0.03em 0.03em 0em transparent, -0.045em 0.045em 0em transparent,
+      -0.06em 0.06em 0em #f8f8ff;
   }
   25% {
     color: transparent;
-    text-shadow: -0.015em 0.015em 0em transparent, -0.03em 0.03em 0em transparent,
-      -0.045em 0.045em 0em #f8f8ff, -0.06em 0.06em 0em #CCCBD8;
+    text-shadow: -0.015em 0.015em 0em transparent,
+      -0.03em 0.03em 0em transparent, -0.045em 0.045em 0em #f8f8ff,
+      -0.06em 0.06em 0em #cccbd8;
   }
   50% {
     color: transparent;
     text-shadow: -0.015em 0.015em 0em transparent, -0.03em 0.03em 0em #f8f8ff,
-      -0.045em 0.045em 0em #CCCBD8, -0.06em 0.06em 0em #9B9BA7;
+      -0.045em 0.045em 0em #cccbd8, -0.06em 0.06em 0em #9b9ba7;
   }
   75% {
     color: transparent;
-    text-shadow: -0.015em 0.015em 0em #f8f8ff, -0.03em 0.03em 0em #CCCBD8,
-      -0.045em 0.045em 0em #9B9BA7, -0.06em 0.06em 0em #6D6D78;
+    text-shadow: -0.015em 0.015em 0em #f8f8ff, -0.03em 0.03em 0em #cccbd8,
+      -0.045em 0.045em 0em #9b9ba7, -0.06em 0.06em 0em #6d6d78;
   }
   100% {
     color: #f8f8ff;
-    text-shadow: -0.015em 0.015em 0em #CCCBD8, -0.03em 0.03em 0em #9B9BA7,
-      -0.045em 0.045em 0em #6D6D78, -0.06em 0.06em 0em #43424D;
+    text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
+      -0.045em 0.045em 0em #6d6d78, -0.06em 0.06em 0em #43424d;
   }
 }
+
+/* ---------- Next Section ------------ */
 
 .test-second {
   width: 100vw;
   height: 100vh;
-  background-color: #f8f8ff;
+  position: relative;
+  overflow: hidden;
 }
+
+.decoration {
+  position: absolute;
+  background-color: #f9f871;
+  box-shadow: 0 0 5px #1c1c25;
+  height: 100vh;
+  width: 610px;
+  border-radius: 20px;
+  left: -300px;
+  top: 50vh;
+  transform-origin: top right;
+  transform: rotate(45deg);
+  transition: all ease-out 1000ms;
+  opacity: 1;
+}
+
+.stack {
+  background-color: #fcb363;
+  left: -350px;
+}
+
+.stack h3 {
+  padding-left: 60%;
+  font-family: "Arapey", serif;
+  color: #1c1c25;
+  font-size: 25px;
+}
+
+.stacked {
+  background-color: #d87b6b;
+  left: -400px;
+}
+
+.stacked h3 {
+    padding-left: 80%;
+    font-family: "Arapey", serif;
+    color: #1c1c25;
+    font-size: 25px;
+}
+
+.about-me-cont {
+  width: 50%;
+  float: right;
+  margin: 10%;
+}
+
+.test-second img {
+  height: 200px;
+  position: absolute;
+  right: 250px;
+  bottom: 100px;
+  z-index: -1;
+}
+
+.about-me-title {
+  color: #f8f8ff;
+  margin-bottom: 10px;
+  font-family: "Arapey", serif;
+  font-size: 50px;
+}
+
+.about-me {
+  color: #f8f8ff;
+  font-family: "Forum", cursive;
+  font-size: 25px;
+}
+
+
+.theater {
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0px;
+    left: 0;
+    top: 0;
+    transform-origin: top right;
+    transform: rotate(0deg);
+}
+/* ------------- Work Together Mode --------------- */
