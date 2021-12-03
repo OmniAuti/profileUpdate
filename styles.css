@@ -248,7 +248,7 @@ h1 {
 .stuck-on:hover,
 .stack:hover,
 .stacked:hover {
-  box-shadow: 0 0 5px #f8f8ff, 0 0 5px #f8f8ff;
+  box-shadow: 1px -1px 5px #f8f8ff, 1px -1px 5px #f8f8ff;
 }
 
 .stuck h3 {
