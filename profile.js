@@ -1,25 +1,27 @@
 const card = document.querySelectorAll(".portfolio-deck");
-
-function openingNight() {
-  card.forEach((card) => {
-    card.addEventListener("click", () => {
-      card.classList.toggle("theater");
-      card.classList.add("curtain-closed");
-      setTimeout(() => {
-        card.classList.remove("curtain-closed");
-      }, 1000);
-    });
-  });
-}
-
-openingNight();
-
 const particleCont = document.getElementById("particles-js");
 const contactCont = document.querySelector(".work-together");
 const contactCard = document.querySelector(".stuck");
 const contactCardOn = document.querySelector(".stuck-on");
 const contactCardTwo = document.querySelector(".stack");
 const contactCardThree = document.querySelector(".stacked");
+
+function openingNight() {
+  card.forEach((card) => {
+    card.addEventListener("click", () => {
+      card.classList.toggle("theater");
+      contactCard.classList.add('curtain-closed')
+      card.classList.add("curtain-closed");
+
+      setTimeout(() => {
+        card.classList.remove("curtain-closed");
+        contactCard.classList.remove("curtain-closed");
+      }, 1000);
+    });
+  });
+}
+
+openingNight();
 
 contactCard.addEventListener("click", () => {
   contactCard.classList.remove("border-on");
@@ -33,7 +35,7 @@ contactCard.addEventListener("click", () => {
   }, 300);
 
   particleCont.style.top = "0";
-  contactCont.style.transform = 'translateY(0)'
+  contactCont.style.transform = "translateY(0)";
   contactCont.style.display = "block";
 
   window.scrollTo(0, document.body.scrollHeight);
@@ -48,10 +50,11 @@ contactCardOn.addEventListener("click", () => {
 
   contactCard.style.zIndex = "0";
   contactCardOn.style.zIndex = "-1";
-  contactCont.style.transform = 'translateY(50vh)'
+  contactCont.style.transform = "translateY(50vh)";
   setTimeout(() => {
     particleCont.style.top = "-50vh";
     contactCont.style.display = "none";
   }, 300);
   document.body.style.overflow = "scroll";
+  document.body.style.overflowX = "hidden";
 });
