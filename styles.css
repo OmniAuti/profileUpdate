@@ -221,24 +221,31 @@ h1 {
 }
 
 .stacked h3 {
-    padding-left: 80%;
-    font-family: "Arapey", serif;
-    color: #1c1c25;
-    font-size: 25px;
+  padding-left: 80%;
+  font-family: "Arapey", serif;
+  color: #1c1c25;
+  font-size: 25px;
 }
 
 .about-me-cont {
+  height: 100%;
   width: 50%;
+  margin-right: 50px;
   float: right;
-  margin: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
-.test-second img {
+.me {
   height: 200px;
-  position: absolute;
   right: 250px;
   bottom: 100px;
   z-index: -1;
+  margin-top: 100px;
+  align-self: flex-start;
 }
 
 .about-me-title {
@@ -246,22 +253,24 @@ h1 {
   margin-bottom: 10px;
   font-family: "Arapey", serif;
   font-size: 50px;
+  text-align: right;
+  width: 100%;
 }
 
 .about-me {
   color: #f8f8ff;
   font-family: "Forum", cursive;
   font-size: 25px;
+  text-align: right;
 }
 
-
 .theater {
-    height: 100vh;
-    width: 100vw;
-    border-radius: 0px;
-    left: 0;
-    top: 0;
-    transform-origin: top right;
-    transform: rotate(0deg);
+  height: 100vh;
+  width: 100vw;
+  border-radius: 0px;
+  left: 0;
+  top: 0;
+  transform-origin: top right;
+  transform: rotate(0deg);
 }
 /* ------------- Work Together Mode --------------- */
