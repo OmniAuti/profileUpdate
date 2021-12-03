@@ -10,6 +10,10 @@ font-family: 'Arapey', serif;
 font-family: 'Forum', cursive;
 */
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #1c1c25;
   overflow-x: hidden;
@@ -17,14 +21,16 @@ body {
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #particles-js {
-  width: 100%;
-  height: 250%;
   position: absolute;
+  top: -50vh;
+  width: 100%;
+  height: 250vh;
   z-index: -1;
+  transition: all ease-in-out 300ms;
 }
 
 .sun {
@@ -185,13 +191,14 @@ h1 {
 
 /* ---------- Next Section ------------ */
 
-.test-second {
+.portfolio-cont {
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
-.decoration {
+.portfolio-deck {
   position: absolute;
   background-color: #f9f871;
   box-shadow: 0 0 5px #1c1c25;
@@ -205,11 +212,45 @@ h1 {
   transition: all ease-out 1000ms;
 }
 
+.stuck {
+  position: absolute;
+  background-color: #f9f871;
+  box-shadow: 0 0 5px #1c1c25;
+  height: 100vh;
+  width: 100vh;
+  border-radius: 20px;
+  left: -50vh;
+  top: 50vh;
+  transform-origin: top right;
+  transform: rotate(45deg);
+  transition: all ease-out 1000ms;
+}
+.stuck-on {
+  position: absolute;
+  background-color: #f9f871;
+  box-shadow: 0 0 5px #1c1c25;
+  height: 100vh;
+  width: 100vh;
+  border-radius: 20px;
+  left: -50vh;
+  top: 50vh;
+  transform-origin: top right;
+  transform: rotate(45deg);
+  transition: all ease-out 1000ms;
+  z-index: -1;
+}
+
+.stuck:hover,
+.stack:hover,
+.stacked:hover {
+  box-shadow: 0 0 5px #f8f8ff;
+}
+
 .stuck h3 {
-    padding-left: 35%;
-    font-family: "Arapey", serif;
-    color: #1c1c25;
-    font-size: 25px;
+  padding-left: 35%;
+  font-family: "Arapey", serif;
+  color: #1c1c25;
+  font-size: 25px;
 }
 
 .stack {
@@ -284,8 +325,8 @@ h1 {
 }
 /* ------------- Work Together Mode --------------- */
 
-
 .work-together {
-    width: 100vw;
-    height: 50vh;
+  width: 100vw;
+  height: 50vh;
+  display: none;
 }
