@@ -33,6 +33,10 @@ a {
   transition: all ease-in-out 300ms;
 }
 
+main {
+  position: relative;
+}
+
 .sun {
   position: absolute;
   background: radial-gradient(#ecc239 5%, #e30c3d, transparent 50%);
@@ -332,6 +336,7 @@ h1 {
 
 .curtain-closed {
   transition: all ease-out 1000ms;
+  pointer-events: none;
 }
 /* ------------- Work Together Mode --------------- */
 
@@ -339,4 +344,5 @@ h1 {
   width: 100vw;
   height: 50vh;
   display: none;
+  transition: transform ease-out 300ms;
 }
