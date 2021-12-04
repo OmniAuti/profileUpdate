@@ -266,21 +266,91 @@ h1 {
 }
 
 .contact-link {
-  padding-left: 35%;
+  width: fit-content;
+  margin-left: 35%;
   font-family: "Arapey", serif;
   color: #1c1c25;
   font-size: 25px;
+  margin-top: 0%;
+  transform-origin: top left;
+  transform: rotate(0deg);
+}
+
+.reverse-contact-link {
+  animation-name: contactTextReset;
+  animation-iteration-count: 1;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes contactTextReset {
+  0% {
+    margin-top: 20%;
+    margin-left: 95%;
+    transform-origin: top left;
+    transform: rotate(-90deg);
+  }
+
+  35% {
+    margin-left: 95%;
+    margin-top: 100%;
+    transform: rotate(-90deg);
+  }
+
+  65% {
+    margin-left: 0%;
+    margin-top: 0%;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    margin-left: 35%;
+    margin-top: 0%;
+    transform: rotate(0deg);
+  }
 }
 
 .active-contact-link {
-  padding-left: 0%;
-  margin-top: 200px;
-  margin-left: 95%;
-  font-family: "Arapey", serif;
-  color: #1c1c25;
-  font-size: 25px;
-  transform-origin: top left;
-  transform: rotate(-90deg);
+  margin-left: 35%;
+  margin-top: 0%;
+  transform: rotate(0deg);
+  animation-name: activeContactText;
+  animation-iteration-count: 1;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes activeContactText {
+  0% {
+    margin-left: 35%;
+    margin-top: 0%;
+    transform: rotate(0deg);
+  }
+
+  35% {
+    margin-left: 35%;
+    margin-top: 0%;
+    transform: rotate(0deg);
+  }
+
+  50% {
+    margin-left: 0%;
+  }
+
+  65% {
+    margin-left: 95%;
+    margin-top: 100%;
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    margin-top: 20%;
+    margin-left: 95%;
+    transform-origin: top left;
+    transform: rotate(-90deg);
+  }
 }
 
 .stack {
@@ -289,10 +359,90 @@ h1 {
 }
 
 .design-link {
-  padding-left: 55%;
+  width: fit-content;
+  margin-left: 55%;
   font-family: "Arapey", serif;
   color: #1c1c25;
   font-size: 25px;
+  margin-top: 0%;
+  transform-origin: top left;
+  transform: rotate(0deg);
+}
+
+.reverse-design-link {
+  animation-name: designTextReset;
+  animation-iteration-count: 1;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes designTextReset {
+  0% {
+    margin-top: 30%;
+    margin-left: 95%;
+    transform-origin: top left;
+    transform: rotate(-90deg);
+  }
+
+  35% {
+    margin-left: 95%;
+    margin-top: 100%;
+    transform: rotate(-90deg);
+  }
+
+  65% {
+    margin-left: 0%;
+    margin-top: 0%;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    margin-left: 55%;
+    margin-top: 0%;
+    transform: rotate(0deg);
+  }
+}
+
+.active-design-link {
+  margin-left: 55%;
+  margin-top: 0%;
+  transform: rotate(0deg);
+  animation-name: activeDesignText;
+  animation-iteration-count: 1;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes activeDesignText {
+  0% {
+    margin-left: 55%;
+    margin-top: 0%;
+    transform: rotate(0deg);
+  }
+
+  35% {
+    margin-left: 55%;
+    margin-top: 0%;
+    transform: rotate(0deg);
+  }
+
+  50% {
+    margin-left: 0%;
+  }
+
+  65% {
+    margin-left: 95%;
+    margin-top: 100%;
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    margin-top: 30%;
+    margin-left: 95%;
+    transform: rotate(-90deg);
+  }
 }
 
 .stacked {
@@ -301,33 +451,89 @@ h1 {
   transition: transform ease-out 1000ms;
 }
 
-.active-contact-design-link {
-  padding-left: 0%;
-  margin-top: 200px;
-  margin-left: 95%;
-  font-family: "Arapey", serif;
-  color: #1c1c25;
-  font-size: 25px;
-  transform-origin: top left;
-  transform: rotate(-90deg);
-}
-
 .code-link {
-  padding-left: 75%;
-  font-family: "Arapey", serif;
-  color: #1c1c25;
-  font-size: 25px;
-}
-
-.active-contact-code-link {
-  padding-left: 0%;
-  margin-top: 200px;
-  margin-left: 95%;
+  width: fit-content;
+  margin-left: 75%;
   font-family: "Arapey", serif;
   color: #1c1c25;
   font-size: 25px;
   transform-origin: top left;
-  transform: rotate(-90deg);
+  transform: rotate(0deg);
+}
+
+.reverse-code-link {
+  animation-name: codeTextReset;
+  animation-iteration-count: 1;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes codeTextReset {
+  0% {
+    margin-top: 40%;
+    margin-left: 95%;
+    transform: rotate(-90deg);
+  }
+
+  35% {
+    margin-left: 95%;
+    margin-top: 100%;
+    transform: rotate(-90deg);
+  }
+
+  65% {
+    margin-left: 0%;
+    margin-top: 0%;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    margin-left: 75%;
+    margin-top: 0%;
+    transform: rotate(0deg);
+  }
+}
+
+.active-code-link {
+  margin-left: 75%;
+  margin-top: 0%;
+  transform: rotate(0deg);
+  animation-name: activeCodeText;
+  animation-iteration-count: 1;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes activeCodeText {
+  0% {
+    margin-left: 75%;
+    margin-top: 0%;
+    transform: rotate(0deg);
+  }
+
+  35% {
+    margin-left: 75%;
+    margin-top: 0%;
+    transform: rotate(0deg);
+  }
+
+  50% {
+    margin-left: 0%;
+  }
+
+  65% {
+    margin-left: 95%;
+    margin-top: 100%;
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    margin-top: 40%;
+    margin-left: 95%;
+    transform: rotate(-90deg);
+  }
 }
 
 .border-on {

@@ -68,25 +68,37 @@ contactCard.addEventListener("click", () => {
     designCard.classList.add("border-on");
     codeCard.classList.add("border-on");
 
-    contactLink.classList.remove('active-contact-link')
-    designLink.classList.remove('active-contact-design-link')
-    codeLink.classList.remove('active-contact-code-link')
+    contactLink.classList.remove("active-contact-link");
+    contactLink.classList.add("reverse-contact-link");
+    designLink.classList.remove("active-design-link");
+    designLink.classList.add("reverse-design-link");
+    codeLink.classList.remove("active-code-link");
+    codeLink.classList.add("reverse-code-link");
+    setTimeout(() => {
+      contactLink.innerText = "Contact"; // CHANGES INNER TEXT TO ORIGINAL
+    }, 500);
 
     derp.style.transform = "translateY(100vh)"; // TAKES OUT HEADER OF CONTACT SECTION
     contactCont.style.zIndex = "-1";
 
-   
-      portfolioCont.style.transform = "translateY(0vh)"; // BRINGS BACK PORTFOLIO SECTION TO ORIGINAL POSITION
- 
-    document.body.style.overflow = "scroll";// RESETS LOCKED SCROLL
-    document.body.style.overflowX = "hidden"; 
+    portfolioCont.style.transform = "translateY(0vh)"; // BRINGS BACK PORTFOLIO SECTION TO ORIGINAL POSITION
+
+    document.body.style.overflow = "scroll"; // RESETS LOCKED SCROLL
+    document.body.style.overflowX = "hidden";
     contactCard.classList.remove("active-contact");
   } else {
     contactCard.classList.add("active-contact");
 
-    contactLink.classList.add('active-contact-link')
-    designLink.classList.add('active-contact-design-link')
-    codeLink.classList.add('active-contact-code-link')
+    contactLink.classList.add("active-contact-link");
+    contactLink.classList.remove("reverse-contact-link");
+    designLink.classList.add("active-design-link");
+    designLink.classList.remove("reverse-design-link");
+    codeLink.classList.add("active-code-link");
+    codeLink.classList.remove("reverse-code-link");
+
+    setTimeout(() => {
+      contactLink.innerText = "Return"; // CHANGES INNER TEXT TO RETURN LINK
+    }, 500);
 
     contactCard.classList.remove("border-on");
     designCard.classList.remove("border-on");
