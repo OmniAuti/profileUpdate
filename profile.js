@@ -67,7 +67,7 @@ contactCard.addEventListener("click", () => {
     contactCard.classList.add("border-on"); // SETS BORDERS OF CARDS
     designCard.classList.add("border-on");
     codeCard.classList.add("border-on");
-
+    // THIS IS ANIMATION FOR LINKS WHEN CONTACT CARD OPEN
     contactLink.classList.remove("active-contact-link");
     contactLink.classList.add("reverse-contact-link");
     designLink.classList.remove("active-design-link");
@@ -88,7 +88,8 @@ contactCard.addEventListener("click", () => {
     contactCard.classList.remove("active-contact");
   } else {
     contactCard.classList.add("active-contact");
-
+ 
+    // THIS IS ANIMATION FOR LINKS WHEN CONTACT CARD OPEN
     contactLink.classList.add("active-contact-link");
     contactLink.classList.remove("reverse-contact-link");
     designLink.classList.add("active-design-link");
