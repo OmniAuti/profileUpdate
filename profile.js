@@ -3,57 +3,54 @@ const particleCont = document.getElementById("particles-js");
 const contactCont = document.querySelector(".work-together");
 const portfolioCont = document.querySelector(".portfolio-cont");
 const contactCard = document.querySelector(".stuck");
-const contactCardOn = document.querySelector(".stuck-on");
+const contactLink = document.querySelector(".contact-link");
 const designCard = document.querySelector(".stack");
+const designLink = document.querySelector(".design-link");
 const codeCard = document.querySelector(".stacked");
+const codeLink = document.querySelector(".code-link");
 const derp = document.querySelector(".derp");
 
+// HANDLES OPENING CARD ANIMATIONS FOR CODE, DESIGN, CONTACT SECTIONS
 function openingContact() {
   card.forEach((card) => {
     card.addEventListener("click", () => {
-      card.classList.toggle("theater");
+      card.classList.toggle("theater"); // ACTIVE ON SCREEN FRONT AND CENTER
 
-      contactCard.classList.add("curtain-closed");
-      card.classList.add("curtain-closed");
+      contactCard.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE
+      card.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE
 
       if (designCard.classList.contains("theater")) {
-        contactCard.classList.add("move-card-back");
-        contactCardOn.classList.add("move-card-back");
+        contactCard.classList.add("move-card-back"); // ANIMATION TO MOVE UNUSED CARDS OUT OF VIEW
         codeCard.classList.add("move-card-back");
       } else if (designCard.classList.contains("curtain-closed")) {
         contactCard.classList.remove("move-card-back");
-        contactCardOn.classList.remove("move-card-back");
         codeCard.classList.remove("move-card-back");
-        contactCard.classList.add("move-card-forward");
-        contactCardOn.classList.add("move-card-forward");
+        contactCard.classList.add("move-card-forward"); // ANIMATION TO MOVE UNUSED CARDS INTO VIEW AS CURRENT SELECTION CLOSES
         codeCard.classList.add("move-card-forward");
 
         setTimeout(() => {
+          // REMOVES ANIMATION AS ANIMATION COMPLETES FORWARD
           contactCard.classList.remove("move-card-forward");
-          contactCardOn.classList.remove("move-card-forward");
           codeCard.classList.remove("move-card-forward");
         }, 1000);
       }
 
       if (codeCard.classList.contains("theater")) {
+        // REPEATS SAME MOTIONS BUT FOR CODE CARD
         contactCard.classList.add("move-card-back");
-        contactCardOn.classList.add("move-card-back");
         designCard.classList.add("move-card-back");
       } else if (codeCard.classList.contains("curtain-closed")) {
         contactCard.classList.remove("move-card-back");
-        contactCardOn.classList.remove("move-card-back");
         designCard.classList.remove("move-card-back");
         contactCard.classList.add("move-card-forward");
-        contactCardOn.classList.add("move-card-forward");
         designCard.classList.add("move-card-forward");
 
         setTimeout(() => {
           contactCard.classList.remove("move-card-forward");
-          contactCardOn.classList.remove("move-card-forward");
           designCard.classList.remove("move-card-forward");
         }, 1000);
       }
-
+      // REMOVES UNCLICKABLE CLASS
       setTimeout(() => {
         card.classList.remove("curtain-closed");
         contactCard.classList.remove("curtain-closed");
@@ -63,42 +60,44 @@ function openingContact() {
 }
 
 openingContact();
-
+// HANDLES CONTACT CARD LOGISTICS
 contactCard.addEventListener("click", () => {
-  contactCard.classList.remove("border-on");
-  contactCardOn.classList.remove("border-on");
-  designCard.classList.remove("border-on");
-  codeCard.classList.remove("border-on");
+  if (contactCard.classList.contains("active-contact")) {
+    // CHECK FOR ACTIVE CONTACT
+    contactCard.classList.add("border-on"); // SETS BORDERS OF CARDS
+    designCard.classList.add("border-on");
+    codeCard.classList.add("border-on");
 
-  document.body.style.overflow = "hidden";
-  window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" });
+    contactLink.classList.remove('active-contact-link')
+    designLink.classList.remove('active-contact-design-link')
+    codeLink.classList.remove('active-contact-code-link')
 
-  setTimeout(() => {
-    contactCard.style.zIndex = "-1";
-    contactCardOn.style.zIndex = "0";
-  }, 300);
+    derp.style.transform = "translateY(100vh)"; // TAKES OUT HEADER OF CONTACT SECTION
+    contactCont.style.zIndex = "-1";
 
+   
+      portfolioCont.style.transform = "translateY(0vh)"; // BRINGS BACK PORTFOLIO SECTION TO ORIGINAL POSITION
+ 
+    document.body.style.overflow = "scroll";// RESETS LOCKED SCROLL
+    document.body.style.overflowX = "hidden"; 
+    contactCard.classList.remove("active-contact");
+  } else {
+    contactCard.classList.add("active-contact");
 
-  derp.style.transform = "translate(0vh)";
-  contactCont.style.zIndex = "0";
+    contactLink.classList.add('active-contact-link')
+    designLink.classList.add('active-contact-design-link')
+    codeLink.classList.add('active-contact-code-link')
 
-  portfolioCont.style.transform = "translateY(-50vh)";
-});
+    contactCard.classList.remove("border-on");
+    designCard.classList.remove("border-on");
+    codeCard.classList.remove("border-on");
 
-contactCardOn.addEventListener("click", () => {
-  contactCard.classList.add("border-on");
-  contactCardOn.classList.add("border-on");
-  designCard.classList.add("border-on");
-  codeCard.classList.add("border-on");
+    document.body.style.overflow = "hidden"; // LOCKED SCROLL TO STAY ON CONTACT SECTION
+    window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
 
-  derp.style.transform = "translateY(100vh)";
-  contactCont.style.zIndex = "-1";
+    derp.style.transform = "translate(0vh)"; // BRINGS IN HEADER OF SECTION
+    contactCont.style.zIndex = "0";
 
-  contactCard.style.zIndex = "0";
-  contactCardOn.style.zIndex = "-1";
-  setTimeout(() => {
-    portfolioCont.style.transform = "translateY(0vh)";
-  }, 250);
-  document.body.style.overflow = "scroll";
-  document.body.style.overflowX = "hidden";
+    portfolioCont.style.transform = "translateY(-50vh)"; // LIFTS UP PROTFOLIO SECTION TO GIVE FEEL OF MOVEMENT
+  }
 });

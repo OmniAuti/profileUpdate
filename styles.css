@@ -15,8 +15,8 @@ html::-webkit-scrollbar {
 }
 
 html {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 body {
@@ -26,7 +26,7 @@ body {
 }
 
 a {
-  scroll-behavior: smooth;  
+  scroll-behavior: smooth;
   text-decoration: none;
 }
 
@@ -202,13 +202,13 @@ h1 {
   }
 }
 
-/* ---------- Next Section ------------ */
+/* ---------- PORTFOLIO SECTION ------------ */
 
 .portfolio-cont {
   width: 100vw;
   height: 100vh;
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
   transition: transform ease 750ms;
 }
 
@@ -265,11 +265,22 @@ h1 {
   box-shadow: 1px -1px 5px #f8f8ff;
 }
 
-.stuck h3 {
+.contact-link {
   padding-left: 35%;
   font-family: "Arapey", serif;
   color: #1c1c25;
   font-size: 25px;
+}
+
+.active-contact-link {
+  padding-left: 0%;
+  margin-top: 200px;
+  margin-left: 95%;
+  font-family: "Arapey", serif;
+  color: #1c1c25;
+  font-size: 25px;
+  transform-origin: top left;
+  transform: rotate(-90deg);
 }
 
 .stack {
@@ -277,7 +288,7 @@ h1 {
   left: calc(-50vh - 50px);
 }
 
-.stack h3 {
+.design-link {
   padding-left: 55%;
   font-family: "Arapey", serif;
   color: #1c1c25;
@@ -290,11 +301,33 @@ h1 {
   transition: transform ease-out 1000ms;
 }
 
-.stacked h3 {
+.active-contact-design-link {
+  padding-left: 0%;
+  margin-top: 200px;
+  margin-left: 95%;
+  font-family: "Arapey", serif;
+  color: #1c1c25;
+  font-size: 25px;
+  transform-origin: top left;
+  transform: rotate(-90deg);
+}
+
+.code-link {
   padding-left: 75%;
   font-family: "Arapey", serif;
   color: #1c1c25;
   font-size: 25px;
+}
+
+.active-contact-code-link {
+  padding-left: 0%;
+  margin-top: 200px;
+  margin-left: 95%;
+  font-family: "Arapey", serif;
+  color: #1c1c25;
+  font-size: 25px;
+  transform-origin: top left;
+  transform: rotate(-90deg);
 }
 
 .border-on {
@@ -397,9 +430,9 @@ h1 {
   width: 100vw;
   height: 50vh;
   position: absolute;
-  display:block;
+  display: block;
   bottom: 0;
-  overflow:hidden;
+  overflow: hidden;
   z-index: -1;
 }
 
