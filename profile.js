@@ -6,6 +6,7 @@ const contactCard = document.querySelector(".stuck");
 const contactCardOn = document.querySelector(".stuck-on");
 const designCard = document.querySelector(".stack");
 const codeCard = document.querySelector(".stacked");
+const derp = document.querySelector(".derp");
 
 function openingContact() {
   card.forEach((card) => {
@@ -70,23 +71,12 @@ contactCard.addEventListener("click", () => {
   codeCard.classList.remove("border-on");
 
   setTimeout(() => {
-    contactCard.classList.add("active-contact");
     contactCard.style.zIndex = "-1";
     contactCardOn.style.zIndex = "0";
   }, 300);
 
-  contactCont.style.display = "block";
-  contactCont.style.bottom = "0vh";
-
-  setTimeout(() => {
-    contactCont.style.transform = "translateY(0)";
-  }, 250);
-
-  window.scroll({
-    top: window.innerHeight, 
-    left: 0, 
-    behavior: 'smooth'
-  });
+  derp.style.transform = "translate(0vh)";
+  contactCont.style.zIndex = "1"
 
   portfolioCont.style.transform = "translateY(-50vh)";
 
@@ -99,12 +89,12 @@ contactCardOn.addEventListener("click", () => {
   designCard.classList.add("border-on");
   codeCard.classList.add("border-on");
 
-  contactCont.style.transform = "translateY(100vh)";
+  derp.style.transform = "translateY(100vh)";
+  contactCont.style.zIndex = "-1"
 
   contactCard.style.zIndex = "0";
   contactCardOn.style.zIndex = "-1";
   setTimeout(() => {
-    contactCont.style.display = "none";
     portfolioCont.style.transform = "translateY(0vh)";
   }, 250);
   document.body.style.overflow = "scroll";

@@ -31,8 +31,11 @@ body {
 
 a {
   text-decoration: none;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;  
+}
 
+.disabled-links {
+  pointer-events: none;
 }
 
 #particles-js {
@@ -398,7 +401,13 @@ h1 {
   width: 100vw;
   height: 50vh;
   position: absolute;
+  display:block;
+  bottom: 0;
+  overflow:hidden;
+  z-index: -1;
+}
+
+.derp {
   transform: translateY(100vh);
-  transition: all ease-out 250ms;
-  display: none;
+  transition: all ease-out 500ms;
 }
