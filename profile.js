@@ -70,17 +70,19 @@ contactCard.addEventListener("click", () => {
   designCard.classList.remove("border-on");
   codeCard.classList.remove("border-on");
 
+  document.body.style.overflow = "hidden";
+  window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" });
+
   setTimeout(() => {
     contactCard.style.zIndex = "-1";
     contactCardOn.style.zIndex = "0";
   }, 300);
 
+
   derp.style.transform = "translate(0vh)";
-  contactCont.style.zIndex = "1"
+  contactCont.style.zIndex = "0";
 
   portfolioCont.style.transform = "translateY(-50vh)";
-
-  document.body.style.overflow = "hidden";
 });
 
 contactCardOn.addEventListener("click", () => {
@@ -90,7 +92,7 @@ contactCardOn.addEventListener("click", () => {
   codeCard.classList.add("border-on");
 
   derp.style.transform = "translateY(100vh)";
-  contactCont.style.zIndex = "-1"
+  contactCont.style.zIndex = "-1";
 
   contactCard.style.zIndex = "0";
   contactCardOn.style.zIndex = "-1";
