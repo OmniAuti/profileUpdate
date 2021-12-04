@@ -1,5 +1,4 @@
 const card = document.querySelectorAll(".portfolio-deck");
-const particleCont = document.getElementById("particles-js");
 const contactCont = document.querySelector(".work-together");
 const portfolioCont = document.querySelector(".portfolio-cont");
 const contactCard = document.querySelector(".stuck");

@@ -36,10 +36,10 @@ a {
 
 #particles-js {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 200vh;
   z-index: -1;
-  transition: all ease-in-out 300ms;
 }
 
 main {
@@ -90,7 +90,6 @@ main {
 }
 
 .intro {
-  height: 100vh;
   width: 100vw;
   position: relative;
   overflow: hidden;
@@ -207,7 +206,6 @@ h1 {
 
 .portfolio-cont {
   width: 100vw;
-  height: 100vh;
   position: relative;
   overflow: hidden;
   transition: transform ease 750ms;
@@ -216,8 +214,6 @@ h1 {
 .portfolio-deck {
   position: absolute;
   box-shadow: 0 0 5px #1c1c25;
-  height: 100vh;
-  width: 100vh;
   left: -50vh;
   top: 50vh;
   transform-origin: top right;
@@ -230,41 +226,13 @@ h1 {
   position: absolute;
   box-shadow: 0 0 5px #1c1c25;
   background-color: #f9f871;
-  height: 99vh;
-  width: 99vh;
-  left: -50vh;
-  top: 50vh;
   transform-origin: top right;
   transform: rotate(45deg);
   cursor: pointer;
   transition: border-radius ease-out 1000ms;
 }
-.stuck-on {
-  position: absolute;
-  background-color: #f9f871;
-  box-shadow: 0 0 5px #1c1c25;
-  height: 99vh;
-  width: 99vh;
-  left: -50vh;
-  top: 50vh;
-  transform-origin: top right;
-  transform: rotate(45deg);
-  z-index: -1;
-  cursor: pointer;
-  transition: border-radius ease-out 1000ms;
-}
 
-.stack:hover,
-.stacked:hover {
-  outline: 1px solid #f8f8ff;
-  box-shadow: 1px -1px 5px #f8f8ff, 1px -1px 5px #f8f8ff;
-}
 
-.stuck:hover,
-.stuck-on:hover {
-  outline: 2px solid #f8f8ff;
-  box-shadow: 1px -1px 5px #f8f8ff;
-}
 
 .contact-link {
   width: fit-content;
@@ -548,6 +516,18 @@ h1 {
   transition: border-radius ease 1000ms;
 }
 
+.stack:hover,
+.stacked:hover {
+  outline: 1px solid #f8f8ff;
+  box-shadow: 1px -1px 5px #f8f8ff, 1px -1px 5px #f8f8ff;
+}
+
+.stuck:hover,
+.stuck-on:hover {
+  outline: 2px solid #f8f8ff;
+  box-shadow: 1px -1px 5px #f8f8ff;
+}
+
 .about-me-cont {
   height: 100%;
   width: 50%;
@@ -641,12 +621,12 @@ h1 {
 
 .work-together {
   width: 100vw;
-  height: 50vh;
   position: absolute;
   display: block;
   bottom: 0;
   overflow: hidden;
-  z-index: -1;
+  z-index: -99;
+  border: 1px solid red;
 }
 
 .derp {
