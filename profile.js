@@ -1,12 +1,13 @@
 const card = document.querySelectorAll(".portfolio-deck");
 const particleCont = document.getElementById("particles-js");
 const contactCont = document.querySelector(".work-together");
+const portfolioCont = document.querySelector(".portfolio-cont");
 const contactCard = document.querySelector(".stuck");
 const contactCardOn = document.querySelector(".stuck-on");
 const designCard = document.querySelector(".stack");
 const codeCard = document.querySelector(".stacked");
 
-function openingNight() {
+function openingContact() {
   card.forEach((card) => {
     card.addEventListener("click", () => {
       card.classList.toggle("theater");
@@ -60,7 +61,7 @@ function openingNight() {
   });
 }
 
-openingNight();
+openingContact();
 
 contactCard.addEventListener("click", () => {
   contactCard.classList.remove("border-on");
@@ -69,15 +70,26 @@ contactCard.addEventListener("click", () => {
   codeCard.classList.remove("border-on");
 
   setTimeout(() => {
+    contactCard.classList.add("active-contact");
     contactCard.style.zIndex = "-1";
     contactCardOn.style.zIndex = "0";
   }, 300);
 
-  particleCont.style.top = "0";
-  contactCont.style.transform = "translateY(0)";
   contactCont.style.display = "block";
+  contactCont.style.bottom = "0vh";
 
-  window.scrollTo(0, document.body.scrollHeight);
+  setTimeout(() => {
+    contactCont.style.transform = "translateY(0)";
+  }, 250);
+
+  window.scroll({
+    top: window.innerHeight, 
+    left: 0, 
+    behavior: 'smooth'
+  });
+
+  portfolioCont.style.transform = "translateY(-50vh)";
+
   document.body.style.overflow = "hidden";
 });
 
@@ -87,13 +99,14 @@ contactCardOn.addEventListener("click", () => {
   designCard.classList.add("border-on");
   codeCard.classList.add("border-on");
 
+  contactCont.style.transform = "translateY(100vh)";
+
   contactCard.style.zIndex = "0";
   contactCardOn.style.zIndex = "-1";
-  contactCont.style.transform = "translateY(50vh)";
   setTimeout(() => {
-    particleCont.style.top = "-50vh";
     contactCont.style.display = "none";
-  }, 300);
+    portfolioCont.style.transform = "translateY(0vh)";
+  }, 250);
   document.body.style.overflow = "scroll";
   document.body.style.overflowX = "hidden";
 });
