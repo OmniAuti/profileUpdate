@@ -23,6 +23,8 @@ body {
   background-color: #1c1c25;
   overflow-x: hidden;
   background-image: url("https://www.transparenttextures.com/patterns/egg-shell.png");
+  opacity: 0;
+  transition:opacity ease-in 1000ms;
 }
 
 a {
@@ -38,6 +40,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
+  height: 200vh;
   width: 100%;
   z-index: -1;
 }
@@ -626,7 +629,6 @@ h1 {
   bottom: 0;
   overflow: hidden;
   z-index: -99;
-  border: 1px solid red;
 }
 
 .derp {
