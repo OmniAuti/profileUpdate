@@ -58,4 +58,8 @@ function setHieghts() {
   document.body.style.opacity = 1;
 }
 
-window.addEventListener("resize", setHieghts);
+window.addEventListener("resize", () => {
+  if (designCard.classList.contains("theater")) return
+  if (codeCard.classList.contains("theater")) return
+  setHieghts();
+});

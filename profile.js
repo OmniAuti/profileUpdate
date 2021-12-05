@@ -9,6 +9,7 @@ const codeCard = document.querySelector(".stacked");
 const codeLink = document.querySelector(".code-link");
 const aboutMeTitle = document.querySelector(".about-me-title");
 const derp = document.querySelector(".derp");
+const fullVH = window.innerHeight; // RESET HEIGHT FOR PORTFOLIO CARDS AS THEY TRANSITION
 
 // HANDLES OPENING CARD ANIMATIONS FOR CODE, DESIGN, CONTACT SECTIONS
 function openingContact() {
@@ -29,10 +30,7 @@ function openingContact() {
         codeCard.classList.add("move-card-back");
         setScrollOnOpenTheater();
       } else if (designCard.classList.contains("curtain-closed")) {
-        designCard.style.height = fullVH - 5 + "px"; // RESETS ELEMENT.STYLE SETTINGS
-        designCard.style.width = fullVH - 5 + "px";
-        designCard.style.left = -(fullVH / 2) - 50 + "px";
-        designCard.style.top = fullVH / 2 + "px";
+        setHieghts();
         contactCard.classList.remove("move-card-back");
         codeCard.classList.remove("move-card-back");
         contactCard.classList.add("move-card-forward"); // ANIMATION TO MOVE UNUSED CARDS INTO VIEW AS CURRENT SELECTION CLOSES
@@ -58,10 +56,7 @@ function openingContact() {
         designCard.classList.add("move-card-back");
         setScrollOnOpenTheater();
       } else if (codeCard.classList.contains("curtain-closed")) {
-        codeCard.style.height = fullVH - 5 + "px"; // RESETS ELEMENT.STYLE SETTINGS
-        codeCard.style.width = fullVH - 5 + "px";
-        codeCard.style.left = -(fullVH / 2) - 100 + "px";
-        codeCard.style.top = fullVH / 2 + "px";
+        setHieghts();
         contactCard.classList.remove("move-card-back");
         designCard.classList.remove("move-card-back");
         contactCard.classList.add("move-card-forward");
@@ -139,5 +134,5 @@ contactCard.addEventListener("click", () => {
 
 function setScrollOnOpenTheater() {
   document.body.style.overflow = "hidden";
-  window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
+  window.scrollTo({ top: portfolioCont.getBoundingClientRect().bottom, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
 }
