@@ -7,6 +7,7 @@ const designCard = document.querySelector(".stack");
 const designLink = document.querySelector(".design-link");
 const codeCard = document.querySelector(".stacked");
 const codeLink = document.querySelector(".code-link");
+const aboutMeTitle = document.querySelector(".about-me-title");
 const derp = document.querySelector(".derp");
 
 // HANDLES OPENING CARD ANIMATIONS FOR CODE, DESIGN, CONTACT SECTIONS
@@ -19,6 +20,7 @@ function openingContact() {
       card.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE
 
       if (designCard.classList.contains("theater")) {
+        aboutMeTitle.style.zIndex = -1;
         designCard.style.height = null; // WIPES ELEMENT.STYLE SETTINGS
         designCard.style.width = null;
         designCard.style.left = null;
@@ -36,6 +38,7 @@ function openingContact() {
         contactCard.classList.add("move-card-forward"); // ANIMATION TO MOVE UNUSED CARDS INTO VIEW AS CURRENT SELECTION CLOSES
         codeCard.classList.add("move-card-forward");
         setTimeout(() => {
+          aboutMeTitle.style.zIndex = 1;
           document.body.style.overflow = "scroll"; // RESETS LOCKED SCROLL
           document.body.style.overflowX = "hidden";
           // REMOVES ANIMATION AS ANIMATION COMPLETES FORWARD
@@ -45,6 +48,7 @@ function openingContact() {
       }
 
       if (codeCard.classList.contains("theater")) {
+        aboutMeTitle.style.zIndex = -1;
         // REPEATS SAME MOTIONS BUT FOR CODE CARD
         codeCard.style.height = null; // WIPES ELEMENT.STYLE SETTINGS
         codeCard.style.width = null;
@@ -63,6 +67,7 @@ function openingContact() {
         contactCard.classList.add("move-card-forward");
         designCard.classList.add("move-card-forward");
         setTimeout(() => {
+          aboutMeTitle.style.zIndex = 1;
           document.body.style.overflow = "scroll"; // RESETS LOCKED SCROLL
           document.body.style.overflowX = "hidden";
           contactCard.classList.remove("move-card-forward");
