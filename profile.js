@@ -30,8 +30,8 @@ function openingContact() {
         codeCard.classList.add("move-card-back");
         setScrollOnOpenTheater();
       } else if (designCard.classList.contains("curtain-closed")) {
-        window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
         setHieghts();
+        window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
         contactCard.classList.remove("move-card-back");
         codeCard.classList.remove("move-card-back");
         contactCard.classList.add("move-card-forward"); // ANIMATION TO MOVE UNUSED CARDS INTO VIEW AS CURRENT SELECTION CLOSES
@@ -57,8 +57,8 @@ function openingContact() {
         designCard.classList.add("move-card-back");
         setScrollOnOpenTheater();
       } else if (codeCard.classList.contains("curtain-closed")) {
-        window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
         setHieghts();
+        window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
         contactCard.classList.remove("move-card-back");
         designCard.classList.remove("move-card-back");
         contactCard.classList.add("move-card-forward");
