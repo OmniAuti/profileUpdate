@@ -19,22 +19,24 @@ function openingContact() {
       card.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE
 
       if (designCard.classList.contains("theater")) {
-        designCard.style.height = null;
+        designCard.style.height = null; // WIPES ELEMENT.STYLE SETTINGS
         designCard.style.width = null;
         designCard.style.left = null;
         designCard.style.top = null;
         contactCard.classList.add("move-card-back"); // ANIMATION TO MOVE UNUSED CARDS OUT OF VIEW
         codeCard.classList.add("move-card-back");
+        setScrollOnOpenTheater();
       } else if (designCard.classList.contains("curtain-closed")) {
-        designCard.style.height = (fullVH - 5) + 'px';
-        designCard.style.width = (fullVH - 5)  + 'px';
-        designCard.style.left = -(fullVH / 2) - 50  + 'px';
-        designCard.style.top = (fullVH / 2)  + 'px';
+        designCard.style.height = fullVH - 5 + "px"; // RESETS ELEMENT.STYLE SETTINGS
+        designCard.style.width = fullVH - 5 + "px";
+        designCard.style.left = -(fullVH / 2) - 50 + "px";
+        designCard.style.top = fullVH / 2 + "px";
         contactCard.classList.remove("move-card-back");
         codeCard.classList.remove("move-card-back");
         contactCard.classList.add("move-card-forward"); // ANIMATION TO MOVE UNUSED CARDS INTO VIEW AS CURRENT SELECTION CLOSES
         codeCard.classList.add("move-card-forward");
-
+        document.body.style.overflow = "scroll"; // RESETS LOCKED SCROLL
+        document.body.style.overflowX = "hidden";
         setTimeout(() => {
           // REMOVES ANIMATION AS ANIMATION COMPLETES FORWARD
           contactCard.classList.remove("move-card-forward");
@@ -44,23 +46,24 @@ function openingContact() {
 
       if (codeCard.classList.contains("theater")) {
         // REPEATS SAME MOTIONS BUT FOR CODE CARD
-        codeCard.style.height = null;
+        codeCard.style.height = null; // WIPES ELEMENT.STYLE SETTINGS
         codeCard.style.width = null;
         codeCard.style.left = null;
         codeCard.style.top = null;
-
         contactCard.classList.add("move-card-back");
         designCard.classList.add("move-card-back");
+        setScrollOnOpenTheater();
       } else if (codeCard.classList.contains("curtain-closed")) {
-        codeCard.style.height = (fullVH - 5) + 'px';
-        codeCard.style.width = (fullVH - 5)  + 'px';
-        codeCard.style.left = -(fullVH / 2) - 100  + 'px';
-        codeCard.style.top = (fullVH / 2)  + 'px';
+        codeCard.style.height = fullVH - 5 + "px";  // RESETS ELEMENT.STYLE SETTINGS
+        codeCard.style.width = fullVH - 5 + "px";
+        codeCard.style.left = -(fullVH / 2) - 100 + "px";
+        codeCard.style.top = fullVH / 2 + "px";
         contactCard.classList.remove("move-card-back");
         designCard.classList.remove("move-card-back");
         contactCard.classList.add("move-card-forward");
         designCard.classList.add("move-card-forward");
-
+        document.body.style.overflow = "scroll"; // RESETS LOCKED SCROLL
+        document.body.style.overflowX = "hidden";
         setTimeout(() => {
           contactCard.classList.remove("move-card-forward");
           designCard.classList.remove("move-card-forward");
@@ -104,7 +107,7 @@ contactCard.addEventListener("click", () => {
     contactCard.classList.remove("active-contact");
   } else {
     contactCard.classList.add("active-contact");
- 
+
     // THIS IS ANIMATION FOR LINKS WHEN CONTACT CARD OPEN
     contactLink.classList.add("active-contact-link");
     contactLink.classList.remove("reverse-contact-link");
@@ -121,12 +124,15 @@ contactCard.addEventListener("click", () => {
     designCard.classList.remove("border-on");
     codeCard.classList.remove("border-on");
 
-    document.body.style.overflow = "hidden"; // LOCKED SCROLL TO STAY ON CONTACT SECTION
-    window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
+    setScrollOnOpenTheater()
 
     derp.style.transform = "translate(0vh)"; // BRINGS IN HEADER OF SECTION
     contactCont.style.zIndex = "0";
-
     portfolioCont.style.transform = "translateY(-50vh)"; // LIFTS UP PROTFOLIO SECTION TO GIVE FEEL OF MOVEMENT
   }
 });
+
+function setScrollOnOpenTheater() {
+  document.body.style.overflow = "hidden";
+  window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
+}
