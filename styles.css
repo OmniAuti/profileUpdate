@@ -24,7 +24,7 @@ body {
   overflow-x: hidden;
   background-image: url("egg-shell.png");
   opacity: 0;
-  transition:opacity ease-in 1000ms;
+  transition: opacity ease-in 1000ms;
 }
 
 a {
@@ -234,8 +234,6 @@ h1 {
   cursor: pointer;
   transition: border-radius ease-out 1000ms;
 }
-
-
 
 .contact-link {
   width: fit-content;
@@ -550,7 +548,6 @@ h1 {
   margin: 0 1px;
 }
 
-
 .about-me-title {
   color: #f8f8ff;
   margin-bottom: 10px;
@@ -558,6 +555,14 @@ h1 {
   font-size: 50px;
   text-align: right;
   width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.about-me-title div {
+  margin-left: 15px;
 }
 
 .about-me {
