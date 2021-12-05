@@ -59,7 +59,7 @@ function setHieghts() {
 }
 
 window.addEventListener("resize", () => {
-  if (designCard.classList.contains("theater")) return
-  if (codeCard.classList.contains("theater")) return
+  if (designCard.classList.contains("theater")) return;
+  if (codeCard.classList.contains("theater")) return;
   setHieghts();
 });
