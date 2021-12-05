@@ -30,6 +30,7 @@ function openingContact() {
         codeCard.classList.add("move-card-back");
         setScrollOnOpenTheater();
       } else if (designCard.classList.contains("curtain-closed")) {
+        window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
         setHieghts();
         contactCard.classList.remove("move-card-back");
         codeCard.classList.remove("move-card-back");
@@ -56,6 +57,7 @@ function openingContact() {
         designCard.classList.add("move-card-back");
         setScrollOnOpenTheater();
       } else if (codeCard.classList.contains("curtain-closed")) {
+        window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
         setHieghts();
         contactCard.classList.remove("move-card-back");
         designCard.classList.remove("move-card-back");
@@ -134,5 +136,5 @@ contactCard.addEventListener("click", () => {
 
 function setScrollOnOpenTheater() {
   document.body.style.overflow = "hidden";
-  window.scrollTo({ top: portfolioCont.getBoundingClientRect().bottom, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
+  window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
 }
