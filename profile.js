@@ -19,9 +19,17 @@ function openingContact() {
       card.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE
 
       if (designCard.classList.contains("theater")) {
+        designCard.style.height = null;
+        designCard.style.width = null;
+        designCard.style.left = null;
+        designCard.style.top = null;
         contactCard.classList.add("move-card-back"); // ANIMATION TO MOVE UNUSED CARDS OUT OF VIEW
         codeCard.classList.add("move-card-back");
       } else if (designCard.classList.contains("curtain-closed")) {
+        designCard.style.height = (fullVH - 5) + 'px';
+        designCard.style.width = (fullVH - 5)  + 'px';
+        designCard.style.left = -(fullVH / 2) - 50  + 'px';
+        designCard.style.top = (fullVH / 2)  + 'px';
         contactCard.classList.remove("move-card-back");
         codeCard.classList.remove("move-card-back");
         contactCard.classList.add("move-card-forward"); // ANIMATION TO MOVE UNUSED CARDS INTO VIEW AS CURRENT SELECTION CLOSES
@@ -36,9 +44,18 @@ function openingContact() {
 
       if (codeCard.classList.contains("theater")) {
         // REPEATS SAME MOTIONS BUT FOR CODE CARD
+        codeCard.style.height = null;
+        codeCard.style.width = null;
+        codeCard.style.left = null;
+        codeCard.style.top = null;
+
         contactCard.classList.add("move-card-back");
         designCard.classList.add("move-card-back");
       } else if (codeCard.classList.contains("curtain-closed")) {
+        codeCard.style.height = (fullVH - 5) + 'px';
+        codeCard.style.width = (fullVH - 5)  + 'px';
+        codeCard.style.left = -(fullVH / 2) - 100  + 'px';
+        codeCard.style.top = (fullVH / 2)  + 'px';
         contactCard.classList.remove("move-card-back");
         designCard.classList.remove("move-card-back");
         contactCard.classList.add("move-card-forward");
