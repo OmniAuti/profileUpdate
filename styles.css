@@ -339,6 +339,7 @@ h1 {
   margin-top: 0%;
   transform-origin: top left;
   transform: rotate(0deg);
+  transition: opacity ease-in 500ms;
 }
 
 .reverse-design-link {
@@ -351,7 +352,7 @@ h1 {
 
 @keyframes designTextReset {
   0% {
-    margin-top: 32.5%;
+    margin-top: 30%;
     margin-left: 95%;
     transform-origin: top left;
     transform: rotate(-90deg);
@@ -413,7 +414,7 @@ h1 {
   }
 
   100% {
-    margin-top: 31.5%;
+    margin-top: 30%;
     margin-left: 95%;
     transform: rotate(-90deg);
   }
@@ -433,6 +434,7 @@ h1 {
   font-size: 25px;
   transform-origin: top left;
   transform: rotate(0deg);
+  transition: opacity ease-in 500ms;
 }
 
 .reverse-code-link {
@@ -506,7 +508,7 @@ h1 {
   }
 
   100% {
-    margin-top: calc(40% + 12.5px);
+    margin-top: 40%;
     margin-left: 95%;
     transform: rotate(-90deg);
   }
@@ -514,6 +516,9 @@ h1 {
 
 .border-on {
   border-radius: 20px;
+}
+
+.border-tran {
   transition: border-radius ease 1000ms;
 }
 

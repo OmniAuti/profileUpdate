@@ -15,6 +15,17 @@ const fullVH = window.innerHeight; // RESET HEIGHT FOR PORTFOLIO CARDS AS THEY T
 function openingContact() {
   card.forEach((card) => {
     card.addEventListener("click", () => {
+
+      if (contactCard.classList.contains("active-contact")) {
+        designLink.style.opacity = 0
+        codeLink.style.opacity = 0
+        handleContact()
+        setTimeout(() => {
+          designLink.style.opacity = 1
+          codeLink.style.opacity = 1
+        }, 1000)
+      }
+
       card.classList.toggle("theater"); // ACTIVE ON SCREEN FRONT AND CENTER
 
       contactCard.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE
@@ -82,7 +93,9 @@ function openingContact() {
 
 openingContact();
 // HANDLES CONTACT CARD LOGISTICS
-contactCard.addEventListener("click", () => {
+contactCard.addEventListener("click", handleContact);
+
+function handleContact() {
   if (contactCard.classList.contains("active-contact")) {
     // CHECK FOR ACTIVE CONTACT
     contactCard.classList.add("border-on"); // SETS BORDERS OF CARDS
@@ -109,7 +122,6 @@ contactCard.addEventListener("click", () => {
     contactCard.classList.remove("active-contact");
   } else {
     contactCard.classList.add("active-contact");
-
     // THIS IS ANIMATION FOR LINKS WHEN CONTACT CARD OPEN
     contactLink.classList.add("active-contact-link");
     contactLink.classList.remove("reverse-contact-link");
@@ -132,7 +144,8 @@ contactCard.addEventListener("click", () => {
     contactCont.style.zIndex = "0";
     portfolioCont.style.transform = "translateY(-50vh)"; // LIFTS UP PROTFOLIO SECTION TO GIVE FEEL OF MOVEMENT
   }
-});
+}
+
 
 function setScrollOnOpenTheater() {
   document.body.style.overflow = "hidden";
