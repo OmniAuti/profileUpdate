@@ -563,6 +563,7 @@ h1 {
 
 .about-me-title div {
   margin-left: 15px;
+  white-space: nowrap;
 }
 
 .about-me {
