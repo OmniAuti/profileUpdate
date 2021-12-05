@@ -61,5 +61,8 @@ function setHieghts() {
 window.addEventListener("resize", () => {
   if (designCard.classList.contains("theater")) return;
   if (codeCard.classList.contains("theater")) return;
+  if (contactCard.classList.contains("active-contact")) {
+    window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
+  }
   setHieghts();
 });
