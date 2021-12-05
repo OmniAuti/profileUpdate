@@ -35,9 +35,9 @@ function openingContact() {
         codeCard.classList.remove("move-card-back");
         contactCard.classList.add("move-card-forward"); // ANIMATION TO MOVE UNUSED CARDS INTO VIEW AS CURRENT SELECTION CLOSES
         codeCard.classList.add("move-card-forward");
-        document.body.style.overflow = "scroll"; // RESETS LOCKED SCROLL
-        document.body.style.overflowX = "hidden";
         setTimeout(() => {
+          document.body.style.overflow = "scroll"; // RESETS LOCKED SCROLL
+          document.body.style.overflowX = "hidden";
           // REMOVES ANIMATION AS ANIMATION COMPLETES FORWARD
           contactCard.classList.remove("move-card-forward");
           codeCard.classList.remove("move-card-forward");
@@ -54,7 +54,7 @@ function openingContact() {
         designCard.classList.add("move-card-back");
         setScrollOnOpenTheater();
       } else if (codeCard.classList.contains("curtain-closed")) {
-        codeCard.style.height = fullVH - 5 + "px";  // RESETS ELEMENT.STYLE SETTINGS
+        codeCard.style.height = fullVH - 5 + "px"; // RESETS ELEMENT.STYLE SETTINGS
         codeCard.style.width = fullVH - 5 + "px";
         codeCard.style.left = -(fullVH / 2) - 100 + "px";
         codeCard.style.top = fullVH / 2 + "px";
@@ -62,9 +62,9 @@ function openingContact() {
         designCard.classList.remove("move-card-back");
         contactCard.classList.add("move-card-forward");
         designCard.classList.add("move-card-forward");
-        document.body.style.overflow = "scroll"; // RESETS LOCKED SCROLL
-        document.body.style.overflowX = "hidden";
         setTimeout(() => {
+          document.body.style.overflow = "scroll"; // RESETS LOCKED SCROLL
+          document.body.style.overflowX = "hidden";
           contactCard.classList.remove("move-card-forward");
           designCard.classList.remove("move-card-forward");
         }, 1000);
@@ -124,7 +124,7 @@ contactCard.addEventListener("click", () => {
     designCard.classList.remove("border-on");
     codeCard.classList.remove("border-on");
 
-    setScrollOnOpenTheater()
+    setScrollOnOpenTheater();
 
     derp.style.transform = "translate(0vh)"; // BRINGS IN HEADER OF SECTION
     contactCont.style.zIndex = "0";
