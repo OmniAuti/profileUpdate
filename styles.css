@@ -22,7 +22,7 @@ html {
 body {
   background-color: #1c1c25;
   overflow-x: hidden;
-  background-image: url("https://www.transparenttextures.com/patterns/egg-shell.png");
+  background-image: url("egg-shell.png");
   opacity: 0;
   transition:opacity ease-in 1000ms;
 }
@@ -543,14 +543,13 @@ h1 {
   text-align: center;
 }
 
-.me {
-  height: 200px;
-  right: 250px;
-  bottom: 100px;
-  z-index: -1;
-  margin-top: 100px;
-  align-self: flex-start;
+.move-letter {
+  transition: all ease-out 500ms;
+  transform-style: preserve-3d;
+  display: inline-block;
+  margin: 0 1px;
 }
+
 
 .about-me-title {
   color: #f8f8ff;
