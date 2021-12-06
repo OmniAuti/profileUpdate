@@ -57,10 +57,29 @@ function setHieghts() {
 
   document.body.style.opacity = 1;
 }
-
+// SETS RESIZE OF CONTAINERS AND ACTIVE CARDS
 window.addEventListener("resize", () => {
-  if (designCard.classList.contains("theater")) return;
-  if (codeCard.classList.contains("theater")) return;
+  const portCont = document.getElementById("portfolio");
+  const heroCont = document.getElementById("hero");
+  const conCont = document.getElementById("contact");
+  const fullVH = window.innerHeight;
+  // HANDLES ACTIVE DESIGN CARD HEIGHT
+  if (designCard.classList.contains("theater")) {
+    portCont.style.height = fullVH + "px";
+    heroCont.style.height = fullVH + "px";
+    conCont.style.height = fullVH / 2 + "px";
+    window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
+    return;
+  }
+  // HANDLES ACTIVE CODE CARD HEIGHT
+  if (codeCard.classList.contains("theater")) {
+    portCont.style.height = fullVH + "px";
+    heroCont.style.height = fullVH + "px";
+    conCont.style.height = fullVH / 2 + "px";
+    window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
+    return;
+  }
+  // HANDLES ACTIVE CONTACT SECTION
   if (contactCard.classList.contains("active-contact")) {
     window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
   }
