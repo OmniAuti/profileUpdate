@@ -214,17 +214,6 @@ h1 {
   transition: transform ease 750ms;
 }
 
-.portfolio-deck {
-  position: absolute;
-  box-shadow: 0 0 5px #1c1c25;
-  left: -50vh;
-  top: 50vh;
-  transform-origin: top right;
-  transform: rotate(45deg);
-  cursor: pointer;
-  transition: border-radius ease-out 1000ms;
-}
-
 .stuck {
   position: absolute;
   box-shadow: 0 0 5px #1c1c25;
@@ -328,6 +317,14 @@ h1 {
 .stack {
   background-color: #fcb363;
   left: calc(-50vh - 50px);
+  position: absolute;
+  box-shadow: 0 0 5px #1c1c25;
+  left: -50vh;
+  top: 50vh;
+  transform-origin: top right;
+  transform: rotate(45deg);
+  cursor: pointer;
+  transition: border-radius ease-out 1000ms;
 }
 
 .design-link {
@@ -424,6 +421,14 @@ h1 {
   background-color: #d87b6b;
   left: calc(-50vh - 100px);
   transition: transform ease-out 1000ms;
+  position: absolute;
+  box-shadow: 0 0 5px #1c1c25;
+  left: -50vh;
+  top: 50vh;
+  transform-origin: top right;
+  transform: rotate(45deg);
+  cursor: pointer;
+  transition: border-radius ease-out 1000ms;
 }
 
 .code-link {
@@ -587,6 +592,7 @@ h1 {
   transform-origin: top right;
   transform: rotate(0deg);
   transition: all ease-out 1000ms;
+  cursor:default;
 }
 
 .curtain-closed {
@@ -644,4 +650,11 @@ h1 {
 .derp {
   transform: translateY(100vh);
   transition: all ease-out 500ms;
+}
+
+
+.design-close-btn,
+  .code-close-btn {
+  padding: 50px;
+  cursor: pointer;
 }
