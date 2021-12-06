@@ -25,10 +25,8 @@ const codeCloseBtn = document.querySelector(".code-close-btn");
 // CLOSE BTN FUNCTIONS
 function handleDesignCloseBtn() {
   if (designCard.classList.contains("theater")) {
-    contactTabLink.style.display = "block"; // DISABLE CONTACT LINK
-    codeTabLink.style.display = "block"; // DISABLE CODE LINK
-    contactTabLink.style.display = null; // DISABLE CONTACT LINK
-    codeTabLink.style.display = null; // DISABLE CODE LINK
+    contactTabLink.setAttribute('tabindex', '0')// ENABLE CONTACT LINK
+    codeTabLink.setAttribute('tabindex', '0') // ENABLE CODE LINK
     //CHECK IF ACTIVE CARD
     designCard.classList.add("close-theater"); // ADD CLASS TO CATCH SIZE RESET IF/ELSE
     setHieghts();
@@ -43,7 +41,7 @@ function handleDesignCloseBtn() {
     codeCard.classList.add("move-card-forward");
     designCard.classList.remove("theater"); // REMOVES MAIN FOCUS CLASS
     setTimeout(() => {
-      designCloseBtn.style.display = "none"; // GET RID OF CLOSE BTN
+      designCloseBtn.setAttribute('tabindex', '-1') // DISABLE TABABLE CLOSE BTN OFF SCREEN
       aboutMeTitle.style.zIndex = 1;
       document.body.style.overflow = "scroll"; // RESETS LOCKED SCROLL
       document.body.style.overflowX = "hidden";
@@ -56,10 +54,8 @@ function handleDesignCloseBtn() {
 }
 function handleCodeCloseBtn() {
   if (codeCard.classList.contains("theater")) {
-    contactTabLink.style.display = "block"; // DISABLE CONTACT LINK
-    designTabLink.style.display = "block"; // DISABLE CODE LINK
-    contactTabLink.style.display = null; // DISABLE CONTACT LINK
-    designTabLink.style.display = null; // DISABLE CODE LINK
+    contactTabLink.setAttribute('tabindex', '0') // ENABLE LINKS
+    designTabLink.setAttribute('tabindex', '0')
     //CHECK IF ACTIVE CARD
     codeCard.classList.add("close-theater"); // ADD CLASS TO CATCH SIZE RESET IF/ELSE
     setHieghts();
@@ -74,7 +70,7 @@ function handleCodeCloseBtn() {
     designCard.classList.add("move-card-forward");
     codeCard.classList.remove("theater");
     setTimeout(() => {
-      codeCloseBtn.style.display = "none"; // GET RID OF CLOSE BTN
+      codeCloseBtn.setAttribute('tabindex', '-1') // GET RID OF CLOSE BTN
       aboutMeTitle.style.zIndex = 1;
       document.body.style.overflow = "scroll"; // RESETS LOCKED SCROLL
       document.body.style.overflowX = "hidden";
@@ -105,10 +101,9 @@ function handleContactActiveDesignCard() {
 
   if (designCard.classList.contains("theater")) {
     // SET ACTIVE TAB ABLE LINKS
-    designCloseBtn.style.display = "block"; // BRING UP CLOSE BTN
-    contactTabLink.style.display = "none"; // DISABLE CONTACT LINK
-    designTabLink.style.cursor = "default"; // DISABLE CONTACT LINK
-    codeTabLink.style.display = "none"; // DISABLE CODE LINK
+    designCloseBtn.setAttribute('tabindex', '0') // BRING UP CLOSE BTN
+    contactTabLink.setAttribute('tabindex', '-1') // DISABLE CONTACT LINK
+    codeTabLink.setAttribute('tabindex', '-1') // DISABLE CODE LINK
 
     aboutMeTitle.style.zIndex = -1;
     designCard.style.height = null; // WIPES ELEMENT.STYLE SETTINGS
@@ -144,10 +139,9 @@ function handleContactActiveCodeCard() {
 
   if (codeCard.classList.contains("theater")) {
     // SET ACTIVE TAB ABLE LINKS
-    codeCloseBtn.style.display = "block"; // BRING UP CLOSE BTN
-    contactTabLink.style.display = "none"; // DISABLE CONTACT LINK
-    codeTabLink.style.cursor = "default"; // DISABLE CONTACT LINK
-    designTabLink.style.display = "none"; // DISABLE CODE LINK
+    codeCloseBtn.setAttribute('tabindex', '0') // BRING UP CLOSE BTN
+    contactTabLink.setAttribute('tabindex', '-1') // DISABLE CONTACT LINK
+    designTabLink.setAttribute('tabindex', '-1') // DISABLE CODE LINK
 
     aboutMeTitle.style.zIndex = -1;
     // REPEATS SAME MOTIONS BUT FOR CODE CARD
