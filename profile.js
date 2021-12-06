@@ -1,19 +1,23 @@
-const contactCont = document.querySelector(".work-together");
+// HANDLES OPENING CARD ANIMATIONS FOR CODE, DESIGN, CONTACT SECTIONS --------------------------
+
+// SECTIONS OR CONTAINERS
+const contactCont = document.querySelector(".contact-cont");
 const portfolioCont = document.querySelector(".portfolio-cont");
+// CARD
 const contactCard = document.querySelector(".stuck");
-const contactLink = document.querySelector(".contact-link");
 const designCard = document.querySelector(".stack");
-const designLink = document.querySelector(".design-link");
 const codeCard = document.querySelector(".stacked");
+// LINKS
+const contactLink = document.querySelector(".contact-link");
+const designLink = document.querySelector(".design-link");
 const codeLink = document.querySelector(".code-link");
+// CONTACT SECTION CONTENT
 const aboutMeTitle = document.querySelector(".about-me-title");
 const derp = document.querySelector(".derp");
-
-// HANDLES OPENING CARD ANIMATIONS FOR CODE, DESIGN, CONTACT SECTIONS
-
+// CLOSE BUTTONS
 const designCloseBtn = document.querySelector(".design-close-btn");
 const codeCloseBtn = document.querySelector(".code-close-btn");
-
+// CLOSE BTN FUNCTIONS
 function handleDesignCloseBtn() {
   if (designCard.classList.contains("theater")) {
     //CHECK IF ACTIVE CARD
@@ -40,7 +44,6 @@ function handleDesignCloseBtn() {
     }, 1000);
   }
 }
-
 function handleCodeCloseBtn() {
   if (codeCard.classList.contains("theater")) {
     //CHECK IF ACTIVE CARD
@@ -67,10 +70,7 @@ function handleCodeCloseBtn() {
     }, 1000);
   }
 }
-
-designCloseBtn.addEventListener("click", handleDesignCloseBtn);
-codeCloseBtn.addEventListener("click", handleCodeCloseBtn);
-
+// ACTIVE CONTACT HANDLERS
 function handleContactActiveDesignCard() {
   if (contactCard.classList.contains("active-contact")) {
     designLink.style.opacity = 0;
@@ -138,13 +138,7 @@ function handleContactActiveCodeCard() {
     contactCard.classList.remove("curtain-closed");
   }, 1000);
 }
-
-designCard.addEventListener("click", handleContactActiveDesignCard);
-codeCard.addEventListener("click", handleContactActiveCodeCard);
-
-// HANDLES CONTACT CARD LOGISTICS
-contactCard.addEventListener("click", handleContact);
-
+// CONTACT ALL FUNCTION ACTIVE/NONACTIVE
 function handleContact() {
   if (contactCard.classList.contains("active-contact")) {
     // CHECK FOR ACTIVE CONTACT
@@ -195,8 +189,17 @@ function handleContact() {
     portfolioCont.style.transform = "translateY(-50vh)"; // LIFTS UP PROTFOLIO SECTION TO GIVE FEEL OF MOVEMENT
   }
 }
-
+// SCROLL RESET FUNCTION
 function setScrollOnOpenTheater() {
   document.body.style.overflow = "hidden";
   window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
 }
+// CLOSE BTN EVENTS
+designCloseBtn.addEventListener("click", handleDesignCloseBtn);
+codeCloseBtn.addEventListener("click", handleCodeCloseBtn);
+// DESIGN/CODE CARD CLICK EVENTS
+designCard.addEventListener("click", handleContactActiveDesignCard);
+codeCard.addEventListener("click", handleContactActiveCodeCard);
+// CONTACT CARD CLICK EVENT
+contactCard.addEventListener("click", handleContact);
+

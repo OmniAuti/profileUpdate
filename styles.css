@@ -592,7 +592,7 @@ h1 {
   transform-origin: top right;
   transform: rotate(0deg);
   transition: all ease-out 1000ms;
-  cursor:default;
+  cursor: default;
 }
 
 .curtain-closed {
@@ -638,7 +638,7 @@ h1 {
 
 /* ------------- Work Together Mode --------------- */
 
-.work-together {
+.contact-cont {
   width: 100vw;
   position: absolute;
   display: block;
@@ -652,9 +652,8 @@ h1 {
   transition: all ease-out 500ms;
 }
 
-
 .design-close-btn,
-  .code-close-btn {
+.code-close-btn {
   padding: 50px;
   cursor: pointer;
 }
