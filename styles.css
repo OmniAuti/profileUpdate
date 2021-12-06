@@ -32,8 +32,8 @@ a {
   text-decoration: none;
 }
 
-.disabled-links {
-  pointer-events: none;
+a:focus-visible {
+  outline-color: #6D87FF;
 }
 
 #particles-js {
@@ -656,4 +656,6 @@ h1 {
 .code-close-btn {
   padding: 50px;
   cursor: pointer;
+  display: none;
+  transition: all ease 1000ms;
 }

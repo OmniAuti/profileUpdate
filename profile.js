@@ -11,15 +11,24 @@ const codeCard = document.querySelector(".stacked");
 const contactLink = document.querySelector(".contact-link");
 const designLink = document.querySelector(".design-link");
 const codeLink = document.querySelector(".code-link");
+// LINKS FOR UI DISABLE
+const contactTabLink = document.querySelector(".contact-tab-link");
+const designTabLink = document.querySelector(".design-tab-link");
+const codeTabLink = document.querySelector(".code-tab-link");
 // CONTACT SECTION CONTENT
 const aboutMeTitle = document.querySelector(".about-me-title");
 const derp = document.querySelector(".derp");
 // CLOSE BUTTONS
 const designCloseBtn = document.querySelector(".design-close-btn");
 const codeCloseBtn = document.querySelector(".code-close-btn");
+
 // CLOSE BTN FUNCTIONS
 function handleDesignCloseBtn() {
   if (designCard.classList.contains("theater")) {
+    contactTabLink.style.display = "block"; // DISABLE CONTACT LINK
+    codeTabLink.style.display = "block"; // DISABLE CODE LINK
+    contactTabLink.style.display = null; // DISABLE CONTACT LINK
+    codeTabLink.style.display = null; // DISABLE CODE LINK
     //CHECK IF ACTIVE CARD
     designCard.classList.add("close-theater"); // ADD CLASS TO CATCH SIZE RESET IF/ELSE
     setHieghts();
@@ -32,8 +41,9 @@ function handleDesignCloseBtn() {
     codeCard.classList.remove("move-card-back");
     contactCard.classList.add("move-card-forward"); // ANIMATION TO MOVE UNUSED CARDS INTO VIEW AS CURRENT SELECTION CLOSES
     codeCard.classList.add("move-card-forward");
-    designCard.classList.remove("theater");
+    designCard.classList.remove("theater"); // REMOVES MAIN FOCUS CLASS
     setTimeout(() => {
+      designCloseBtn.style.display = "none"; // GET RID OF CLOSE BTN
       aboutMeTitle.style.zIndex = 1;
       document.body.style.overflow = "scroll"; // RESETS LOCKED SCROLL
       document.body.style.overflowX = "hidden";
@@ -46,6 +56,10 @@ function handleDesignCloseBtn() {
 }
 function handleCodeCloseBtn() {
   if (codeCard.classList.contains("theater")) {
+    contactTabLink.style.display = "block"; // DISABLE CONTACT LINK
+    designTabLink.style.display = "block"; // DISABLE CODE LINK
+    contactTabLink.style.display = null; // DISABLE CONTACT LINK
+    designTabLink.style.display = null; // DISABLE CODE LINK
     //CHECK IF ACTIVE CARD
     codeCard.classList.add("close-theater"); // ADD CLASS TO CATCH SIZE RESET IF/ELSE
     setHieghts();
@@ -60,6 +74,7 @@ function handleCodeCloseBtn() {
     designCard.classList.add("move-card-forward");
     codeCard.classList.remove("theater");
     setTimeout(() => {
+      codeCloseBtn.style.display = "none"; // GET RID OF CLOSE BTN
       aboutMeTitle.style.zIndex = 1;
       document.body.style.overflow = "scroll"; // RESETS LOCKED SCROLL
       document.body.style.overflowX = "hidden";
@@ -89,6 +104,12 @@ function handleContactActiveDesignCard() {
   this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITION
 
   if (designCard.classList.contains("theater")) {
+    // SET ACTIVE TAB ABLE LINKS
+    designCloseBtn.style.display = "block"; // BRING UP CLOSE BTN
+    contactTabLink.style.display = "none"; // DISABLE CONTACT LINK
+    designTabLink.style.cursor = "default"; // DISABLE CONTACT LINK
+    codeTabLink.style.display = "none"; // DISABLE CODE LINK
+
     aboutMeTitle.style.zIndex = -1;
     designCard.style.height = null; // WIPES ELEMENT.STYLE SETTINGS
     designCard.style.width = null;
@@ -98,6 +119,7 @@ function handleContactActiveDesignCard() {
     codeCard.classList.add("move-card-back");
     setScrollOnOpenTheater();
   }
+  // REMOVES UNCLICKABLE CLASS
   setTimeout(() => {
     designCard.classList.remove("curtain-closed");
     contactCard.classList.remove("curtain-closed");
@@ -121,6 +143,12 @@ function handleContactActiveCodeCard() {
   this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITION
 
   if (codeCard.classList.contains("theater")) {
+    // SET ACTIVE TAB ABLE LINKS
+    codeCloseBtn.style.display = "block"; // BRING UP CLOSE BTN
+    contactTabLink.style.display = "none"; // DISABLE CONTACT LINK
+    codeTabLink.style.cursor = "default"; // DISABLE CONTACT LINK
+    designTabLink.style.display = "none"; // DISABLE CODE LINK
+
     aboutMeTitle.style.zIndex = -1;
     // REPEATS SAME MOTIONS BUT FOR CODE CARD
     codeCard.style.height = null; // WIPES ELEMENT.STYLE SETTINGS
@@ -131,7 +159,6 @@ function handleContactActiveCodeCard() {
     designCard.classList.add("move-card-back");
     setScrollOnOpenTheater();
   }
-
   // REMOVES UNCLICKABLE CLASS
   setTimeout(() => {
     this.classList.remove("curtain-closed");
@@ -202,4 +229,3 @@ designCard.addEventListener("click", handleContactActiveDesignCard);
 codeCard.addEventListener("click", handleContactActiveCodeCard);
 // CONTACT CARD CLICK EVENT
 contactCard.addEventListener("click", handleContact);
-
