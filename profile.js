@@ -25,8 +25,8 @@ const codeCloseBtn = document.querySelector(".code-close-btn");
 // CLOSE BTN FUNCTIONS
 function handleDesignCloseBtn() {
   if (designCard.classList.contains("theater")) {
-    contactTabLink.setAttribute('tabindex', '0')// ENABLE CONTACT LINK
-    codeTabLink.setAttribute('tabindex', '0') // ENABLE CODE LINK
+    contactTabLink.setAttribute("tabindex", "0"); // ENABLE CONTACT LINK
+    codeTabLink.setAttribute("tabindex", "0"); // ENABLE CODE LINK
     //CHECK IF ACTIVE CARD
     designCard.classList.add("close-theater"); // ADD CLASS TO CATCH SIZE RESET IF/ELSE
     setHieghts();
@@ -41,7 +41,7 @@ function handleDesignCloseBtn() {
     codeCard.classList.add("move-card-forward");
     designCard.classList.remove("theater"); // REMOVES MAIN FOCUS CLASS
     setTimeout(() => {
-      designCloseBtn.setAttribute('tabindex', '-1') // DISABLE TABABLE CLOSE BTN OFF SCREEN
+      designCloseBtn.setAttribute("tabindex", "-1"); // DISABLE TABABLE CLOSE BTN OFF SCREEN
       aboutMeTitle.style.zIndex = 1;
       document.body.style.overflow = "scroll"; // RESETS LOCKED SCROLL
       document.body.style.overflowX = "hidden";
@@ -54,8 +54,8 @@ function handleDesignCloseBtn() {
 }
 function handleCodeCloseBtn() {
   if (codeCard.classList.contains("theater")) {
-    contactTabLink.setAttribute('tabindex', '0') // ENABLE LINKS
-    designTabLink.setAttribute('tabindex', '0')
+    contactTabLink.setAttribute("tabindex", "0"); // ENABLE LINKS
+    designTabLink.setAttribute("tabindex", "0");
     //CHECK IF ACTIVE CARD
     codeCard.classList.add("close-theater"); // ADD CLASS TO CATCH SIZE RESET IF/ELSE
     setHieghts();
@@ -70,7 +70,7 @@ function handleCodeCloseBtn() {
     designCard.classList.add("move-card-forward");
     codeCard.classList.remove("theater");
     setTimeout(() => {
-      codeCloseBtn.setAttribute('tabindex', '-1') // GET RID OF CLOSE BTN
+      codeCloseBtn.setAttribute("tabindex", "-1"); // GET RID OF CLOSE BTN
       aboutMeTitle.style.zIndex = 1;
       document.body.style.overflow = "scroll"; // RESETS LOCKED SCROLL
       document.body.style.overflowX = "hidden";
@@ -83,6 +83,11 @@ function handleCodeCloseBtn() {
 }
 // ACTIVE CONTACT HANDLERS
 function handleContactActiveDesignCard() {
+  //AVOID DOUBLE DECLARATIONS
+  if (designCard.classList.contains("theater")) {
+    return;
+  }
+
   if (contactCard.classList.contains("active-contact")) {
     designLink.style.opacity = 0;
     codeLink.style.opacity = 0;
@@ -101,9 +106,9 @@ function handleContactActiveDesignCard() {
 
   if (designCard.classList.contains("theater")) {
     // SET ACTIVE TAB ABLE LINKS
-    designCloseBtn.setAttribute('tabindex', '0') // BRING UP CLOSE BTN
-    contactTabLink.setAttribute('tabindex', '-1') // DISABLE CONTACT LINK
-    codeTabLink.setAttribute('tabindex', '-1') // DISABLE CODE LINK
+    designCloseBtn.setAttribute("tabindex", "0"); // BRING UP CLOSE BTN
+    contactTabLink.setAttribute("tabindex", "-1"); // DISABLE CONTACT LINK
+    codeTabLink.setAttribute("tabindex", "-1"); // DISABLE CODE LINK
 
     aboutMeTitle.style.zIndex = -1;
     designCard.style.height = null; // WIPES ELEMENT.STYLE SETTINGS
@@ -121,6 +126,10 @@ function handleContactActiveDesignCard() {
   }, 1000);
 }
 function handleContactActiveCodeCard() {
+  //AVOID DOUBLE DECLARATIONS
+  if (codeCard.classList.contains("theater")) {
+    return;
+  }
   if (contactCard.classList.contains("active-contact")) {
     designLink.style.opacity = 0;
     codeLink.style.opacity = 0;
@@ -139,9 +148,9 @@ function handleContactActiveCodeCard() {
 
   if (codeCard.classList.contains("theater")) {
     // SET ACTIVE TAB ABLE LINKS
-    codeCloseBtn.setAttribute('tabindex', '0') // BRING UP CLOSE BTN
-    contactTabLink.setAttribute('tabindex', '-1') // DISABLE CONTACT LINK
-    designTabLink.setAttribute('tabindex', '-1') // DISABLE CODE LINK
+    codeCloseBtn.setAttribute("tabindex", "0"); // BRING UP CLOSE BTN
+    contactTabLink.setAttribute("tabindex", "-1"); // DISABLE CONTACT LINK
+    designTabLink.setAttribute("tabindex", "-1"); // DISABLE CODE LINK
 
     aboutMeTitle.style.zIndex = -1;
     // REPEATS SAME MOTIONS BUT FOR CODE CARD
