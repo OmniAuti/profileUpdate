@@ -69,6 +69,7 @@ function handleCodeCloseBtn() {
     contactCard.classList.add("move-card-forward");
     designCard.classList.add("move-card-forward");
     codeCard.classList.remove("theater");
+    deleteGuts();
     setTimeout(() => {
       codeCloseBtn.setAttribute("tabindex", "-1"); // GET RID OF CLOSE BTN
       aboutMeTitle.style.zIndex = 1;
@@ -82,7 +83,7 @@ function handleCodeCloseBtn() {
   }
 }
 // ACTIVE CONTACT HANDLERS
-function handleContactActiveDesignCard() {
+function handleActiveDesignCard() {
   //AVOID DOUBLE DECLARATIONS
   if (designCard.classList.contains("theater")) {
     return;
@@ -125,7 +126,7 @@ function handleContactActiveDesignCard() {
     contactCard.classList.remove("curtain-closed");
   }, 1000);
 }
-function handleContactActiveCodeCard() {
+function handleActiveCodeCard() {
   //AVOID DOUBLE DECLARATIONS
   if (codeCard.classList.contains("theater")) {
     return;
@@ -144,7 +145,7 @@ function handleContactActiveCodeCard() {
     this.classList.add("theater"); // MAKE CARD ACTIVE - FRONT AND CENTER
   }
 
-  this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITION
+  this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITIONS
 
   if (codeCard.classList.contains("theater")) {
     // SET ACTIVE TAB ABLE LINKS
@@ -161,6 +162,7 @@ function handleContactActiveCodeCard() {
     contactCard.classList.add("move-card-back");
     designCard.classList.add("move-card-back");
     setScrollOnOpenTheater();
+    createCodeGuts();
   }
   // REMOVES UNCLICKABLE CLASS
   setTimeout(() => {
@@ -228,7 +230,49 @@ function setScrollOnOpenTheater() {
 designCloseBtn.addEventListener("click", handleDesignCloseBtn);
 codeCloseBtn.addEventListener("click", handleCodeCloseBtn);
 // DESIGN/CODE CARD CLICK EVENTS
-designCard.addEventListener("click", handleContactActiveDesignCard);
-codeCard.addEventListener("click", handleContactActiveCodeCard);
+designCard.addEventListener("click", handleActiveDesignCard);
+codeCard.addEventListener("click", handleActiveCodeCard);
 // CONTACT CARD CLICK EVENT
 contactCard.addEventListener("click", handleContact);
+
+function createCodeGuts() {
+  setTimeout(() => {
+    const guts = document.createElement("div");
+    guts.classList.add("stacked-guts");
+    guts.innerHTML = `
+    <div class="project-card">
+      <div class="card-inner">
+        <div class="header">
+          <p>Home</p>
+          <p>Info</p>
+          <p>Download</p>
+        </div>
+        <div class="card-title">
+          <h1>Dead Cat</h1>
+          <p>- Here for the pounce</p>
+        </div>
+        
+        <div class="project-card-logo">
+        </div>
+        
+      </div>
+      <h3></h3>
+    </div>`;
+    codeCard.appendChild(guts);
+  }, 1000);
+  setTimeout(() => {
+    const scripty = document.createElement('script');
+    scripty.setAttribute('src', 'projectCard.js');
+    scripty.classList.add('project-card-script');
+    document.body.appendChild(scripty)
+  }, 1250)
+
+  //create SWITCH STATEMENT for if design card clicked guts gets different output
+}
+
+function deleteGuts() {
+  const gut = document.querySelector(".stacked-guts");
+  gut.remove();
+  const scripty = document.querySelector('.project-card-script');
+  scripty.remove()
+}

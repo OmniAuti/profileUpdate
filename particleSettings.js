@@ -6,7 +6,7 @@ particlesJS('particles-js',
         "value": 10,
         "density": {
           "enable": true,
-          "value_area": 600
+          "value_area": 800
         }
       },
       "color": {
@@ -79,7 +79,7 @@ particlesJS('particles-js',
           "enable": false,
           "mode": "push"
         },
-        "resize": true
+        "resize": false
       },
       "modes": {
         "grab": {
