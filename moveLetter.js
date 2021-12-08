@@ -11,8 +11,6 @@ letter.forEach((lett) =>
     var x = (1 * mouseY - h / 4).toFixed(2);
     var y = (-1 * mouseX - w / 4).toFixed(2);
 
-    console.log(x, y);
-
     if (x > 15) {
         x = 15
     }
