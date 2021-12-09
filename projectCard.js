@@ -1,4 +1,4 @@
-var card = document.querySelector('.project-card')
+var card = document.querySelector('.project-card') || document.querySelector('.card');
 
 
 card.addEventListener('mousemove', cardMouseMove)
@@ -28,6 +28,6 @@ function setTransition() {
     clearTimeout(card.whatever )
     card.style.transition = `transform 3000ms cubic-bezier(.03,.98,.52,.99)`
     card.whatever = setTimeout(() => {
-        card.style.transition = ''
+        card.style.transition = null
     }, 3000)
 }
