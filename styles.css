@@ -22,7 +22,7 @@ html {
 body {
   background-color: #1c1c25;
   overflow-x: hidden;
-  background-image: url("egg-shell.png");
+  background-image: url("imgs/egg-shell.png");
   opacity: 0;
   transition: opacity ease-in 1000ms;
 }
@@ -727,7 +727,7 @@ h1 {
 }
 
 .project-card-logo {
-  background-image: url(deadcatscg.svg);
+  background-image: url(imgsProfileCards/deadcatscg.svg);
   background-position: center;
   background-size: cover;
   width: 250px;
@@ -788,7 +788,7 @@ h1 {
 }
 
 .square-studio-silence {
-  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+  background-image: url("imgs/otis-redding.png");
   width: 300px;
   height: 300px;
   background-color: rgba(202, 13, 0, 0.5);
