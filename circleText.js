@@ -1,1 +1,0 @@
-const contactText = document.querySelector('.make-contact-text')
