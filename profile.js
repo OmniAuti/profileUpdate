@@ -245,7 +245,7 @@ function createCodeGuts() {
   setTimeout(() => {
     const guts = document.createElement("div");
     guts.classList.add("stacked-guts");
-    guts.innerHTML = portfolioCardDeckArr[1];
+    guts.innerHTML = portfolioCardDeckArr[0];
     codeCard.appendChild(guts);
   }, 1000);
   setTimeout(() => {
@@ -254,8 +254,6 @@ function createCodeGuts() {
     scripty.classList.add("project-card-script");
     document.body.appendChild(scripty);
   }, 1250);
-
-  //create SWITCH STATEMENT for if design card clicked guts gets different output
 }
 
 function deleteGuts() {
@@ -403,24 +401,40 @@ var madBatterCard = `
 
 var portfolioCardDeckArr = [deadCatCard, madBatterCard, studioSilenceCard];
 
-function handlePortfolioChange(i) {
-  portfolioCardDeckArr[i];
+function changeCodeGuts(i) {
+  deleteGuts();
+  setTimeout(() => {
+    const guts = document.createElement("div");
+    guts.classList.add("stacked-guts");
+    guts.innerHTML = portfolioCardDeckArr[i];
+    codeCard.appendChild(guts);
+  }, 1000);
+  setTimeout(() => {
+    const scripty = document.createElement("script");
+    scripty.setAttribute("src", "projectCard.js");
+    scripty.classList.add("project-card-script");
+    document.body.appendChild(scripty);
+  }, 1250);
 }
 
-codeProjectUpBtn.addEventListener("click", () => {
+function portfolioCardChange() {
+  var i = 0;
 
-  i--;
-  if (i < 0) {
-    i = 2;
-  }
-  handlePortfolioChange(i);
-});
+  codeProjectUpBtn.addEventListener("click", () => {
+    i--;
+    if (i < 0) {
+      i = 2;
+    }
+    changeCodeGuts(i);
+  });
 
-codeProjectDownBtn.addEventListener("click", () => {
-  i++;
-  if (i > 2) {
-    i = 0;
-  }
-  handlePortfolioChange(i);
-  console.log(i);
-});
+  codeProjectDownBtn.addEventListener("click", () => {
+    i++;
+    if (i > 2) {
+      i = 0;
+    }
+    changeCodeGuts(i);
+  });
+}
+
+portfolioCardChange();
