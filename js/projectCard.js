@@ -1,4 +1,4 @@
-var card = document.querySelector('.project-card') || document.querySelector('.card');
+var card = document.querySelector('.card');
 
 
 card.addEventListener('mousemove', cardMouseMove)
