@@ -1,50 +1,45 @@
 const codeProjectUpBtn = document.querySelector(".code-project-less-btn");
 const codeProjectDownBtn = document.querySelector(".code-project-add-btn");
 
-
 var deadCatCard = `
-<div class="project-card">
-  <div class="card-inner">
-    <div class="header">
+<div class="card">
+  <div class="card-inner-dead-cat">
+    <div class="header-dead-cat">
       <p>Home</p>
       <p>Info</p>
       <p>Download</p>
     </div>
-    <div class="card-title">
-      <h1>Dead Cat</h1>
-      <p>- Here for the pounce</p>
+    <hr class="hr-dead-cat">
+    <div class="card-title-dead-cat">
+      <h1 class="title-dead-cat">Dead Cat</h1>
+      <p class="p-dead-cat">- Here for the pounce</p>
     </div>
-    <div class="project-card-logo">
+    <div class="logo-dead-cat">
     </div>
   </div>
-  <h3></h3>
 </div>`;
 
 var studioSilenceCard = `      
 <div class="card">
-<div class="card-inner-studio-silence">
-  <div class="title-studio-silence">
-    <img class="studio-title-studio-silence" src="imgsProfileCards/studioH1.png" alt="" />
-    <img class="silence-title-studio-silence" src="imgsProfileCards/SilenceH1.png" alt="" />
+  <div class="card-inner-studio-silence">
+    <div class="title-studio-silence">
+      <img class="studio-title-studio-silence" src="imgsProfileCards/stuidosilence/studioH1.png" alt="" />
+      <img class="silence-title-studio-silence" src="imgsProfileCards/stuidosilence/SilenceH1.png" alt="" />
+    </div>
+    <div class="square-studio-silence"></div>
   </div>
-  <div class="square-studio-silence"></div>
-</div>
 </div>`;
 
 var madBatterCard = `
     <div class="card">
       <div class="card-inner-mad-bat">
-        <div class="hero-mad-bat">
-      
-        </div>
+        <div class="hero-mad-bat"></div>
         <h1 class="header-mad-bat">
           <div>The</div>
           <div>Mad</div>
           <div>Batter</div>
         </h1>
-
         <div class="cart-mad-bat">
-
           <div class="cart-item-mad-bat">
             <div class="trash-mad-bat"></div>
             <p>1</p>
@@ -57,7 +52,6 @@ var madBatterCard = `
               <p>$10.15</p>
             </div>
           </div>
-
           <div class="cart-item-mad-bat">
             <div class="trash-mad-bat"></div>
             <p>2</p>
@@ -70,8 +64,6 @@ var madBatterCard = `
               <p>$10.00</p>
             </div>
           </div>
-          
-  
           <div class="cart-item-mad-bat">
             <div class="trash-mad-bat"></div>
             <p>1</p>
@@ -84,7 +76,6 @@ var madBatterCard = `
               <p>$3.50</p>
             </div>
           </div>
-
           <div class="cart-item-mad-bat">
             <div class="trash-mad-bat"></div>
             <p>3</p>
@@ -97,7 +88,6 @@ var madBatterCard = `
               <p>$7.50</p>
             </div>
           </div>
-
           <div class="cart-item-mad-bat">
             <div class="trash-mad-bat"></div>
             <p>1</p>
@@ -110,11 +100,8 @@ var madBatterCard = `
               <p>$1.00</p>
             </div>
           </div>
-
           <div class="btn-mad-bat"><p>Checkout</p></div>
-
         </div>
-
         <div class="nav-mad-bat">
           <p>Waffles</p>
           <p>French Toast</p>
@@ -123,8 +110,6 @@ var madBatterCard = `
           <p>Drinks</p>
         </div>
         <hr class="nav-hr-mad-bat">
-       
-        
         <div class="logo-two-mad-bat">
           <div class="logo-cover-mad-bat">
             <div class="logo-mad-bat">
@@ -138,7 +123,56 @@ var madBatterCard = `
     </div>
 `;
 
-var portfolioCardDeckArr = [deadCatCard, madBatterCard, studioSilenceCard];
+var hoppyBarberCard = `
+<div class="card">
+  <div class="card-inner-hoppy">
+    <hr class="border-no-3d-hoppy" />
+    <div class="logo-hoppy"></div>
+    <div class="nav-hoppy">
+      <div class="name-holder-hoppy">
+        <h2>The Hoppy Barber</h2>
+      </div>
+      <div class="nav-nav-hoppy">
+        <p class="p-hoppy-one">Appointments</p>
+        <p class="p-hoppy-two">Gallery</p>
+        <p class="p-hoppy-three">About</p>
+      </div>
+    </div>
+    <div class="gallery-hoppy">
+      <div class="one-img-hoppy"></div>
+      <div class="two-img-hoppy"></div>
+    </div>
+  </div>
+</div>`;
+
+var wheelersCard = `    
+<div class="card">
+  <div class="card-inner-wheelers">
+    <div class="hero-wheelers"></div>
+    <div class="header-wheelers-top">
+      <h2>
+        Two
+        <div class="logo-wheelers"></div>
+        Wheeler's
+      </h2>
+      <div class="header-wheelers-bottom">
+        <div class="border-cover-wheelers"></div>
+        <p class="p-wheelers-one">Bikes</p>
+        <p class="p-wheelers-two">Repairs</p>
+        <p class="p-wheelers-three">Biking App</p>
+      </div>
+    </div>
+    <div class="coa-wheelers"><h3>Visit Us</h3></div>
+  </div>
+</div>`
+
+var portfolioCardDeckArr = [
+  deadCatCard,
+  madBatterCard,
+  studioSilenceCard,
+  hoppyBarberCard,
+  wheelersCard,
+];
 
 function changeCodeGuts(i) {
   deleteGuts();
@@ -162,14 +196,14 @@ function portfolioCardChange() {
   codeProjectUpBtn.addEventListener("click", () => {
     i--;
     if (i < 0) {
-      i = 2;
+      i = 4;
     }
     changeCodeGuts(i);
   });
 
   codeProjectDownBtn.addEventListener("click", () => {
     i++;
-    if (i > 2) {
+    if (i > 4) {
       i = 0;
     }
     changeCodeGuts(i);
