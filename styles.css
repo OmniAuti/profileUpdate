@@ -788,7 +788,7 @@ h1 {
 }
 
 .square-studio-silence {
-  background-image: url("imgs/otis-redding.png");
+  background-image: url("imgsProfileCards/otis-redding.png");
   width: 300px;
   height: 300px;
   background-color: rgba(202, 13, 0, 0.5);
@@ -1061,4 +1061,131 @@ h1 {
     left: 50%;
     transform: translateX(-50%) translateZ(50px);
     transform-style: preserve-3d;
+}
+
+/* ----- HOPPY BARBER -------- */
+
+.card-inner-hoppy {
+  height: 500px;
+  width: 600px;
+  background-color: #f6f9ff;
+  background-image: url("imgsProfileCards/mirrored-squares.png");
+  transform-style: preserve-3d;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.logo-hoppy {
+  width: 55%;
+  height: 55%;
+  background-image: url("imgsProfileCards/hoppyBarberLogo.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: -30px;
+  left: -45px;
+  transform: translateZ(50px);
+}
+
+.nav-hoppy {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: translateZ(0px);
+}
+
+.name-holder-hoppy {
+  width: 100%;
+  text-align: center;
+  height: 50%;
+  padding-top: 30px;
+  transform: translateZ(50px);
+  font-family: 'Abril Fatface', cursive;
+  text-shadow:0.025em  0.025em 0em #232325,
+  0.05em  0.05em 0em #fff,
+  0.075em  0.075em 0em #232325,
+  0.1em  0.1em 0em #fff;
+  font-size: 25px;
+}
+
+.border-no-3d-hoppy {
+  position: absolute;
+  background-color: transparent;
+  border-bottom: 1px solid #000;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  top: 100px;
+  right: 0;
+  width: 60%;
+  height: 1px;
+}
+
+.nav-nav-hoppy {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  transform-style: preserve-3d;
+  transform: translateZ(25px);
+}
+
+.nav-nav-hoppy p {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateX(-15px) translateZ(35px);
+}
+.p-hoppy-one::after {
+  content: url("imgsProfileCards/scissors.svg");
+  position: absolute;
+  right: -40%;
+  top: -15px;
+}
+.p-hoppy-two::after {
+  content: url("imgsProfileCards/camera.svg");
+  position: absolute;
+  right: -75%;
+  top: -7.5px;
+}
+
+.p-hoppy-three::after {
+  content: url('imgsProfileCards/barber-pole.svg');
+  position: absolute;
+  right: -75%;
+  top: -7.5px;
+}
+
+.gallery-hoppy {
+  position: absolute;
+  width: 100%;
+  height: 61.5%;
+  bottom: 0;
+  border-radius: 0% 0% 20px 20px;
+  transform: translateZ(20px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.one-img-hoppy {
+  background-image: url("imgsProfileCards/4.png");
+  background-position: center;
+  background-size: cover;
+  width: 48%;
+  height: 95%;
+  border-radius: 5px 5px 5px 20px;
+}
+.two-img-hoppy {
+  background-image: url("imgsProfileCards/8.png");
+  background-position: center;
+  background-size: cover;
+  width: 48%;
+  height: 95%;
+  border-radius: 5px 5px 20px 5px;
 }
