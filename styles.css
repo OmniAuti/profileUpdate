@@ -33,7 +33,7 @@ a {
 }
 
 a:focus-visible {
-  outline-color: #6D87FF;
+  outline-color: #6d87ff;
 }
 
 #particles-js {
@@ -436,8 +436,8 @@ h1 {
 
 .stacked-guts {
   display: grid;
-  grid-template-columns: repeat(6,1fr);
-  grid-template-rows: repeat(6,1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   height: 95%;
   width: 100%;
 }
@@ -668,7 +668,7 @@ h1 {
 }
 
 .design-close-btn,
-.code-close-btn{
+.code-close-btn {
   padding: 50px;
   cursor: pointer;
   height: 50px;
@@ -676,7 +676,7 @@ h1 {
   position: absolute;
 }
 
-.code-project-less-btn  {
+.code-project-less-btn {
   padding: 5px;
   cursor: pointer;
   position: absolute;
@@ -684,7 +684,7 @@ h1 {
   left: 30%;
 }
 
-.code-project-add-btn  {
+.code-project-add-btn {
   padding: 5px;
   cursor: pointer;
   position: absolute;
@@ -692,84 +692,7 @@ h1 {
   left: 25%;
 }
 
-
-
-/* ------------- Profile card --------------- */
-
-
-.project-card {
-  height: 375px;
-  width: 350px;
-  background-color: transparent;
-  transform-style: preserve-3d;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin-bottom: 100px;
-  grid-column-end: 6;
-  grid-row-start: 6;
-  box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.5);
-}
-
-.card-inner {
-  height: 500px;
-  width: 600px;
-  background-color: #2f313b;
-  transform-style: preserve-3d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-}
-
-.card-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  transform: translateZ(100px);
-  font-family: Helvetica Neue;
-
-}
-
-.project-card-logo {
-  background-image: url(imgsProfileCards/deadcatscg.svg);
-  background-position: center;
-  background-size: cover;
-  width: 250px;
-  height: 225px;
-  transform: translateZ(100px);
-  margin-left: 50px;
-}
-
-.project-card h1 {
-  transform: translateZ(100px);
-  font-size: 3rem;
-  font-weight: 200;
-}
-
-.project-card p {
-  margin-top: -25px;
-  padding-left: 50px;
-  color: #fff;
-}
-
-.header {
-  padding-top: 10px;
-  position: absolute;
-  transform: translateZ(25px);
-  top: 20px;
-  height: 25px;
-  border-bottom: 2px solid #fff;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-around;
-}
-
-/* NEED TO CONVERT .CARD FOR ALL CARD SIZE */
+/* ------------- PROFILE PROJECT CARDS --------------- */
 
 .card {
   height: 550px;
@@ -782,6 +705,74 @@ h1 {
   grid-column-end: 6;
   grid-row-start: 2;
 }
+
+/* -------------DEAD CAT CARD--------------- */
+
+.card-inner-dead-cat {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 600px;
+  height: 500px;
+  background-color: #2f313b;
+  color: #eeefee;
+  transform-style: preserve-3d;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-title-dead-cat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translateZ(50px);
+  font-family: Helvetica Neue;
+}
+
+.logo-dead-cat {
+  background-image: url(imgsProfileCards/deadCat/deadcatscg.svg);
+  background-position: center;
+  background-size: cover;
+  width: 250px;
+  height: 225px;
+  transform: translateZ(75px);
+  margin-left: 50px;
+}
+
+.title-dead-cat {
+  transform: translateZ(50px);
+  font-size: 3.5rem;
+  font-weight: 100;
+  text-shadow: none;
+  font-weight: 200;
+}
+
+.p-dead-cat {
+  padding-left: 100px;
+}
+
+.header-dead-cat {
+  position: absolute;
+  width: 100%;
+  transform: translateZ(50px);
+  top: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hr-dead-cat {
+  border-bottom: 2px solid #eeefee;
+  width: 100%;
+  position: absolute;
+  top: 50px;
+}
+
+/* NEED TO CONVERT .CARD FOR ALL CARD SIZE */
 
 .card-inner-studio-silence {
   height: 500px;
@@ -796,7 +787,7 @@ h1 {
 }
 
 .square-studio-silence {
-  background-image: url("imgsProfileCards/otis-redding.png");
+  background-image: url("imgsProfileCards/stuidosilence/otis-redding.png");
   width: 300px;
   height: 300px;
   background-color: rgba(202, 13, 0, 0.5);
@@ -816,7 +807,7 @@ h1 {
     height: 60%;
     transform: rotate(45deg) translateZ(100px);
     clip-path: polygon(100% -100%, -100% 100%, 100% 100%);
-    }
+  }
 
   20% {
     border-radius: 50%;
@@ -831,7 +822,7 @@ h1 {
     border-radius: 0%;
     width: 85%;
     height: 25%;
-    background-color:rgba(82, 206, 24, 0.5); 
+    background-color: rgba(82, 206, 24, 0.5);
     transform: rotate(0deg) translateZ(100px);
     clip-path: polygon(100% -100%, -100% 100%, 100% 100%);
   }
@@ -882,7 +873,6 @@ h1 {
 
 /* ----- MAD BATTER */
 
-
 .card-inner-mad-bat {
   height: 500px;
   width: 600px;
@@ -897,7 +887,7 @@ h1 {
 }
 
 .hero-mad-bat {
-  background-image: url("imgsProfileCards/hero-1.jpeg");
+  background-image: url("imgsProfileCards/madBatter/hero-1.jpeg");
   background-position: center left -50px;
   background-size: cover;
   position: absolute;
@@ -936,7 +926,7 @@ h1 {
 }
 
 .trash-mad-bat {
-  background-image: url("imgsProfileCards/delete.svg");
+  background-image: url("imgsProfileCards/madBatter/delete.svg");
   background-position: center;
   background-size: cover;
   height: 12px;
@@ -953,13 +943,13 @@ h1 {
 }
 
 .order-cont-mad-bat p {
-    width: 100%;
+  width: 100%;
   margin-bottom: 0px;
   text-overflow: ellipsis;
 }
 
 .order-cont-mad-bat h6 {
-    width: 100%;
+  width: 100%;
   margin-top: 0px;
   color: #656566;
   overflow: hidden;
@@ -1005,7 +995,7 @@ h1 {
 }
 
 .logo-mad-bat {
-  background-image: url("imgsProfileCards/logo.png");
+  background-image: url("imgsProfileCards/madBatter/logo.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1020,11 +1010,11 @@ h1 {
 
 .logo-cover-mad-bat {
   height: 160px;
-  width: 145px;
+  width: 100%;
   border-radius: 30%;
   position: absolute;
   top: 5px;
-  border-radius: 20% 20% 0% 0%;
+  border-radius: 30% 30% 0% 0%;
   background-color: #f7f7f7;
   transform-style: preserve-3d;
   transform: translateZ(2px);
@@ -1057,18 +1047,18 @@ h1 {
 }
 
 .btn-mad-bat {
-    background-color: #ba6fb4;
-    color: #fff;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%) translateZ(50px);
-    transform-style: preserve-3d;
+  background-color: #ba6fb4;
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%) translateZ(50px);
+  transform-style: preserve-3d;
 }
 
 /* ----- HOPPY BARBER -------- */
@@ -1077,20 +1067,20 @@ h1 {
   height: 500px;
   width: 600px;
   background-color: #f6f9ff;
-  background-image: url("imgsProfileCards/mirrored-squares.png");
+  background-image: url("imgsProfileCards/hoppy/mirrored-squares.png");
   transform-style: preserve-3d;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .logo-hoppy {
   width: 55%;
   height: 55%;
-  background-image: url("imgsProfileCards/hoppyBarberLogo.png");
+  background-image: url("imgsProfileCards/hoppy/hoppyBarberLogo.png");
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -1115,11 +1105,9 @@ h1 {
   height: 50%;
   padding-top: 30px;
   transform: translateZ(50px);
-  font-family: 'Abril Fatface', cursive;
-  text-shadow:0.025em  0.025em 0em #232325,
-  0.05em  0.05em 0em #fff,
-  0.075em  0.075em 0em #232325,
-  0.1em  0.1em 0em #fff;
+  font-family: "Abril Fatface", cursive;
+  text-shadow: 0.025em 0.025em 0em #232325, 0.05em 0.05em 0em #fff,
+    0.075em 0.075em 0em #232325, 0.1em 0.1em 0em #fff;
   font-size: 25px;
 }
 
@@ -1151,20 +1139,20 @@ h1 {
   transform: translateX(-15px) translateZ(35px);
 }
 .p-hoppy-one::after {
-  content: url("imgsProfileCards/scissors.svg");
+  content: url("imgsProfileCards/hoppy/scissors.svg");
   position: absolute;
   right: -40%;
   top: -15px;
 }
 .p-hoppy-two::after {
-  content: url("imgsProfileCards/camera.svg");
+  content: url("imgsProfileCards/hoppy/camera.svg");
   position: absolute;
   right: -75%;
   top: -7.5px;
 }
 
 .p-hoppy-three::after {
-  content: url('imgsProfileCards/barber-pole.svg');
+  content: url("imgsProfileCards/hoppy/barber-pole.svg");
   position: absolute;
   right: -75%;
   top: -7.5px;
@@ -1182,7 +1170,7 @@ h1 {
   align-items: center;
 }
 .one-img-hoppy {
-  background-image: url("imgsProfileCards/4.png");
+  background-image: url("imgsProfileCards/hoppy/4.png");
   background-position: center;
   background-size: cover;
   width: 48%;
@@ -1190,10 +1178,143 @@ h1 {
   border-radius: 5px 5px 5px 20px;
 }
 .two-img-hoppy {
-  background-image: url("imgsProfileCards/8.png");
+  background-image: url("imgsProfileCards/hoppy/8.png");
   background-position: center;
   background-size: cover;
   width: 48%;
   height: 95%;
   border-radius: 5px 5px 20px 5px;
+}
+
+/*------ WHEELERS -------*/
+
+.card-inner-wheelers {
+  height: 500px;
+  width: 600px;
+  background-color: #fff;
+  transform-style: preserve-3d;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-family: "Yusei Magic", sans-serif;
+}
+
+.hero-wheelers {
+  background-image: url("imgsProfileCards/wheelers/heroWheelers.png");
+  background-position: center;
+  background-size: cover;
+  width: 90%;
+  height: 70%;
+  position: absolute;
+  top: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  transform: translateZ(15px);
+}
+
+.header-wheelers-top {
+  width: 97.5%;
+  height: 60px;
+  position: absolute;
+  top: calc(70% + 40px);
+  background-color: #dcdcdc;
+  border: 1px solid #000;
+  text-align: center;
+  transform-style: preserve-3d;
+}
+
+.header-wheelers-top h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transform: translateZ(50px);
+  font-size: 40px;
+  text-shadow: -1.5px -1px 0px #ef5261;
+}
+
+.logo-wheelers {
+  background-image: url("imgsProfileCards/wheelers/logo.png");
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  height: 75px;
+  width: 75px;
+  margin: -7.5px 10px;
+}
+
+.header-wheelers-bottom {
+  background-color: #dcdcdc;
+  border: 1px solid #000;
+  border-top: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  width: 60%;
+  position: absolute;
+  top: 59px;
+  z-index: 5;
+  right: -1px;
+  padding-left: 25px;
+  transform-style: preserve-3d;
+}
+
+.border-cover-wheelers {
+  position: absolute;
+  width: calc(100% + 1px);
+  height: 100%;
+  border-right: 1px solid #000;
+  background-color: #dcdcdc;
+  top: -20px;
+  left: 0px;
+  transform: translateZ(0.5px);
+}
+
+.header-wheelers-bottom p {
+  margin-left: 5px;
+  margin-right: 5px;
+  transform-style: preserve-3d;
+  transform: translateZ(25px);
+}
+
+.p-wheelers-one::before {
+  content: url(imgsProfileCards/wheelers/bicycle-solid.svg);
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: -60%;
+  top: 10%;
+}
+.p-wheelers-two::before {
+  content: url(imgsProfileCards/wheelers/tools-solid.svg);
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  left: -40%;
+  top: 10%;
+}
+.p-wheelers-three::before {
+  content: url(imgsProfileCards/wheelers/mobile-alt-solid.svg);
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  left: -25%;
+  top: 12%;
+}
+
+.coa-wheelers {
+  width: 40%;
+  height: 40px;
+  position: absolute;
+  top: calc(70% + 100px);
+  left: 2.5%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transform: translateZ(25px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
