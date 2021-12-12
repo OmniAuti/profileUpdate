@@ -651,7 +651,9 @@ h1 {
 
 .stacked-guts {
   height: 95%;
-  width: 100%;
+  width: 75%;
+  border: 1px solid red;
+  float: right;
 }
 
 .stacked::-webkit-scrollbar {
@@ -1004,68 +1006,124 @@ h1 {
 }
 
 .gitHub-cont,
-  .email-cont,
-  .linkedin-cont {
-    -webkit-transform: translateY(100vh);
-    -moz-transform: translateY(100vh);
-    -ms-transform: translateY(100vh);
-    -o-transform: translateY(100vh);
-    transform: translateY(100vh);
-    -webkit-transition: all ease 250ms;
-    -moz-transition: all ease 250ms;
-    -ms-transition: all ease 250ms;
-    -o-transition: all ease 250ms;
-    transition: all ease 250ms;
-    width: 60px; 
-    height: 60px;
+.email-cont,
+.linkedin-cont {
+  -webkit-transform: translateY(100vh);
+  -moz-transform: translateY(100vh);
+  -ms-transform: translateY(100vh);
+  -o-transform: translateY(100vh);
+  transform: translateY(100vh);
+  -webkit-transition: all ease 250ms;
+  -moz-transition: all ease 250ms;
+  -ms-transition: all ease 250ms;
+  -o-transition: all ease 250ms;
+  transition: all ease 250ms;
+  width: 60px;
+  height: 60px;
 }
 
 .gitHub-cont {
-  background-image: url('imgs/github.svg');
+  background-image: url("imgs/github.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .email-cont {
-  background-image: url('imgs/email.svg');
+  background-image: url("imgs/email.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .linkedin-cont {
-  background-image: url('imgs/linkedin.svg');
+  background-image: url("imgs/linkedin.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-
-
-/* CARD START --------------- */
+/* CARD BTN STUFF --------------- */
 
 .design-close-btn,
 .code-close-btn {
   padding: 50px;
   cursor: pointer;
   height: 50px;
-  top: 300px;
+  top: 25px;
   position: absolute;
+  background-color: transparent;
+  border: none;
+  font-family: "Arapey", serif;
+  color: #1c1c25;
+  font-size: 25px;
 }
 
-.code-project-less-btn {
-  padding: 5px;
-  cursor: pointer;
+.rtn-btn-text::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 30%;
+  background-color: #1c1c25;
+  width: 40px;
+  bottom: 33px;
+  left: 7.5px;
+  height: 2.5px;
 }
 
+.change-project-cont {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 200px;
+  width: 50px;
+}
+
+.code-project-less-btn,
 .code-project-add-btn {
   padding: 5px;
   cursor: pointer;
+  width: 50px;
+  height: 95px;
+  background-color: transparent;
+  border: none;
+  font-family: "Arapey", serif;
+  color: #1c1c25;
+  font-size: 25px;
+}
+
+
+
+.change-project-up-arrow::before {
+  content: "";
   position: absolute;
+  width: 3px;
+  height: 95px;
+  background-color: #1c1c25;
   top: 0;
-  left: 25%;
+  left: 17.5px;
+  transition: all ease-out 500ms;
+}
+.change-project-down-arrow::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 95px;
+  background-color: #1c1c25;
+  right: 17.5px;
+  bottom: 0;
+  transition: all ease-out 500ms;
+}
+
+
+.code-project-add-btn:hover .change-project-down-arrow::after {
+  height: 130px;
+  bottom: -35px;
+}
+.code-project-less-btn:hover .change-project-up-arrow::before {
+  height: 130px;
+  top: -35px;
 }
 
 /* ------------- PROFILE PROJECT CARDS --------------- */
