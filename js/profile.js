@@ -1,7 +1,6 @@
 // HANDLES OPENING CARD ANIMATIONS FOR CODE, DESIGN, CONTACT SECTIONS --------------------------
 
-// SECTIONS OR CONTAINERS
-const contactCont = document.querySelector(".contact-cont");
+// PORTFOLIO - - - - - - - - - - - - - - - - - - - - - - - - - - -
 const portfolioCont = document.querySelector(".portfolio-cont");
 // CARD
 const contactCard = document.querySelector(".stuck");
@@ -15,13 +14,18 @@ const codeLink = document.querySelector(".code-link");
 const contactTabLink = document.querySelector(".contact-tab-link");
 const designTabLink = document.querySelector(".design-tab-link");
 const codeTabLink = document.querySelector(".code-tab-link");
-// CONTACT SECTION CONTENT
+// ABOUT ME SECTION CONTENT
+const aboutMeCont = document.querySelector(".about-me-cont");
 const aboutMeTitle = document.querySelector(".about-me-title");
-const derp = document.querySelector(".derp");
+// CONTACT SECTION CONTENT
+const contactCont = document.querySelector(".contact-cont");
+const contactTitle = document.querySelector(".contact-title");
+const gitHubContact = document.querySelector('.gitHub-cont')
+const emailContact = document.querySelector('.email-cont')
+const linkedinContact = document.querySelector('.linkedin-cont')
 // CLOSE BUTTONS
 const designCloseBtn = document.querySelector(".design-close-btn");
 const codeCloseBtn = document.querySelector(".code-close-btn");
-
 
 // CLOSE BTN FUNCTIONS
 function handleDesignCloseBtn() {
@@ -193,7 +197,13 @@ function handleContact() {
       contactLink.innerText = "Contact"; // CHANGES INNER TEXT TO ORIGINAL
     }, 500);
 
-    derp.style.transform = "translateY(100vh)"; // TAKES OUT HEADER OF CONTACT SECTION
+    aboutMeCont.style.transform = null; // NULL THIS TRANSFORM SO CSS PRESET WORKS
+    contactTitle.style.transform = "translateX(100vw)"; // TAKES OUT HEADER OF CONTACT SECTION
+
+      gitHubContact.style.transform = "translateY(100vh)"; //SETTIME FOR LINK TIMED TRANSITION
+      emailContact.style.transform = "translateY(100vh)"; 
+      linkedinContact.style.transform = "translateY(100vh)"; 
+  
     contactCont.style.zIndex = "-1";
 
     portfolioCont.style.transform = "translateY(0vh)"; // BRINGS BACK PORTFOLIO SECTION TO ORIGINAL POSITION
@@ -221,7 +231,17 @@ function handleContact() {
 
     setScrollOnOpenTheater();
 
-    derp.style.transform = "translate(0vh)"; // BRINGS IN HEADER OF SECTION
+    aboutMeCont.style.transform = "translateY(-100vh)";
+    setTimeout(() => {
+      gitHubContact.style.transform = "translateY(0vh)"; //SETTIME FOR LINK TIMED TRANSITION
+    },300)
+    setTimeout(() => {
+      emailContact.style.transform = "translateY(0vh)"; 
+    }, 200)
+    setTimeout(() => {
+      linkedinContact.style.transform = "translateY(0vh)"; 
+    }, 100);
+    contactTitle.style.transform = "translateX(0vw)"; // BRINGS IN HEADER OF SECTION
     contactCont.style.zIndex = "0";
     portfolioCont.style.transform = "translateY(-50vh)"; // LIFTS UP PROTFOLIO SECTION TO GIVE FEEL OF MOVEMENT
   }

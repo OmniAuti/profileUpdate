@@ -305,7 +305,7 @@ h1 {
   font-family: "Arapey", serif;
   color: #1c1c25;
   font-size: 25px;
-  margin-top: 0%;
+  margin-top: 0px;
   -webkit-transform-origin: top left;
   -moz-transform-origin: top left;
   -ms-transform-origin: top left;
@@ -353,8 +353,8 @@ h1 {
   }
 
   65% {
-    margin-left: 0%;
-    margin-top: 0%;
+    margin-left: 0px;
+    margin-top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -364,7 +364,7 @@ h1 {
 
   100% {
     margin-left: calc(37.5% - 10px);
-    margin-top: 0%;
+    margin-top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -375,7 +375,7 @@ h1 {
 
 .active-contact-link {
   margin-left: calc(37.5% - 10px);
-  margin-top: 0%;
+  margin-top: 0px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -391,7 +391,7 @@ h1 {
 @keyframes activeContactText {
   0% {
     margin-left: calc(37.5% - 10px);
-    margin-top: 0%;
+    margin-top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -401,7 +401,7 @@ h1 {
 
   35% {
     margin-left: 14.5%;
-    margin-top: 0%;
+    margin-top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -410,8 +410,8 @@ h1 {
   }
 
   64% {
-    margin-left: 0%;
-    margin-top: 0%;
+    margin-left: 0px;
+    margin-top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -476,7 +476,7 @@ h1 {
   font-family: "Arapey", serif;
   color: #1c1c25;
   font-size: 25px;
-  margin-top: 0%;
+  margin-top: 0px;
   -webkit-transform-origin: top left;
   -moz-transform-origin: top left;
   -ms-transform-origin: top left;
@@ -529,8 +529,8 @@ h1 {
   }
 
   65% {
-    margin-left: 0%;
-    margin-top: 0%;
+    margin-left: 0px;
+    margin-top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -540,7 +540,7 @@ h1 {
 
   100% {
     margin-left: 60%;
-    margin-top: 0%;
+    margin-top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -551,7 +551,7 @@ h1 {
 
 .active-design-link {
   margin-left: 60%;
-  margin-top: 0%;
+  margin-top: 0px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -567,7 +567,7 @@ h1 {
 @keyframes activeDesignText {
   0% {
     margin-left: 60%;
-    margin-top: 0%;
+    margin-top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -577,7 +577,7 @@ h1 {
 
   35% {
     margin-left: 27.5%;
-    margin-top: 0%;
+    margin-top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -586,8 +586,8 @@ h1 {
   }
 
   64% {
-    margin-left: 0%;
-    margin-top: 0%;
+    margin-left: 0px;
+    margin-top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -650,9 +650,6 @@ h1 {
 }
 
 .stacked-guts {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
   height: 95%;
   width: 100%;
 }
@@ -667,6 +664,7 @@ h1 {
   font-family: "Arapey", serif;
   color: #1c1c25;
   font-size: 25px;
+  top: 0px;
   -webkit-transform-origin: top left;
   -moz-transform-origin: top left;
   -ms-transform-origin: top left;
@@ -714,8 +712,8 @@ h1 {
   }
 
   65% {
-    margin-left: 0%;
-    margin-top: 0%;
+    margin-left: 0px;
+    margin-top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -725,7 +723,7 @@ h1 {
 
   100% {
     margin-left: 82.5%;
-    margin-top: 0%;
+    margin-top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -736,7 +734,7 @@ h1 {
 
 .active-code-link {
   margin-left: 82.5%;
-  margin-top: 0%;
+  margin-top: 0px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -752,7 +750,7 @@ h1 {
 @keyframes activeCodeText {
   0% {
     margin-left: 82.5%;
-    margin-top: 0%;
+    margin-top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -762,7 +760,7 @@ h1 {
 
   35% {
     margin-left: 50%;
-    margin-top: 0%;
+    margin-top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -772,7 +770,7 @@ h1 {
 
   50% {
     margin-left: 50%;
-    margin-top: 0%;
+    margin-top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -835,6 +833,11 @@ h1 {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  -webkit-transition: transform ease-out 500ms;
+  -moz-transition: transform ease-out 500ms;
+  -ms-transition: transform ease-out 500ms;
+  -o-transition: transform ease-out 500ms;
+  transition: transform ease-out 500ms;
 }
 
 .move-letter {
@@ -962,7 +965,7 @@ h1 {
   }
 }
 
-/* ------------- Work Together Mode --------------- */
+/* ------------- CONTACT MODE --------------- */
 
 .contact-cont {
   width: 100vw;
@@ -973,18 +976,72 @@ h1 {
   z-index: -99;
 }
 
-.derp {
-  -webkit-transform: translateY(100vh);
-  -moz-transform: translateY(100vh);
-  -ms-transform: translateY(100vh);
-  -o-transform: translateY(100vh);
-  transform: translateY(100vh);
+.contact-title {
+  -webkit-transform: translateX(100vw);
+  -moz-transform: translateX(100vw);
+  -ms-transform: translateX(100vw);
+  -o-transform: translateX(100vw);
+  transform: translateX(100vw);
   -webkit-transition: all ease-out 500ms;
   -moz-transition: all ease-out 500ms;
   -ms-transition: all ease-out 500ms;
   -o-transition: all ease-out 500ms;
   transition: all ease-out 500ms;
+  font-family: "Arapey", serif;
+  font-size: 7rem;
+  color: #f8f8ff;
+  width: 100%;
+  text-align: right;
+  padding-right: 50px;
 }
+
+.contact-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 70%;
+  height: 50%;
+}
+
+.gitHub-cont,
+  .email-cont,
+  .linkedin-cont {
+    -webkit-transform: translateY(100vh);
+    -moz-transform: translateY(100vh);
+    -ms-transform: translateY(100vh);
+    -o-transform: translateY(100vh);
+    transform: translateY(100vh);
+    -webkit-transition: all ease 250ms;
+    -moz-transition: all ease 250ms;
+    -ms-transition: all ease 250ms;
+    -o-transition: all ease 250ms;
+    transition: all ease 250ms;
+    width: 60px; 
+    height: 60px;
+}
+
+.gitHub-cont {
+  background-image: url('imgs/github.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.email-cont {
+  background-image: url('imgs/email.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.linkedin-cont {
+  background-image: url('imgs/linkedin.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+/* CARD START --------------- */
 
 .design-close-btn,
 .code-close-btn {
