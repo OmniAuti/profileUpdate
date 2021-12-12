@@ -234,13 +234,13 @@ function handleContact() {
     aboutMeCont.style.transform = "translateY(-100vh)";
     setTimeout(() => {
       gitHubContact.style.transform = "translateY(0vh)"; //SETTIME FOR LINK TIMED TRANSITION
-    },300)
+    },100)
     setTimeout(() => {
       emailContact.style.transform = "translateY(0vh)"; 
     }, 200)
     setTimeout(() => {
       linkedinContact.style.transform = "translateY(0vh)"; 
-    }, 100);
+    }, 300);
     contactTitle.style.transform = "translateX(0vw)"; // BRINGS IN HEADER OF SECTION
     contactCont.style.zIndex = "0";
     portfolioCont.style.transform = "translateY(-50vh)"; // LIFTS UP PROTFOLIO SECTION TO GIVE FEEL OF MOVEMENT
@@ -273,11 +273,4 @@ function createCodeGuts() {
     scripty.classList.add("project-card-script");
     document.body.appendChild(scripty);
   }, 1250);
-}
-
-function deleteGuts() {
-  const gut = document.querySelector(".stacked-guts");
-  gut.remove();
-  const scripty = document.querySelector(".project-card-script");
-  scripty.remove();
 }

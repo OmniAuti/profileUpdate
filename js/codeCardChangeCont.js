@@ -2,6 +2,7 @@ const codeProjectUpBtn = document.querySelector(".code-project-less-btn");
 const codeProjectDownBtn = document.querySelector(".code-project-add-btn");
 
 var deadCatCard = `
+<a href="https://omniauti.github.io/deadCat/" target="_blank">
 <div class="card">
   <div class="card-inner-dead-cat">
     <div class="header-dead-cat">
@@ -17,9 +18,11 @@ var deadCatCard = `
     <div class="logo-dead-cat">
     </div>
   </div>
-</div>`;
+</div>
+</a>`;
 
-var studioSilenceCard = `      
+var studioSilenceCard = `  
+<a href="https://omniauti.github.io/studiosilence/" target="_blank">    
 <div class="card">
   <div class="card-inner-studio-silence">
     <div class="title-studio-silence">
@@ -28,9 +31,13 @@ var studioSilenceCard = `
     </div>
     <div class="square-studio-silence"></div>
   </div>
-</div>`;
+</div>
+</a>
+`;
 
 var madBatterCard = `
+<a href="https://omniauti.github.io/madbatter/" target="_blank">
+
     <div class="card">
       <div class="card-inner-mad-bat">
         <div class="hero-mad-bat"></div>
@@ -121,9 +128,12 @@ var madBatterCard = `
         </div>
       </div>
     </div>
+    </a>
 `;
 
 var hoppyBarberCard = `
+<a href="https://omniauti.github.io/barber/" target="_blank">
+
 <div class="card">
   <div class="card-inner-hoppy">
     <hr class="border-no-3d-hoppy" />
@@ -143,9 +153,12 @@ var hoppyBarberCard = `
       <div class="two-img-hoppy"></div>
     </div>
   </div>
-</div>`;
+</div>
+</a>`;
 
 var wheelersCard = `    
+<a href="https://omniauti.github.io/TwoWheelers/" target="_blank">
+
 <div class="card">
   <div class="card-inner-wheelers">
     <div class="hero-wheelers"></div>
@@ -164,14 +177,15 @@ var wheelersCard = `
     </div>
     <div class="coa-wheelers"><h3>Visit Us</h3></div>
   </div>
-</div>`
+</div>
+</a>`
 
 var portfolioCardDeckArr = [
   deadCatCard,
   madBatterCard,
   studioSilenceCard,
-  hoppyBarberCard,
   wheelersCard,
+  hoppyBarberCard,
 ];
 
 function changeCodeGuts(i) {
@@ -202,6 +216,7 @@ function portfolioCardChange() {
   });
 
   codeProjectDownBtn.addEventListener("click", () => {
+    codeProjectUpBtn.removeAttribute('disabled')
     i++;
     if (i > 4) {
       i = 0;
@@ -211,3 +226,10 @@ function portfolioCardChange() {
 }
 
 portfolioCardChange();
+
+function deleteGuts() {
+  const gut = document.querySelector(".stacked-guts");
+  gut.remove();
+  const scripty = document.querySelector(".project-card-script");
+  scripty.remove();
+}

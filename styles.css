@@ -1111,9 +1111,25 @@ justify-content: space-between;
   height: 95px;
   background-color: transparent;
   border: none;
-  font-family: "Arapey", serif;
   color: #1c1c25;
-  font-size: 25px;
+  font-size: 20px;
+  font-family: 'Catamaran', sans-serif;
+}
+
+.text-mask {
+  font-family: "Arapey", serif;;
+}
+
+.change-project-up-arrow {
+  padding-left: 10.25px;
+}
+
+.code-project-less-btn:disabled {
+  cursor:not-allowed;
+}
+
+.change-project-down-arrow {
+  margin-left: -24px;
 }
 
 .change-project-up-arrow::before {
