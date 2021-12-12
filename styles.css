@@ -1071,7 +1071,7 @@ justify-content: space-between;
   padding: 50px;
   cursor: pointer;
   height: 50px;
-  top: 25px;
+  top: 0px;
   position: absolute;
   background-color: transparent;
   border: none;
