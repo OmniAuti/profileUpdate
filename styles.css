@@ -1112,16 +1112,18 @@ justify-content: space-between;
   background-color: transparent;
   border: none;
   color: #1c1c25;
-  font-size: 20px;
-  font-family: 'Catamaran', sans-serif;
+  font-size: 10px;
+  font-family: sans-serif;
+  font-weight: 0l;
 }
 
 .text-mask {
   font-family: "Arapey", serif;;
+  font-size: 10px ;
 }
 
 .change-project-up-arrow {
-  padding-left: 10.25px;
+  padding-left: 11.5px;
 }
 
 .code-project-less-btn:disabled {
@@ -1129,23 +1131,23 @@ justify-content: space-between;
 }
 
 .change-project-down-arrow {
-  margin-left: -24px;
+  margin-left: -2.5px;
 }
 
 .change-project-up-arrow::before {
   content: "";
   position: absolute;
-  width: 3px;
+  width: 2.5px;
   height: 95px;
   background-color: #1c1c25;
   top: 0;
-  left: 17.5px;
+  left: 17px;
   transition: all ease-out 500ms;
 }
 .change-project-down-arrow::after {
   content: "";
   position: absolute;
-  width: 3px;
+  width: 2.5px;
   height: 95px;
   background-color: #1c1c25;
   right: 17.5px;
