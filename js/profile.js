@@ -40,6 +40,9 @@ function handleDesignCloseBtn() {
       left: 0,
       behavior: "smooth",
     }); // FORCED SCROLL TO CONTACT SECTION
+
+    aboutMeCont.style.transform = "translateX(0vh)";
+
     contactCard.classList.remove("move-card-back");
     codeCard.classList.remove("move-card-back");
     contactCard.classList.add("move-card-forward"); // ANIMATION TO MOVE UNUSED CARDS INTO VIEW AS CURRENT SELECTION CLOSES
@@ -69,6 +72,9 @@ function handleCodeCloseBtn() {
       left: 0,
       behavior: "smooth",
     }); // FORCED SCROLL TO CONTACT SECTION
+
+    aboutMeCont.style.transform = "translateX(0vh)";
+
     contactCard.classList.remove("move-card-back");
     designCard.classList.remove("move-card-back");
     contactCard.classList.add("move-card-forward");
@@ -91,13 +97,14 @@ function handleCodeCloseBtn() {
 }
 // ACTIVE CONTACT HANDLERS
 function handleActiveDesignCard() {
-  this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITION
-  codeCard.classList.add("curtain-closed")
-  contactCard.classList.add("curtain-closed")
-  //AVOID DOUBLE DECLARATIONS
+    //AVOID DOUBLE DECLARATIONS
   if (designCard.classList.contains("theater")) {
     return;
   }
+
+  this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITION
+  codeCard.classList.add("curtain-closed")
+  contactCard.classList.add("curtain-closed")
 
   if (contactCard.classList.contains("active-contact")) {
     designLink.style.opacity = 0;
@@ -127,6 +134,7 @@ function handleActiveDesignCard() {
     contactCard.classList.add("move-card-back"); // ANIMATION TO MOVE UNUSED CARDS OUT OF VIEW
     codeCard.classList.add("move-card-back");
     setScrollOnOpenTheater();
+    aboutMeCont.style.transform = "translateX(200vh)";
   }
   // REMOVES UNCLICKABLE CLASS
   setTimeout(() => {
@@ -136,13 +144,16 @@ function handleActiveDesignCard() {
   }, 1000);
 }
 function handleActiveCodeCard() {
-  this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITIONS
-  designCard.classList.add("curtain-closed")
-  contactCard.classList.add("curtain-closed")
+
   //AVOID DOUBLE DECLARATIONS
   if (codeCard.classList.contains("theater")) {
     return;
   }
+
+  this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITIONS
+  designCard.classList.add("curtain-closed")
+  contactCard.classList.add("curtain-closed")
+
   if (contactCard.classList.contains("active-contact")) {
     designLink.style.opacity = 0;
     codeLink.style.opacity = 0;
@@ -176,6 +187,7 @@ function handleActiveCodeCard() {
     designCard.classList.add("move-card-back");
     setScrollOnOpenTheater();
     createCodeGuts();
+    aboutMeCont.style.transform = "translateX(200vh)";
   }
   // REMOVES UNCLICKABLE CLASS
   setTimeout(() => {
@@ -271,19 +283,5 @@ codeCard.addEventListener("click", handleActiveCodeCard);
 // CONTACT CARD CLICK EVENT
 contactCard.addEventListener("click", handleContact);
 
-function createCodeGuts() {
-  setTimeout(() => {
-    const guts = document.createElement("div");
-    guts.classList.add("stacked-guts");
-    guts.innerHTML = portfolioCardDeckArr[0];
-    codeCard.appendChild(guts);
-  }, 1000);
-  setTimeout(() => {
-    const scripty = document.createElement("script");
-    scripty.setAttribute("src", "js/projectCard.js");
-    scripty.classList.add("project-card-script");
-    document.body.appendChild(scripty);
-  }, 1250);
-}
 
 

@@ -227,6 +227,22 @@ function portfolioCardChange() {
 
 portfolioCardChange();
 
+function createCodeGuts() {
+  setTimeout(() => {
+    const guts = document.createElement("div");
+    guts.classList.add("stacked-guts");
+    guts.innerHTML = portfolioCardDeckArr[0];
+    codeCard.appendChild(guts);
+  }, 1000);
+  setTimeout(() => {
+    const scripty = document.createElement("script");
+    scripty.setAttribute("src", "js/projectCard.js");
+    scripty.classList.add("project-card-script");
+    document.body.appendChild(scripty);
+  }, 1250);
+}
+
+
 function deleteGuts() {
   const gut = document.querySelector(".stacked-guts");
   gut.remove();
