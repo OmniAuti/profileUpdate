@@ -91,6 +91,7 @@ function handleCodeCloseBtn() {
 }
 // ACTIVE CONTACT HANDLERS
 function handleActiveDesignCard() {
+  this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITION
   //AVOID DOUBLE DECLARATIONS
   if (designCard.classList.contains("theater")) {
     return;
@@ -109,8 +110,6 @@ function handleActiveDesignCard() {
   if (!this.classList.contains("close-theater")) {
     this.classList.add("theater"); // MAKE CARD ACTIVE - FRONT AND CENTER
   }
-
-  this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITION
 
   if (designCard.classList.contains("theater")) {
     // SET ACTIVE TAB ABLE LINKS
@@ -134,6 +133,8 @@ function handleActiveDesignCard() {
   }, 1000);
 }
 function handleActiveCodeCard() {
+  this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITIONS
+
   //AVOID DOUBLE DECLARATIONS
   if (codeCard.classList.contains("theater")) {
     return;
@@ -152,7 +153,6 @@ function handleActiveCodeCard() {
     this.classList.add("theater"); // MAKE CARD ACTIVE - FRONT AND CENTER
   }
 
-  this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITIONS
 
   if (codeCard.classList.contains("theater")) {
     // SET ACTIVE TAB ABLE LINKS
@@ -200,6 +200,9 @@ function handleContact() {
     aboutMeCont.style.transform = null; // NULL THIS TRANSFORM SO CSS PRESET WORKS
     contactTitle.style.transform = "translateX(100vw)"; // TAKES OUT HEADER OF CONTACT SECTION
 
+     gitHubContact.setAttribute("tabindex", "-1")
+     emailContact.setAttribute("tabindex", "-1")
+     linkedinContact.setAttribute("tabindex", "-1")
       gitHubContact.style.transform = "translateY(100vh)"; //SETTIME FOR LINK TIMED TRANSITION
       emailContact.style.transform = "translateY(100vh)"; 
       linkedinContact.style.transform = "translateY(100vh)"; 
@@ -241,6 +244,9 @@ function handleContact() {
     setTimeout(() => {
       linkedinContact.style.transform = "translateY(0vh)"; 
     }, 300);
+    gitHubContact.setAttribute("tabindex", "0")
+    emailContact.setAttribute("tabindex", "0")
+    linkedinContact.setAttribute("tabindex", "0")
     contactTitle.style.transform = "translateX(0vw)"; // BRINGS IN HEADER OF SECTION
     contactCont.style.zIndex = "0";
     portfolioCont.style.transform = "translateY(-50vh)"; // LIFTS UP PROTFOLIO SECTION TO GIVE FEEL OF MOVEMENT
@@ -274,3 +280,5 @@ function createCodeGuts() {
     document.body.appendChild(scripty);
   }, 1250);
 }
+
+

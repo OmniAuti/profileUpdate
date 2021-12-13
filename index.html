@@ -105,17 +105,34 @@
                   <div class="html-icon"></div>
                   <div class="css-icon"></div>
                 </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, necessitatibus reiciendis vero saepe tempora nam nisi repellat magnam debitis corporis, sint assumenda tenetur itaque vel, soluta odio doloremque? Facere, quisquam?</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+                  necessitatibus reiciendis vero saepe tempora nam nisi repellat
+                  magnam debitis corporis, sint assumenda tenetur itaque vel,
+                  soluta odio doloremque? Facere, quisquam?
+                </p>
               </div>
-              <a href="#">Visit Site</a>
+              <p>Visit Site</p>
             </div>
             <button tabindex="-1" class="code-close-btn">
-                <h3 class="rtn-btn-text">Return</h3>
+              <h3 class="rtn-btn-text">Return</h3>
+            </button>
+            <div class="change-project-cont">
+              <button
+                tabindex="-1"
+                disabled="true"
+                class="code-project-less-btn btn"
+              >
+                <h3 class="change-project-up-arrow">
+                  P<span class="text-mask">revious</span>
+                </h3>
               </button>
-              <div class="change-project-cont">
-                <button tabindex="-1" disabled="true" class="code-project-less-btn btn"><h3 class="change-project-up-arrow">P<span class="text-mask">revious</span></h3></button>
-                <button tabindex="-1" class="code-project-add-btn btn"><h3 class="change-project-down-arrow"><span class="text-mask">Nex</span>+</h3></button>
-              </div>
+              <button tabindex="-1" class="code-project-add-btn btn">
+                <h3 class="change-project-down-arrow">
+                  <span class="text-mask">Nex</span>+
+                </h3>
+              </button>
+            </div>
           </div>
         </section>
 
@@ -166,12 +183,18 @@
       <section id="contact" class="contact-cont">
         <h2 class="contact-title">Contact</h2>
         <div class="contact-content">
-          <a href="https://github.com/OmniAuti" target="_blank"
-            ><div class="gitHub-cont"></div
+          <a
+            class="gitHub-cont"
+            tabindex="-1"
+            href="https://github.com/OmniAuti"
+            target="_blank"
           ></a>
-          <a href=""><div class="email-cont"></div></a>
-          <a href="https://www.linkedin.com/in/austin-olijar" target="_blank"
-            ><div class="linkedin-cont"></div
+          <a class="email-cont" onClick="return false" tabindex="-1" href=""></a>
+          <a
+            class="linkedin-cont"
+            tabindex="-1"
+            href="https://www.linkedin.com/in/austin-olijar"
+            target="_blank"
           ></a>
         </div>
       </section>
