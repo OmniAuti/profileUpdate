@@ -1128,6 +1128,10 @@ h1 {
   font-size: 25px;
 }
 
+.code-close-btn {
+  position: absolute;
+}
+
 .rtn-btn-text::before {
   content: "";
   position: absolute;
@@ -1136,6 +1140,52 @@ h1 {
   bottom: 33px;
   left: 7.5px;
   height: 2.5px;
+  transition: all ease 500ms;
+}
+
+.close-btn-effect-one-r {
+  display: inline-block;
+  transition: all ease 500ms;
+}
+.close-btn-effect-e {
+  display: inline-block;
+  transition: all ease 650ms;
+}
+.close-btn-effect-t {
+  display: inline-block;
+  transition: all ease 800ms;
+}
+.close-btn-effect-u {
+  display: inline-block;
+  transition: all ease 950ms;
+}
+.close-btn-effect-r {
+  display: inline-block;
+  transition: all ease 1100ms;
+}
+.close-btn-effect-n {
+  display: inline-block;
+  transition: all ease 1250ms;
+}
+
+.design-close-btn:hover .rtn-btn-text::before,
+.code-close-btn:hover .rtn-btn-text::before {
+  width: 10px;
+}
+
+.design-close-btn:hover .close-btn-effect-one-r, 
+.design-close-btn:hover .close-btn-effect-e, 
+.design-close-btn:hover .close-btn-effect-t, 
+.design-close-btn:hover .close-btn-effect-u, 
+.design-close-btn:hover .close-btn-effect-r, 
+.design-close-btn:hover .close-btn-effect-n,
+.code-close-btn:hover .close-btn-effect-one-r, 
+.code-close-btn:hover .close-btn-effect-e, 
+.code-close-btn:hover .close-btn-effect-t, 
+.code-close-btn:hover .close-btn-effect-u, 
+.code-close-btn:hover .close-btn-effect-r, 
+.code-close-btn:hover .close-btn-effect-n {
+  transform: translateX(-30px)
 }
 
 .change-project-cont {
