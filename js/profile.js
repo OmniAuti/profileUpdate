@@ -92,6 +92,8 @@ function handleCodeCloseBtn() {
 // ACTIVE CONTACT HANDLERS
 function handleActiveDesignCard() {
   this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITION
+  codeCard.classList.add("curtain-closed")
+  contactCard.classList.add("curtain-closed")
   //AVOID DOUBLE DECLARATIONS
   if (designCard.classList.contains("theater")) {
     return;
@@ -129,12 +131,14 @@ function handleActiveDesignCard() {
   // REMOVES UNCLICKABLE CLASS
   setTimeout(() => {
     designCard.classList.remove("curtain-closed");
+    codeCard.classList.remove("curtain-closed")
     contactCard.classList.remove("curtain-closed");
   }, 1000);
 }
 function handleActiveCodeCard() {
   this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITIONS
-
+  designCard.classList.add("curtain-closed")
+  contactCard.classList.add("curtain-closed")
   //AVOID DOUBLE DECLARATIONS
   if (codeCard.classList.contains("theater")) {
     return;
@@ -176,6 +180,7 @@ function handleActiveCodeCard() {
   // REMOVES UNCLICKABLE CLASS
   setTimeout(() => {
     this.classList.remove("curtain-closed");
+    designCard.classList.remove("curtain-closed")
     contactCard.classList.remove("curtain-closed");
   }, 1000);
 }
