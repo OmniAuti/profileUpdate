@@ -189,19 +189,23 @@ var portfolioCardDeckArr = [
 ];
 
 function changeCodeGuts(i) {
+  codeProjectDownBtn.classList.add('close-theater')
+  codeProjectUpBtn.classList.add('close-theater')
   deleteGuts();
   setTimeout(() => {
     const guts = document.createElement("div");
     guts.classList.add("stacked-guts");
     guts.innerHTML = portfolioCardDeckArr[i];
     codeCard.appendChild(guts);
-  }, 1000);
+  }, 750);
   setTimeout(() => {
     const scripty = document.createElement("script");
     scripty.setAttribute("src", "js/projectCard.js");
     scripty.classList.add("project-card-script");
     document.body.appendChild(scripty);
-  }, 1250);
+    codeProjectDownBtn.classList.remove('close-theater')
+    codeProjectUpBtn.classList.remove('close-theater')
+  }, 1000);
 }
 
 function portfolioCardChange() {
@@ -228,18 +232,19 @@ function portfolioCardChange() {
 portfolioCardChange();
 
 function createCodeGuts() {
+ 
   setTimeout(() => {
     const guts = document.createElement("div");
     guts.classList.add("stacked-guts");
     guts.innerHTML = portfolioCardDeckArr[0];
     codeCard.appendChild(guts);
-  }, 1000);
+  }, 750);
   setTimeout(() => {
     const scripty = document.createElement("script");
     scripty.setAttribute("src", "js/projectCard.js");
     scripty.classList.add("project-card-script");
     document.body.appendChild(scripty);
-  }, 1250);
+  }, 1000);
 }
 
 
