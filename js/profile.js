@@ -41,7 +41,7 @@ function handleDesignCloseBtn() {
       behavior: "smooth",
     }); // FORCED SCROLL TO CONTACT SECTION
 
-    aboutMeCont.style.transform = "translateX(0vh)";
+    aboutMeCont.style.transform = null;
 
     contactCard.classList.remove("move-card-back");
     codeCard.classList.remove("move-card-back");
@@ -62,6 +62,7 @@ function handleDesignCloseBtn() {
 }
 function handleCodeCloseBtn() {
   if (codeCard.classList.contains("theater")) {
+    deleteGutsDown(); // GETS RID OF CURRENT PROJECT ON SCREEN
     contactTabLink.setAttribute("tabindex", "0"); // ENABLE LINKS
     designTabLink.setAttribute("tabindex", "0");
     //CHECK IF ACTIVE CARD
@@ -73,14 +74,13 @@ function handleCodeCloseBtn() {
       behavior: "smooth",
     }); // FORCED SCROLL TO CONTACT SECTION
 
-    aboutMeCont.style.transform = "translateX(0vh)";
+    aboutMeCont.style.transform = null;
 
     contactCard.classList.remove("move-card-back");
     designCard.classList.remove("move-card-back");
     contactCard.classList.add("move-card-forward");
     designCard.classList.add("move-card-forward");
     codeCard.classList.remove("theater");
-    deleteGuts();
     setTimeout(() => {
       codeCloseBtn.setAttribute("tabindex", "-1"); // GET RID OF CLOSE BTN
       codeProjectDownBtn.setAttribute("tabindex", "-1"); // GET RID OF CLOSE BTN
@@ -105,6 +105,7 @@ function handleActiveDesignCard() {
   this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITION
   codeCard.classList.add("curtain-closed")
   contactCard.classList.add("curtain-closed")
+ 
 
   if (contactCard.classList.contains("active-contact")) {
     designLink.style.opacity = 0;
@@ -187,7 +188,7 @@ function handleActiveCodeCard() {
     designCard.classList.add("move-card-back");
     setScrollOnOpenTheater();
     createCodeGuts();
-    aboutMeCont.style.transform = "translateX(200vh)";
+    aboutMeCont.style.transform = "translateX(200vw)";
   }
   // REMOVES UNCLICKABLE CLASS
   setTimeout(() => {

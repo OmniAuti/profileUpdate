@@ -188,16 +188,22 @@ var portfolioCardDeckArr = [
   hoppyBarberCard,
 ];
 
-function changeCodeGuts(i) {
+// FUNCTIONALITY TO CHANGE CARDS
+
+function changeCodeGutsNext(i) {
   codeProjectDownBtn.classList.add('close-theater')
   codeProjectUpBtn.classList.add('close-theater')
-  deleteGuts();
+  deleteGutsUp();
   setTimeout(() => {
     const guts = document.createElement("div");
     guts.classList.add("stacked-guts");
     guts.innerHTML = portfolioCardDeckArr[i];
     codeCard.appendChild(guts);
-  }, 750);
+    guts.style.transform = 'translateY(950px)'
+  }, 325);
+  setTimeout(() => {
+    document.querySelector('.stacked-guts').style.transform = 'translateY(0vh)';
+  }, 350)
   setTimeout(() => {
     const scripty = document.createElement("script");
     scripty.setAttribute("src", "js/projectCard.js");
@@ -205,10 +211,33 @@ function changeCodeGuts(i) {
     document.body.appendChild(scripty);
     codeProjectDownBtn.classList.remove('close-theater')
     codeProjectUpBtn.classList.remove('close-theater')
-  }, 1000);
+  }, 375);
+}
+function changeCodeGutsPrev(i) {
+  codeProjectDownBtn.classList.add('close-theater')
+  codeProjectUpBtn.classList.add('close-theater')
+  deleteGutsDown();
+  setTimeout(() => {
+    const guts = document.createElement("div");
+    guts.classList.add("stacked-guts");
+    guts.innerHTML = portfolioCardDeckArr[i];
+    codeCard.appendChild(guts);
+    guts.style.transform = 'translateY(-950px)'
+  }, 325);
+  setTimeout(() => {
+    document.querySelector('.stacked-guts').style.transform = 'translateY(0vh)';
+  }, 350)
+  setTimeout(() => {
+    const scripty = document.createElement("script");
+    scripty.setAttribute("src", "js/projectCard.js");
+    scripty.classList.add("project-card-script");
+    document.body.appendChild(scripty);
+    codeProjectDownBtn.classList.remove('close-theater')
+    codeProjectUpBtn.classList.remove('close-theater')
+  }, 375);
 }
 
-function portfolioCardChange() {
+function portfolioCardChange(i) {
   var i = 0;
 
   codeProjectUpBtn.addEventListener("click", () => {
@@ -216,7 +245,7 @@ function portfolioCardChange() {
     if (i < 0) {
       i = 4;
     }
-    changeCodeGuts(i);
+    changeCodeGutsNext(i);
   });
 
   codeProjectDownBtn.addEventListener("click", () => {
@@ -225,20 +254,22 @@ function portfolioCardChange() {
     if (i > 4) {
       i = 0;
     }
-    changeCodeGuts(i);
+    changeCodeGutsPrev(i);
   });
 }
 
 portfolioCardChange();
 
 function createCodeGuts() {
- 
   setTimeout(() => {
     const guts = document.createElement("div");
     guts.classList.add("stacked-guts");
     guts.innerHTML = portfolioCardDeckArr[0];
     codeCard.appendChild(guts);
-  }, 750);
+  }, 500);
+  setTimeout(() => {
+    document.querySelector('.stacked-guts').style.transform = 'translateY(0vh)';
+  }, 600)
   setTimeout(() => {
     const scripty = document.createElement("script");
     scripty.setAttribute("src", "js/projectCard.js");
@@ -248,9 +279,28 @@ function createCodeGuts() {
 }
 
 
-function deleteGuts() {
-  const gut = document.querySelector(".stacked-guts");
-  gut.remove();
+function deleteGutsUp() {
   const scripty = document.querySelector(".project-card-script");
   scripty.remove();
+  const derp = document.querySelector(".stacked-guts");
+  derp.classList.add('move-project-down');
+  const moveDown = document.querySelector(".move-project-down");
+  moveDown.classList.remove('.stacked-guts')
+  moveDown.style.transform = 'translateY(-100vh)';
+  setTimeout(() => {
+    moveDown.remove();
+  }, 300)
+}
+function deleteGutsDown() {
+  const scripty = document.querySelector(".project-card-script");
+  scripty.remove();
+  const derp = document.querySelector(".stacked-guts");
+  derp.classList.add('move-project-down');
+  const moveDown = document.querySelector(".move-project-down");
+  moveDown.classList.remove('.stacked-guts')
+  moveDown.style.transform = 'translateY(100vh)';
+  setTimeout(() => {
+    moveDown.remove();
+  }, 300)
+
 }
