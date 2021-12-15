@@ -188,7 +188,7 @@ var portfolioCardDeckArr = [
   hoppyBarberCard,
 ];
 
-var deadCatInfo = `<p class="project-title">Dead Cat Chrome Extension</p>
+var deadCatInfo = `<p class="project-title">Dead Cat</p>
 <div class="text-used-code-cont">
   <div class="used-code-icon-cont">
     <div class="javascript-icon"></div>
