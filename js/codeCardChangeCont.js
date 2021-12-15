@@ -292,7 +292,7 @@ function changeCodeGutsNext(i) {
     guts.style.transform = 'translateY(950px)'
   }, 425);
   setTimeout(() => {
-    document.querySelector('.stacked-guts').style.transform = 'translateY(0vh)';
+    document.querySelector('.stacked-guts').style.transform = null;
   }, 450)
   setTimeout(() => {
     const scripty = document.createElement("script");
@@ -315,7 +315,7 @@ function changeCodeGutsPrev(i) {
     guts.style.transform = 'translateY(-950px)'
   }, 425);
   setTimeout(() => {
-    document.querySelector('.stacked-guts').style.transform = 'translateY(0vh)';
+    document.querySelector('.stacked-guts').style.transform = null;
   }, 450)
   setTimeout(() => {
     const scripty = document.createElement("script");
@@ -401,7 +401,7 @@ function createCodeGuts() {
     guts.style.transform = 'translateY(950px)';
   }, 500);
   setTimeout(() => {
-    document.querySelector('.stacked-guts').style.transform = 'translateY(0vh)';
+    document.querySelector('.stacked-guts').style.transform = null;
     
   }, 600)
   setTimeout(() => {
