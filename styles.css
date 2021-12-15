@@ -758,7 +758,7 @@ h1 {
 .project-information-cont {
   height: 350px;
   width: 250px;
-  top: calc(50% + 25px);
+  top: calc(50%);
   left: 50px;
   position: absolute;
   display: flex;
@@ -776,6 +776,7 @@ h1 {
   font-size: 25px;
   margin-left: 150px;
   text-align: left;
+  height: 50px;
 }
 
 .text-used-code-cont {
@@ -1492,7 +1493,7 @@ h1 {
 .change-project-cont {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: calc(50% + 11px);
   transform: translateY(-50%);
   display: flex;
   align-items: center;
@@ -1507,13 +1508,13 @@ h1 {
   padding: 5px;
   cursor: pointer;
   width: 50px;
-  height: 95px;
+  height: 100px;
   background-color: transparent;
   border: none;
   color: #1c1c25;
   font-size: 10px;
   font-family: sans-serif;
-  font-weight: 0l;
+  
 }
 
 .text-mask {
@@ -1555,12 +1556,12 @@ h1 {
 }
 
 .code-project-add-btn:hover .change-project-down-arrow::after {
-  height: 130px;
-  bottom: -35px;
+  height: 190px;
+  bottom: -95px;
 }
 .code-project-less-btn:hover .change-project-up-arrow::before {
-  height: 130px;
-  top: -35px;
+  height: 190px;
+  top: -95px;
 }
 
 /* ------------- PROFILE PROJECT CARDS --------------- */
