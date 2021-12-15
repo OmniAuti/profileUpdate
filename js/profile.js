@@ -63,6 +63,7 @@ function handleDesignCloseBtn() {
 function handleCodeCloseBtn() {
   if (codeCard.classList.contains("theater")) {
     deleteGutsClose(); // GETS RID OF CURRENT PROJECT ON SCREEN
+    projectInfoCont.style.transform = null // RESETS PROJECT INFORMATION BACK OUT OF VIEW
     contactTabLink.setAttribute("tabindex", "0"); // ENABLE LINKS
     designTabLink.setAttribute("tabindex", "0");
     //CHECK IF ACTIVE CARD
@@ -169,8 +170,8 @@ function handleActiveCodeCard() {
     this.classList.add("theater"); // MAKE CARD ACTIVE - FRONT AND CENTER
   }
 
-
   if (codeCard.classList.contains("theater")) {
+    projectDetailsFirstOpen()
     // SET ACTIVE TAB ABLE LINKS
     codeCloseBtn.setAttribute("tabindex", "0"); // BRING UP CLOSE BTN
     codeProjectDownBtn.setAttribute("tabindex", "0"); // BRING UP CLOSE BTN

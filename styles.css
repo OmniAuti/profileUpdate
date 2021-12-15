@@ -748,28 +748,31 @@ h1 {
 }
 
 .project-information-cont {
-  height: 300px;
-  width: 50%;
+  height: 350px;
+  width: 250px;
   top: calc(50% + 25px);
-  left: 75px;
+  left: 50px;
   position: absolute;
-  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  transform: translate(-100vw, -50%);
+  transition: transform ease-in-out 1250ms;
+  color: #1c1c25;
+}
+
+.project-title {
+  width: 100%;
+  font-size: 25px;
+  margin-left: 150px;
+  text-align: left;
 }
 
 .text-used-code-cont {
   display: flex;
   justify-content: space-between;
-}
-
-.text-used-code-cont p {
-  text-align: left;
-  width: 175px;
-  padding-left: 5px;
 }
 
 .used-code-icon-cont {
@@ -779,7 +782,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding-right: 5px;
+  padding-right: 10px;
 }
 
 .javascript-icon {
@@ -802,6 +805,21 @@ h1 {
   background-size: cover;
   width: 40px;
   height: 40px;
+}
+
+.project-details {
+  text-align: left;
+  width: 175px;
+  height: 200px;
+  padding-left: 10px;
+}
+
+.project-card-out-link {
+  width: 100%;
+  text-align: left;
+  margin-left: 150px;
+  font-size: 25px;
+  color: #1c1c25;
 }
 
 .stacked::-webkit-scrollbar {

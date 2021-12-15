@@ -188,6 +188,96 @@ var portfolioCardDeckArr = [
   hoppyBarberCard,
 ];
 
+var deadCatInfo = `<p class="project-title">Dead Cat Chrome Extension</p>
+<div class="text-used-code-cont">
+  <div class="used-code-icon-cont">
+    <div class="javascript-icon"></div>
+    <div class="html-icon"></div>
+    <div class="css-icon"></div>
+  </div>
+  <div class="project-information-details-cont">
+    <p class="project-details">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+      necessitatibus reiciendis vero saepe tempora nam nisi repellat
+      magnam debitis corporis, sint assumenda tenetur itaque vel,
+      soluta odio doloremque? Facere, quisquam?
+    </p>
+  </div>
+</div>
+<a class="project-card-out-link" href="https://omniauti.github.io/deadCat/" target="_blank">Visit Site</a>`
+var madBatInfo = `<p class="project-title">Restaurant Template</p>
+<div class="text-used-code-cont">
+  <div class="used-code-icon-cont">
+    <div class="javascript-icon"></div>
+    <div class="html-icon"></div>
+    <div class="css-icon"></div>
+  </div>
+  <div class="project-information-details-cont">
+    <p class="project-details">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+      necessitatibus reiciendis vero saepe tempora nam nisi repellat
+      magnam debitis corporis, sint assumenda tenetur itaque vel,
+      soluta odio doloremque? Facere, quisquam?
+    </p>
+  </div>
+</div>
+<a class="project-card-out-link" href="https://omniauti.github.io/madbatter/" target="_blank">Visit Site</a>`
+var studioSilenceInfo = `<p class="project-title">Studio Silence</p>
+<div class="text-used-code-cont">
+  <div class="used-code-icon-cont">
+    <div class="javascript-icon"></div>
+    <div class="html-icon"></div>
+    <div class="css-icon"></div>
+  </div>
+  <div class="project-information-details-cont">
+    <p class="project-details">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+      necessitatibus reiciendis vero saepe tempora nam nisi repellat
+      magnam debitis corporis, sint assumenda tenetur itaque vel,
+      soluta odio doloremque? Facere, quisquam?
+    </p>
+  </div>
+</div>
+<a class="project-card-out-link" href="https://omniauti.github.io/studiosilence/" target="_blank">Visit Site</a>`
+var wheelersInfo = `<p class="project-title">Store Template</p>
+<div class="text-used-code-cont">
+  <div class="used-code-icon-cont">
+    <div class="javascript-icon"></div>
+    <div class="html-icon"></div>
+    <div class="css-icon"></div>
+  </div>
+  <div class="project-information-details-cont">
+    <p class="project-details">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+      necessitatibus reiciendis vero saepe tempora nam nisi repellat
+      magnam debitis corporis, sint assumenda tenetur itaque vel,
+      soluta odio doloremque? Facere, quisquam?
+    </p>
+  </div>
+</div>
+<a class="project-card-out-link" href="https://omniauti.github.io/TwoWheelers/" target="_blank">Visit Site</a>`
+var hoppyBarberInfo = `<p class="project-title">The Hoppy Barber</p>
+<div class="text-used-code-cont">
+  <div class="used-code-icon-cont">
+    <div class="javascript-icon"></div>
+    <div class="html-icon"></div>
+    <div class="css-icon"></div>
+  </div>
+  <div class="project-information-details-cont">
+    <p class="project-details">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+      necessitatibus reiciendis vero saepe tempora nam nisi repellat
+      magnam debitis corporis, sint assumenda tenetur itaque vel,
+      soluta odio doloremque? Facere, quisquam?
+    </p>
+  </div>
+</div>
+<a class="project-card-out-link" href="https://omniauti.github.io/barber/" target="_blank">Visit Site</a>`
+
+var infoArr = [deadCatInfo, madBatInfo, studioSilenceInfo, wheelersInfo, hoppyBarberInfo];
+
+
+
 // FUNCTIONALITY TO CHANGE CARDS
 
 function changeCodeGutsNext(i) {
@@ -285,6 +375,7 @@ function portfolioCardChange(i) {
       i = 4;
     }
     changeCodeGutsNext(i);
+    projectInfoChange(i);
   });
 
   codeProjectDownBtn.addEventListener("click", () => {
@@ -294,6 +385,7 @@ function portfolioCardChange(i) {
       i = 0;
     }
     changeCodeGutsPrev(i);
+    projectInfoChange(i);
   });
 }
 
@@ -309,7 +401,7 @@ function createCodeGuts() {
   }, 500);
   setTimeout(() => {
     document.querySelector('.stacked-guts').style.transform = 'translateY(0vh)';
-    guts.style.transform = null;
+    
   }, 600)
   setTimeout(() => {
     const scripty = document.createElement("script");
@@ -317,4 +409,22 @@ function createCodeGuts() {
     scripty.classList.add("project-card-script");
     document.body.appendChild(scripty);
   }, 1000);
+}
+
+
+const projectInfoCont = document.querySelector('.project-information-cont')
+const projectDetails = document.querySelector('.project-details')
+
+function projectDetailsFirstOpen() {
+  projectInfoCont.innerHTML = infoArr[0];
+  projectInfoCont.style.transform = 'translate(0vw, -50%)'
+}
+
+function projectInfoChange(idx) {
+  projectInfoCont.style.transform = null;
+  setTimeout(() => {
+    projectInfoCont.style.transform = 'translate(0vw, -50%)';
+    projectInfoCont.innerHTML = infoArr[idx];
+  }, 500)
+  
 }
