@@ -1515,7 +1515,7 @@ h1 {
 }
 
 .change-project-up-arrow {
-  padding-left: 11.5px;
+  padding-left: 11px;
 }
 
 .code-project-less-btn:disabled {
@@ -1523,13 +1523,13 @@ h1 {
 }
 
 .change-project-down-arrow {
-  margin-left: -2.5px;
+  margin-left: -2.75px;
 }
 
 .change-project-up-arrow::before {
   content: "";
   position: absolute;
-  width: 2.5px;
+  width: 2px;
   height: 95px;
   background-color: #1c1c25;
   top: 0;
@@ -1539,10 +1539,10 @@ h1 {
 .change-project-down-arrow::after {
   content: "";
   position: absolute;
-  width: 2.5px;
+  width: 2px;
   height: 95px;
   background-color: #1c1c25;
-  right: 17.5px;
+  right: 17.6px;
   bottom: 0;
   transition: all ease-out 500ms;
 }
