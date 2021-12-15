@@ -32,6 +32,7 @@ function handleDesignCloseBtn() {
   if (designCard.classList.contains("theater")) {
     contactTabLink.setAttribute("tabindex", "0"); // ENABLE CONTACT LINK
     codeTabLink.setAttribute("tabindex", "0"); // ENABLE CODE LINK
+    designTabLink.setAttribute("tabindex", "0"); // ENABLE DESIGN LINK
     //CHECK IF ACTIVE CARD
     designCard.classList.add("close-theater"); // ADD CLASS TO CATCH SIZE RESET IF/ELSE
     setHieghts();
@@ -66,6 +67,7 @@ function handleCodeCloseBtn() {
     projectInfoCont.style.transform = null // RESETS PROJECT INFORMATION BACK OUT OF VIEW
     contactTabLink.setAttribute("tabindex", "0"); // ENABLE LINKS
     designTabLink.setAttribute("tabindex", "0");
+    codeTabLink.setAttribute("tabindex", "0");
     //CHECK IF ACTIVE CARD
     codeCard.classList.add("close-theater"); // ADD CLASS TO CATCH SIZE RESET IF/ELSE
     setHieghts();
@@ -127,6 +129,7 @@ function handleActiveDesignCard() {
     designCloseBtn.setAttribute("tabindex", "0"); // BRING UP CLOSE BTN
     contactTabLink.setAttribute("tabindex", "-1"); // DISABLE CONTACT LINK
     codeTabLink.setAttribute("tabindex", "-1"); // DISABLE CODE LINK
+    designTabLink.setAttribute("tabindex", "-1"); // DISABLE DESIGN LINK
 
     aboutMeTitle.style.zIndex = -1;
     designCard.style.height = null; // WIPES ELEMENT.STYLE SETTINGS
@@ -177,7 +180,8 @@ function handleActiveCodeCard() {
     codeProjectDownBtn.setAttribute("tabindex", "0"); // BRING UP CLOSE BTN
     codeProjectUpBtn.setAttribute("tabindex", "0"); // BRING UP CLOSE BTN
     contactTabLink.setAttribute("tabindex", "-1"); // DISABLE CONTACT LINK
-    designTabLink.setAttribute("tabindex", "-1"); // DISABLE CODE LINK
+    designTabLink.setAttribute("tabindex", "-1"); // DISABLE DESIGN LINK
+    codeTabLink.setAttribute("tabindex", "-1"); // DISABLE CODE LINK
 
     aboutMeTitle.style.zIndex = -1;
     // REPEATS SAME MOTIONS BUT FOR CODE CARD

@@ -360,7 +360,8 @@ function deleteGutsClose() {
   moveSide.classList.remove('.stacked-guts')
   moveSide.style.transform = 'translateX(-50vh)';
   setTimeout(() => {
-    moveSide.remove();
+    moveSide.remove(); // REMOVE CARD
+    projectInfoCont.innerHTML = ''; // CLEAR HTML OF PROJECT INFO
   }, 1000)
 
 }
