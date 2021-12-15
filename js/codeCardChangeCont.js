@@ -9,6 +9,7 @@ var deadCatCard = `
       <p>Home</p>
       <p>Info</p>
       <p>Download</p>
+      <p>Merch</p>
     </div>
     <hr class="hr-dead-cat">
     <div class="card-title-dead-cat">
