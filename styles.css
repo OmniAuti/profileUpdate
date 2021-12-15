@@ -776,7 +776,6 @@ h1 {
   font-size: 25px;
   margin-left: 150px;
   text-align: left;
-  height: 50px;
 }
 
 .text-used-code-cont {
@@ -1493,7 +1492,7 @@ h1 {
 .change-project-cont {
   position: absolute;
   right: 0;
-  top: calc(50% + 10px);
+  top: 50%;
   transform: translateY(-50%);
   display: flex;
   align-items: center;
