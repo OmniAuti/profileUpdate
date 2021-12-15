@@ -200,10 +200,10 @@ function changeCodeGutsNext(i) {
     guts.innerHTML = portfolioCardDeckArr[i];
     codeCard.appendChild(guts);
     guts.style.transform = 'translateY(950px)'
-  }, 325);
+  }, 425);
   setTimeout(() => {
     document.querySelector('.stacked-guts').style.transform = 'translateY(0vh)';
-  }, 350)
+  }, 450)
   setTimeout(() => {
     const scripty = document.createElement("script");
     scripty.setAttribute("src", "js/projectCard.js");
@@ -211,7 +211,7 @@ function changeCodeGutsNext(i) {
     document.body.appendChild(scripty);
     codeProjectDownBtn.classList.remove('close-theater')
     codeProjectUpBtn.classList.remove('close-theater')
-  }, 375);
+  }, 475);
 }
 function changeCodeGutsPrev(i) {
   codeProjectDownBtn.classList.add('close-theater')
@@ -223,10 +223,10 @@ function changeCodeGutsPrev(i) {
     guts.innerHTML = portfolioCardDeckArr[i];
     codeCard.appendChild(guts);
     guts.style.transform = 'translateY(-950px)'
-  }, 325);
+  }, 425);
   setTimeout(() => {
     document.querySelector('.stacked-guts').style.transform = 'translateY(0vh)';
-  }, 350)
+  }, 450)
   setTimeout(() => {
     const scripty = document.createElement("script");
     scripty.setAttribute("src", "js/projectCard.js");
@@ -234,8 +234,47 @@ function changeCodeGutsPrev(i) {
     document.body.appendChild(scripty);
     codeProjectDownBtn.classList.remove('close-theater')
     codeProjectUpBtn.classList.remove('close-theater')
-  }, 375);
+  }, 475);
 }
+
+function deleteGutsUp() {
+  const scripty = document.querySelector(".project-card-script");
+  scripty.remove();
+  const derp = document.querySelector(".stacked-guts");
+  derp.classList.add('move-project-down');
+  const moveDown = document.querySelector(".move-project-down");
+  moveDown.classList.remove('.stacked-guts')
+  moveDown.style.transform = 'translateY(-950px)';
+  setTimeout(() => {
+    moveDown.remove();
+  }, 400)
+}
+function deleteGutsDown() {
+  const scripty = document.querySelector(".project-card-script");
+  scripty.remove();
+  const derp = document.querySelector(".stacked-guts");
+  derp.classList.add('move-project-down');
+  const moveDown = document.querySelector(".move-project-down");
+  moveDown.classList.remove('.stacked-guts')
+  moveDown.style.transform = 'translateY(950px)';
+  setTimeout(() => {
+    moveDown.remove();
+  }, 400)
+}
+function deleteGutsClose() {
+  const scripty = document.querySelector(".project-card-script");
+  scripty.remove();
+  const derp = document.querySelector(".stacked-guts");
+  derp.classList.add('move-project-side');
+  const moveSide = document.querySelector(".move-project-side");
+  moveSide.classList.remove('.stacked-guts')
+  moveSide.style.transform = 'translateX(-50vh)';
+  setTimeout(() => {
+    moveSide.remove();
+  }, 1000)
+
+}
+
 
 function portfolioCardChange(i) {
   var i = 0;
@@ -266,9 +305,11 @@ function createCodeGuts() {
     guts.classList.add("stacked-guts");
     guts.innerHTML = portfolioCardDeckArr[0];
     codeCard.appendChild(guts);
+    guts.style.transform = 'translateY(950px)';
   }, 500);
   setTimeout(() => {
     document.querySelector('.stacked-guts').style.transform = 'translateY(0vh)';
+    guts.style.transform = null;
   }, 600)
   setTimeout(() => {
     const scripty = document.createElement("script");
@@ -276,31 +317,4 @@ function createCodeGuts() {
     scripty.classList.add("project-card-script");
     document.body.appendChild(scripty);
   }, 1000);
-}
-
-
-function deleteGutsUp() {
-  const scripty = document.querySelector(".project-card-script");
-  scripty.remove();
-  const derp = document.querySelector(".stacked-guts");
-  derp.classList.add('move-project-down');
-  const moveDown = document.querySelector(".move-project-down");
-  moveDown.classList.remove('.stacked-guts')
-  moveDown.style.transform = 'translateY(-100vh)';
-  setTimeout(() => {
-    moveDown.remove();
-  }, 300)
-}
-function deleteGutsDown() {
-  const scripty = document.querySelector(".project-card-script");
-  scripty.remove();
-  const derp = document.querySelector(".stacked-guts");
-  derp.classList.add('move-project-down');
-  const moveDown = document.querySelector(".move-project-down");
-  moveDown.classList.remove('.stacked-guts')
-  moveDown.style.transform = 'translateY(100vh)';
-  setTimeout(() => {
-    moveDown.remove();
-  }, 300)
-
 }

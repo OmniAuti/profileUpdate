@@ -716,7 +716,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform ease-in 500ms;
+  transition: transform ease-in 350ms;
 }
 
 .move-project-down {
@@ -726,7 +726,17 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform ease-in 250ms;
+  transition: transform ease-out 400ms;
+}
+
+.move-project-down {
+  height: 95%;
+  width: 65%;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform ease-in-out 750ms;
 }
 
 .code-info-section-cont {

@@ -62,7 +62,7 @@ function handleDesignCloseBtn() {
 }
 function handleCodeCloseBtn() {
   if (codeCard.classList.contains("theater")) {
-    deleteGutsDown(); // GETS RID OF CURRENT PROJECT ON SCREEN
+    deleteGutsClose(); // GETS RID OF CURRENT PROJECT ON SCREEN
     contactTabLink.setAttribute("tabindex", "0"); // ENABLE LINKS
     designTabLink.setAttribute("tabindex", "0");
     //CHECK IF ACTIVE CARD
