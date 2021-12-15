@@ -815,12 +815,32 @@ h1 {
 }
 
 .project-card-out-link {
-  width: 100%;
+  width: 93px;
+  position: relative;
   text-align: left;
-  margin-left: 150px;
   font-size: 25px;
   color: #1c1c25;
+  transition: all ease 500ms;
 }
+
+.project-card-out-link::before {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  background-color: #1c1c25;
+  bottom: 0;
+  right: 0px;
+  transition: all ease 500ms;
+  transform-origin: left;
+}
+
+
+.project-card-out-link:hover::before { 
+  width: 100%;
+  left: 0px;
+}
+
 
 .stacked::-webkit-scrollbar {
   display: none;
