@@ -530,6 +530,14 @@ h1 {
   transition: border-radius ease-out 1000ms;
 }
 
+.coming-soon {
+  position: absolute;
+  left: 150px;
+  top: 50%;
+  transform: translate(0%, -50%);
+  font-size: 50px;
+}
+
 .design-link {
   width: fit-content;
   margin-left: 60%;
@@ -1149,7 +1157,6 @@ h1 {
   }
   
 }
-
 
 .border-on {
   border-radius: 20px;
