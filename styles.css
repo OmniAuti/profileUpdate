@@ -815,11 +815,21 @@ h1 {
   height: 40px;
 }
 
+.project-information-details-cont {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .project-details {
   text-align: left;
   width: 175px;
-  height: 200px;
   padding-left: 10px;
+}
+
+.project-details a {
+  color: #1c1c25
 }
 
 .project-card-out-link {
