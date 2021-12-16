@@ -784,35 +784,50 @@ h1 {
 }
 
 .used-code-icon-cont {
+  height: 100%;
+  padding: 10px 10px;
   border-right: 2.5px solid #1c1c25;
   width: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  padding-right: 10px;
+  justify-content: space-between;
 }
 
 .javascript-icon {
   background-image: url("imgs/js.svg");
   background-position: center;
   background-size: cover;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 .html-icon {
   background-image: url("imgs/html-5.svg");
   background-position: center;
   background-size: cover;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 .css-icon {
   background-image: url("imgs/css-3.svg");
   background-position: center;
   background-size: cover;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
+}
+.jquery-icon {
+  background-image: url("imgs/jquery.svg");
+  background-position: center;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+.bootstrap-icon {
+  background-image: url("imgs/bootstrap.svg");
+  background-position: center;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
 }
 
 .project-information-details-cont {
