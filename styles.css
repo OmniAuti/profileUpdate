@@ -828,6 +828,8 @@ h1 {
   background-size: cover;
   width: 30px;
   height: 30px;
+  background-color: #f7f7f7;
+  border-radius: 6.5px;
 }
 
 .project-information-details-cont {
