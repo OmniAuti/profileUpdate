@@ -765,7 +765,6 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  text-align: center;
   transform: translate(-100vw, -50%);
   transition: transform ease-in-out 1250ms;
   color: #1c1c25;
@@ -784,7 +783,6 @@ h1 {
 }
 
 .used-code-icon-cont {
-  height: 100%;
   padding: 10px 10px;
   border-right: 2.5px solid #1c1c25;
   width: 50px;
@@ -846,7 +844,9 @@ h1 {
 }
 
 .project-details a {
-  color: #1c1c25
+  color: #1c1c25;
+  margin: 0;
+  padding: 0;
 }
 
 .project-card-out-link {

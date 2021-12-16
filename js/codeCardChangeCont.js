@@ -191,18 +191,20 @@ var portfolioCardDeckArr = [
 ];
 
 var deadCatInfo = `<p class="project-title">Dead Cat</p>
-<div class="text-used-code-cont">
-  <div class="used-code-icon-cont">
-    <div class="javascript-icon"></div>
-    <div class="html-icon"></div>
-    <div class="css-icon"></div>
+  <div class="text-used-code-cont">
+    <div class="used-code-icon-cont">
+      <div class="javascript-icon"></div>
+      <div class="jquery-icon"></div>
+      <div class="html-icon"></div>
+      <div class="css-icon"></div>
+      <div class="bootstrap-icon"></div>
+    </div>
+    <div class="project-information-details-cont">
+      <p class="project-details">
+        A Google Chrome extension that provides technical indicators of stocks in the Nasdaq and NYSE markets with information pulled from the <u><a href="https://site.financialmodelingprep.com/" target="_blank">Financial Modeling Prep</a></u> API. View the most volatile stocks of the day as well your own stock tickers.
+      </p>
+    </div>
   </div>
-  <div class="project-information-details-cont">
-    <p class="project-details">
-      A Google Chrome extension that provides technical indicators of stocks in the Nasdaq and NYSE markets with information pulled from the <u><a href="https://site.financialmodelingprep.com/" target="_blank">FMP<a/></u> API. View the most volatile stocks of the day as well your own stock tickers.
-    </p>
-  </div>
-</div>
 <a class="project-card-out-link" href="https://omniauti.github.io/deadCat/" target="_blank">Visit Site</a>`;
 var madBatInfo = `<p class="project-title">Restaurant Template</p>
 <div class="text-used-code-cont">
@@ -250,6 +252,7 @@ var hoppyBarberInfo = `<p class="project-title">The Hoppy Barber</p>
 <div class="text-used-code-cont">
   <div class="used-code-icon-cont">
     <div class="javascript-icon"></div>
+    <div class="jquery-icon"></div>
     <div class="html-icon"></div>
     <div class="css-icon"></div>
   </div>
@@ -398,7 +401,7 @@ function createCodeGuts() {
   }, 500);
   setTimeout(() => {
     document.querySelector(".stacked-guts").style.transform = null;
-  }, 600);
+  }, 750);
   setTimeout(() => {
     const scripty = document.createElement("script");
     scripty.setAttribute("src", "js/projectCard.js");
@@ -413,6 +416,7 @@ const projectDetails = document.querySelector(".project-details");
 function projectDetailsFirstOpen() {
   projectInfoCont.innerHTML = infoArr[0];
   projectInfoCont.style.transform = "translate(0vw, -50%)";
+  projectInfoCont.style.top = "50%)";
 }
 
 function projectInfoChange(idx) {
