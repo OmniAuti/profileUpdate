@@ -1,5 +1,6 @@
 const codeProjectUpBtn = document.querySelector(".code-project-less-btn");
 const codeProjectDownBtn = document.querySelector(".code-project-add-btn");
+var i = 0;
 
 var deadCatCard = `
 <a href="https://omniauti.github.io/deadCat/" target="_blank">
@@ -179,7 +180,7 @@ var wheelersCard = `
     <div class="coa-wheelers"><h3>Visit Us</h3></div>
   </div>
 </div>
-</a>`
+</a>`;
 
 var portfolioCardDeckArr = [
   deadCatCard,
@@ -198,14 +199,11 @@ var deadCatInfo = `<p class="project-title">Dead Cat</p>
   </div>
   <div class="project-information-details-cont">
     <p class="project-details">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-      necessitatibus reiciendis vero saepe tempora nam nisi repellat
-      magnam debitis corporis, sint assumenda tenetur itaque vel,
-      soluta odio doloremque? Facere, quisquam?
+      A Google Chrome extension that provides technical indicators of stocks in the Nasdaq and NYSE markets with information pulled from the <u><a href="https://site.financialmodelingprep.com/" target="_blank">FMP<a/></u> API. View the most volatile stocks of the day as well your own stock tickers.
     </p>
   </div>
 </div>
-<a class="project-card-out-link" href="https://omniauti.github.io/deadCat/" target="_blank">Visit Site</a>`
+<a class="project-card-out-link" href="https://omniauti.github.io/deadCat/" target="_blank">Visit Site</a>`;
 var madBatInfo = `<p class="project-title">Restaurant Template</p>
 <div class="text-used-code-cont">
   <div class="used-code-icon-cont">
@@ -215,14 +213,11 @@ var madBatInfo = `<p class="project-title">Restaurant Template</p>
   </div>
   <div class="project-information-details-cont">
     <p class="project-details">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-      necessitatibus reiciendis vero saepe tempora nam nisi repellat
-      magnam debitis corporis, sint assumenda tenetur itaque vel,
-      soluta odio doloremque? Facere, quisquam?
+      Menu selection and accompanying modals for modifying a user's order. An interactive order cart that presents selected menu items, modifications, and totals per item. Tip and tax calculators accurately display price totals during checkout. 
     </p>
   </div>
 </div>
-<a class="project-card-out-link" href="https://omniauti.github.io/madbatter/" target="_blank">Visit Site</a>`
+<a class="project-card-out-link" href="https://omniauti.github.io/madbatter/" target="_blank">Visit Site</a>`;
 var studioSilenceInfo = `<p class="project-title">Studio Silence</p>
 <div class="text-used-code-cont">
   <div class="used-code-icon-cont">
@@ -232,15 +227,12 @@ var studioSilenceInfo = `<p class="project-title">Studio Silence</p>
   </div>
   <div class="project-information-details-cont">
     <p class="project-details">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-      necessitatibus reiciendis vero saepe tempora nam nisi repellat
-      magnam debitis corporis, sint assumenda tenetur itaque vel,
-      soluta odio doloremque? Facere, quisquam?
+      A local stained glass artist based in Chicago, Illinois. Custom gallery, contact, and horizontal scrolling effect while viewed on larger screens. Embedded links to the artist's Etsy store as well as a form to request custom work.
     </p>
   </div>
 </div>
-<a class="project-card-out-link" href="https://omniauti.github.io/studiosilence/" target="_blank">Visit Site</a>`
-var wheelersInfo = `<p class="project-title">Store Template</p>
+<a class="project-card-out-link" href="https://omniauti.github.io/studiosilence/" target="_blank">Visit Site</a>`;
+var wheelersInfo = `<p class="project-title">Retail Store Template</p>
 <div class="text-used-code-cont">
   <div class="used-code-icon-cont">
     <div class="javascript-icon"></div>
@@ -249,14 +241,11 @@ var wheelersInfo = `<p class="project-title">Store Template</p>
   </div>
   <div class="project-information-details-cont">
     <p class="project-details">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-      necessitatibus reiciendis vero saepe tempora nam nisi repellat
-      magnam debitis corporis, sint assumenda tenetur itaque vel,
-      soluta odio doloremque? Facere, quisquam?
+      Interactive photo carousel, open/closing soon/closed indications with store hours, and directions to the store from a user's current location. Current weather display pulled from the <u><a href="https://openweathermap.org/api" target="_blank">Open Weather</a></u> API and presented in a clean and understandable format.
     </p>
   </div>
 </div>
-<a class="project-card-out-link" href="https://omniauti.github.io/TwoWheelers/" target="_blank">Visit Site</a>`
+<a class="project-card-out-link" href="https://omniauti.github.io/TwoWheelers/" target="_blank">Visit Site</a>`;
 var hoppyBarberInfo = `<p class="project-title">The Hoppy Barber</p>
 <div class="text-used-code-cont">
   <div class="used-code-icon-cont">
@@ -266,65 +255,66 @@ var hoppyBarberInfo = `<p class="project-title">The Hoppy Barber</p>
   </div>
   <div class="project-information-details-cont">
     <p class="project-details">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-      necessitatibus reiciendis vero saepe tempora nam nisi repellat
-      magnam debitis corporis, sint assumenda tenetur itaque vel,
-      soluta odio doloremque? Facere, quisquam?
+      A local barber based in Chicago, Illinois. Form for making appointments with the ability to select a user's service, appointment time/date based on the barber's schedule, and an accompanying drink selection menu. 
     </p>
   </div>
 </div>
-<a class="project-card-out-link" href="https://omniauti.github.io/barber/" target="_blank">Visit Site</a>`
+<a class="project-card-out-link" href="https://omniauti.github.io/barber/" target="_blank">Visit Site</a>`;
 
-var infoArr = [deadCatInfo, madBatInfo, studioSilenceInfo, wheelersInfo, hoppyBarberInfo];
-
-
+var infoArr = [
+  deadCatInfo,
+  madBatInfo,
+  studioSilenceInfo,
+  wheelersInfo,
+  hoppyBarberInfo,
+];
 
 // FUNCTIONALITY TO CHANGE CARDS
 
 function changeCodeGutsNext(i) {
-  codeProjectDownBtn.classList.add('close-theater')
-  codeProjectUpBtn.classList.add('close-theater')
+  codeProjectDownBtn.classList.add("close-theater");
+  codeProjectUpBtn.classList.add("close-theater");
   deleteGutsUp();
   setTimeout(() => {
     const guts = document.createElement("div");
     guts.classList.add("stacked-guts");
     guts.innerHTML = portfolioCardDeckArr[i];
     codeCard.appendChild(guts);
-    guts.style.transform = 'translateY(950px)'
+    guts.style.transform = "translateY(950px)";
   }, 425);
   setTimeout(() => {
-    document.querySelector('.stacked-guts').style.transform = null;
-  }, 450)
+    document.querySelector(".stacked-guts").style.transform = null;
+  }, 450);
   setTimeout(() => {
     const scripty = document.createElement("script");
     scripty.setAttribute("src", "js/projectCard.js");
     scripty.classList.add("project-card-script");
     document.body.appendChild(scripty);
-    codeProjectDownBtn.classList.remove('close-theater')
-    codeProjectUpBtn.classList.remove('close-theater')
+    codeProjectDownBtn.classList.remove("close-theater");
+    codeProjectUpBtn.classList.remove("close-theater");
   }, 475);
 }
 function changeCodeGutsPrev(i) {
-  codeProjectDownBtn.classList.add('close-theater')
-  codeProjectUpBtn.classList.add('close-theater')
+  codeProjectDownBtn.classList.add("close-theater");
+  codeProjectUpBtn.classList.add("close-theater");
   deleteGutsDown();
   setTimeout(() => {
     const guts = document.createElement("div");
     guts.classList.add("stacked-guts");
     guts.innerHTML = portfolioCardDeckArr[i];
     codeCard.appendChild(guts);
-    guts.style.transform = 'translateY(-950px)'
+    guts.style.transform = "translateY(-950px)";
   }, 425);
   setTimeout(() => {
-    document.querySelector('.stacked-guts').style.transform = null;
-  }, 450)
+    document.querySelector(".stacked-guts").style.transform = null;
+  }, 450);
   setTimeout(() => {
     const scripty = document.createElement("script");
     scripty.setAttribute("src", "js/projectCard.js");
     scripty.classList.add("project-card-script");
     document.body.appendChild(scripty);
-    codeProjectDownBtn.classList.remove('close-theater')
-    codeProjectUpBtn.classList.remove('close-theater')
+    codeProjectDownBtn.classList.remove("close-theater");
+    codeProjectUpBtn.classList.remove("close-theater");
   }, 475);
 }
 
@@ -332,47 +322,51 @@ function deleteGutsUp() {
   const scripty = document.querySelector(".project-card-script");
   scripty.remove();
   const derp = document.querySelector(".stacked-guts");
-  derp.classList.add('move-project-down');
+  derp.classList.add("move-project-down");
   const moveDown = document.querySelector(".move-project-down");
-  moveDown.classList.remove('.stacked-guts')
-  moveDown.style.transform = 'translateY(-950px)';
+  moveDown.classList.remove(".stacked-guts");
+  moveDown.style.transform = "translateY(-950px)";
   setTimeout(() => {
     moveDown.remove();
-  }, 400)
+  }, 400);
 }
 function deleteGutsDown() {
   const scripty = document.querySelector(".project-card-script");
   scripty.remove();
   const derp = document.querySelector(".stacked-guts");
-  derp.classList.add('move-project-down');
+  derp.classList.add("move-project-down");
   const moveDown = document.querySelector(".move-project-down");
-  moveDown.classList.remove('.stacked-guts')
-  moveDown.style.transform = 'translateY(950px)';
+  moveDown.classList.remove(".stacked-guts");
+  moveDown.style.transform = "translateY(950px)";
   setTimeout(() => {
     moveDown.remove();
-  }, 400)
+  }, 400);
 }
 function deleteGutsClose() {
   const scripty = document.querySelector(".project-card-script");
   scripty.remove();
   const derp = document.querySelector(".stacked-guts");
-  derp.classList.add('move-project-side');
+  derp.classList.add("move-project-side");
   const moveSide = document.querySelector(".move-project-side");
-  moveSide.classList.remove('.stacked-guts')
-  moveSide.style.transform = 'translateX(-50vh)';
+  moveSide.classList.remove(".stacked-guts");
+  moveSide.style.transform = "translateX(-50vh)";
   setTimeout(() => {
     moveSide.remove(); // REMOVE CARD
-    projectInfoCont.innerHTML = ''; // CLEAR HTML OF PROJECT INFO
-  }, 1000)
-
+    projectInfoCont.innerHTML = ""; // CLEAR HTML OF PROJECT INFO
+  }, 1000);
 }
 
+var i = 0;
 
-function portfolioCardChange(i) {
-  var i = 0;
+function portfolioCardChange() {
+var i = 0
+
+  codeCloseBtn.addEventListener('click', () => {
+    i = 0 // RESETS I FOR PROPER PROJECT ORDER DISPLAY WHEN OPEN
+  })
 
   codeProjectUpBtn.addEventListener("click", () => {
-    i--;
+    infoArr[i--];
     if (i < 0) {
       i = 4;
     }
@@ -381,17 +375,18 @@ function portfolioCardChange(i) {
   });
 
   codeProjectDownBtn.addEventListener("click", () => {
-    codeProjectUpBtn.removeAttribute('disabled')
-    i++;
+    codeProjectUpBtn.removeAttribute("disabled");
+    infoArr[i++];
     if (i > 4) {
       i = 0;
     }
     changeCodeGutsPrev(i);
     projectInfoChange(i);
+    
   });
 }
 
-portfolioCardChange();
+portfolioCardChange()
 
 function createCodeGuts() {
   setTimeout(() => {
@@ -399,12 +394,11 @@ function createCodeGuts() {
     guts.classList.add("stacked-guts");
     guts.innerHTML = portfolioCardDeckArr[0];
     codeCard.appendChild(guts);
-    guts.style.transform = 'translateY(950px)';
+    guts.style.transform = "translateY(950px)";
   }, 500);
   setTimeout(() => {
-    document.querySelector('.stacked-guts').style.transform = null;
-    
-  }, 600)
+    document.querySelector(".stacked-guts").style.transform = null;
+  }, 600);
   setTimeout(() => {
     const scripty = document.createElement("script");
     scripty.setAttribute("src", "js/projectCard.js");
@@ -413,20 +407,18 @@ function createCodeGuts() {
   }, 1000);
 }
 
-
-const projectInfoCont = document.querySelector('.project-information-cont')
-const projectDetails = document.querySelector('.project-details')
+const projectInfoCont = document.querySelector(".project-information-cont");
+const projectDetails = document.querySelector(".project-details");
 
 function projectDetailsFirstOpen() {
   projectInfoCont.innerHTML = infoArr[0];
-  projectInfoCont.style.transform = 'translate(0vw, -50%)'
+  projectInfoCont.style.transform = "translate(0vw, -50%)";
 }
 
 function projectInfoChange(idx) {
   projectInfoCont.style.transform = null;
   setTimeout(() => {
-    projectInfoCont.style.transform = 'translate(0vw, -50%)';
+    projectInfoCont.style.transform = "translate(0vw, -50%)";
     projectInfoCont.innerHTML = infoArr[idx];
-  }, 500)
-  
+  }, 500);
 }
