@@ -259,13 +259,13 @@ function handleContact() {
 
     aboutMeCont.style.transform = "translateY(-100vh)";
     setTimeout(() => {
-      gitHubContact.style.transform = "translateY(0vh)"; //SETTIME FOR LINK TIMED TRANSITION
+      linkedinContact.style.transform = "translateY(0vh)"; 
     },100)
     setTimeout(() => {
       emailContact.style.transform = "translateY(0vh)"; 
     }, 200)
     setTimeout(() => {
-      linkedinContact.style.transform = "translateY(0vh)"; 
+      gitHubContact.style.transform = "translateY(0vh)"; //SETTIME FOR LINK TIMED TRANSITION
     }, 300);
     gitHubContact.setAttribute("tabindex", "0")
     emailContact.setAttribute("tabindex", "0")
