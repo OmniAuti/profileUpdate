@@ -1307,6 +1307,22 @@ h1 {
   text-align: right;
 }
 
+@media (max-width: 900px) {
+  .about-me-cont {
+    margin-right: 15px;
+  }
+
+  .about-me-title {
+    margin-bottom: 10px;
+    font-size: 40px;
+  }
+  
+  .about-me {
+    font-size: 25px;
+  }
+  
+}
+
 .theater {
   height: 100vh;
   width: 100vw;
