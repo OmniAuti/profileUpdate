@@ -402,6 +402,7 @@ h1 {
   transition: border-radius ease-out 1000ms;
 }
 
+
 .contact-link {
   width: fit-content;
   margin-left: calc(37.5% - 10px);
@@ -1062,6 +1063,32 @@ h1 {
     transform: rotate(-90deg);
   }
 }
+
+
+@media (max-width: 900px) {
+  .stuck {
+    width: 125vw;
+    height: 125vh;
+    top: 100vh;
+    transform: rotate(45deg);
+    left: -50vw;
+  }
+  .stack {
+    width: 125vw;
+    height: 125vh;
+    top: 100vh;
+    transform: rotate(45deg);
+    left: calc(-50vw - 50px);
+  }
+
+    .stacked {
+      width: 125vw;
+      height: 125vh;
+      top: 100vh;
+      transform: rotate(45deg);
+      left: calc(-50vw - 100px);
+    }
+}
 /* ----------------------------------LINK ADJUSTMENTS ------------ */
 @media (min-width: 1400px) {
   @keyframes activeCodeText {
@@ -1320,7 +1347,21 @@ h1 {
   .about-me {
     font-size: 25px;
   }
+}
+
+@media (max-width: 720px) {
+  .about-me-cont {
+    margin-right: 15px;
+  }
+
+  .about-me-title {
+    margin-bottom: 10px;
+    font-size: 40px;
+  }
   
+  .about-me {
+    font-size: 25px;
+  }
 }
 
 .theater {
