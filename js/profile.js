@@ -218,7 +218,10 @@ function handleContact() {
       contactLink.innerText = "Contact"; // CHANGES INNER TEXT TO ORIGINAL
     }, 500);
 
-    aboutMeCont.style.transform = null; // NULL THIS TRANSFORM SO CSS PRESET WORKS
+    setTimeout(() => {
+      aboutMeCont.style.transform = null; // NULL THIS TRANSFORM SO CSS PRESET WORKS
+    }, 250);
+    
     contactTitle.style.transform = "translateX(100vw)"; // TAKES OUT HEADER OF CONTACT SECTION
 
      gitHubContact.setAttribute("tabindex", "-1")
@@ -268,14 +271,18 @@ function handleContact() {
     gitHubContact.setAttribute("tabindex", "0")
     emailContact.setAttribute("tabindex", "0")
     linkedinContact.setAttribute("tabindex", "0")
-    contactTitle.style.transform = "translateX(0vw)"; // BRINGS IN HEADER OF SECTION
+
     contactCont.style.zIndex = "0";
     
     if (window.innerWidth > 750) {
+      contactTitle.style.transform = "translateX(0vw)"; // BRINGS IN HEADER OF SECTION
       portfolioCont.style.transform = "translateY(-50vh)"; // LIFTS UP PROTFOLIO SECTION TO GIVE FEEL OF MOVEMENT
     } 
     else 
     {
+      setTimeout(() => {
+        contactTitle.style.transform = "translateX(0vw)"; // BRINGS IN HEADER OF SECTION
+      }, 500);
       portfolioCont.style.transform = null;
     }
   }
