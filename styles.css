@@ -48,7 +48,7 @@ body {
   background-color: #1c1c25;
   overflow-x: hidden;
   background-image: url("imgs/egg-shell.png");
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: opacity ease-in 1000ms;
   -moz-transition: opacity ease-in 1000ms;
   -ms-transition: opacity ease-in 1000ms;
@@ -157,6 +157,7 @@ main {
 
 .intro {
   width: 100vw;
+  height: 100vh;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -371,6 +372,7 @@ h1 {
 
 .portfolio-cont {
   width: 100vw;
+  height: 100vh;
   position: relative;
   overflow: hidden;
   -webkit-transition: transform ease 750ms;
@@ -400,8 +402,12 @@ h1 {
   -ms-transition: border-radius ease-out 1000ms;
   -o-transition: border-radius ease-out 1000ms;
   transition: border-radius ease-out 1000ms;
+  width: 100vh;
+  height: 100vh;
+  top: 50vh;
+  left: -50vh;
+  z-index: 1;
 }
-
 
 .contact-link {
   width: fit-content;
@@ -572,6 +578,11 @@ h1 {
   -ms-transition: border-radius ease-out 1000ms;
   -o-transition: border-radius ease-out 1000ms;
   transition: border-radius ease-out 1000ms;
+  width: 100vh;
+  height: 100vh;
+  top: 50vh;
+  left: calc(-50vh - 50px);
+  z-index: 1;
 }
 
 .coming-soon {
@@ -730,7 +741,6 @@ h1 {
 
 .stacked {
   background-color: #d87b6b;
-  left: calc(-50vh - 100px);
   -webkit-transition: transform ease-out 1000ms;
   -moz-transition: transform ease-out 1000ms;
   -ms-transition: transform ease-out 1000ms;
@@ -738,8 +748,6 @@ h1 {
   transition: transform ease-out 1000ms;
   position: absolute;
   box-shadow: 0 0 5px #1c1c25;
-  left: -50vh;
-  top: 50vh;
   -webkit-transform-origin: top right;
   -moz-transform-origin: top right;
   -ms-transform-origin: top right;
@@ -759,6 +767,11 @@ h1 {
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  width: 100vh;
+  height: 100vh;
+  top: 50vh;
+  left: calc(-50vh - 100px);
+  z-index: 1;
 }
 
 .stacked-guts {
@@ -1064,31 +1077,28 @@ h1 {
   }
 }
 
-
-@media (max-width: 900px) {
+@media (max-width: 750px) {
   .stuck {
-    width: 125vw;
-    height: 125vh;
-    top: 100vh;
-    transform: rotate(45deg);
-    left: -50vw;
+    top: 110vh;
+    left: -75vh;
+    width: 150vh;
+    height: 150vh;
   }
   .stack {
-    width: 125vw;
-    height: 125vh;
-    top: 100vh;
-    transform: rotate(45deg);
-    left: calc(-50vw - 50px);
+    top: 110vh;
+    left: calc(-75vh - 100px);
+    width: 150vh;
+    height: 150vh;
   }
-
-    .stacked {
-      width: 125vw;
-      height: 125vh;
-      top: 100vh;
-      transform: rotate(45deg);
-      left: calc(-50vw - 100px);
-    }
+  .stacked {
+    top: 110vh;
+    left: calc(-75vh - 200px);
+    width: 150vh;
+    height: 150vh;
+  }
 }
+
+
 /* ----------------------------------LINK ADJUSTMENTS ------------ */
 @media (min-width: 1400px) {
   @keyframes activeCodeText {
@@ -1453,11 +1463,11 @@ h1 {
 
 .contact-cont {
   width: 100vw;
+  height: 50vh;
   position: absolute;
   display: block;
   bottom: 0;
   overflow: hidden;
-  z-index: -99;
 }
 
 .contact-title {
@@ -1494,6 +1504,38 @@ h1 {
   justify-content: space-between;
   width: 60%;
   height: 50%;
+}
+
+@media (max-width: 750px) {
+  .contact-cont {
+    height: 100vh;
+    border: 1px solid red;
+  }
+  .contact-title {
+    padding-right: 25px;
+  }
+  .contact-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding-right: 0px;
+    padding-top: 50px;
+    border: 1px solid blue;
+    float: right;
+    padding-right: 25px;
+  }
+  .contact-icon-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 25%;
+    height: 75%;
+    border: 1px solid red;
+  }
 }
 
 .gitHub-cont,
@@ -1545,7 +1587,7 @@ h1 {
   background-repeat: no-repeat;
 }
 
-/* CARD BTN STUFF --------------- */
+/* ------------------- CARD BTN STUFF --------------- */
 
 .design-close-btn,
 .code-close-btn {

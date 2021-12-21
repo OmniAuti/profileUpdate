@@ -35,7 +35,6 @@ function handleDesignCloseBtn() {
     designTabLink.setAttribute("tabindex", "0"); // ENABLE DESIGN LINK
     //CHECK IF ACTIVE CARD
     designCard.classList.add("close-theater"); // ADD CLASS TO CATCH SIZE RESET IF/ELSE
-    setHieghts();
     window.scrollTo({
       top: window.innerHeight,
       left: 0,
@@ -70,7 +69,6 @@ function handleCodeCloseBtn() {
     codeTabLink.setAttribute("tabindex", "0");
     //CHECK IF ACTIVE CARD
     codeCard.classList.add("close-theater"); // ADD CLASS TO CATCH SIZE RESET IF/ELSE
-    setHieghts();
     window.scrollTo({
       top: window.innerHeight,
       left: 0,
@@ -256,7 +254,7 @@ function handleContact() {
     codeCard.classList.remove("border-on");
 
     setScrollOnOpenTheater();
-
+   
     aboutMeCont.style.transform = "translateY(-100vh)";
     setTimeout(() => {
       linkedinContact.style.transform = "translateY(0vh)"; 
@@ -272,13 +270,20 @@ function handleContact() {
     linkedinContact.setAttribute("tabindex", "0")
     contactTitle.style.transform = "translateX(0vw)"; // BRINGS IN HEADER OF SECTION
     contactCont.style.zIndex = "0";
-    portfolioCont.style.transform = "translateY(-50vh)"; // LIFTS UP PROTFOLIO SECTION TO GIVE FEEL OF MOVEMENT
+    
+    if (window.innerWidth > 750) {
+      portfolioCont.style.transform = "translateY(-50vh)"; // LIFTS UP PROTFOLIO SECTION TO GIVE FEEL OF MOVEMENT
+    } 
+    else 
+    {
+      portfolioCont.style.transform = null;
+    }
   }
 }
 // SCROLL RESET FUNCTION
 function setScrollOnOpenTheater() {
   document.body.style.overflow = "hidden";
-  window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
+    window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
 }
 // CLOSE BTN EVENTS
 designCloseBtn.addEventListener("click", handleDesignCloseBtn);
