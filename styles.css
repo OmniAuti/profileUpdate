@@ -271,7 +271,6 @@ h1 {
 @media (max-width: 650px) {
   .coa-intro {
     font-size: 40px;
-
   }
   .name-intro {
     line-height: 100px;
@@ -436,53 +435,6 @@ h1 {
   animation-fill-mode: forwards;
 }
 
-@keyframes contactTextReset {
-  0% {
-    margin-top: calc(17.5% + 25px);
-    margin-left: calc(100% - 30px);
-    -webkit-transform-origin: top left;
-    -moz-transform-origin: top left;
-    -ms-transform-origin: top left;
-    -o-transform-origin: top left;
-    transform-origin: top left;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-  }
-
-  35% {
-    margin-left: 95%;
-    margin-top: 100%;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-  }
-
-  65% {
-    margin-left: 0px;
-    margin-top: 0px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    margin-left: calc(37.5% - 10px);
-    margin-top: 0px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-}
-
 .active-contact-link {
   margin-left: calc(37.5% - 10px);
   margin-top: 0px;
@@ -498,60 +450,181 @@ h1 {
   animation-fill-mode: forwards;
 }
 
-@keyframes activeContactText {
-  0% {
-    margin-left: calc(37.5% - 10px);
+@media (max-width: 750px) {
+
+  .reverse-contact-link {
+    animation-name: contactTextResetMobile;
+    animation-iteration-count: 1;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }  
+
+  .active-contact-link {
+    margin-left: 35%;
     margin-top: 0px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
+    animation-name: activeContactTextMobile;
+    animation-iteration-count: 1;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes activeContactTextMobile {
+    0% {
+      margin-left: 35%;
+      margin-top: 0px;
+    }
+
+    35% {
+      margin-left: 0%;
+      margin-top: 0px;
+    }
+
+    65% {
+      margin-left: 15%;
+      margin-top: 0px;
+    }
+
+    100% {
+      margin-top: 0px;
+      margin-left: 35%;
+    }
+  }
+  
+  @keyframes contactTextResetMobile {
+    0% {
+      margin-top: 0px;
+      margin-left: 35%;
+    }
+
+    35% {
+      margin-left: 0%;
+      margin-top: 0px;
+    }
+
+    65% {
+      margin-left: 15%;
+      margin-top: 0px;
+    }
+
+    100% {
+      margin-left: 35%;
+      margin-top: 0px;
+    }
   }
 
-  35% {
-    margin-left: 14.5%;
-    margin-top: 0px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+}
+
+@media (min-width: 750px) {
+
+  @keyframes contactTextReset {
+    0% {
+      margin-top: calc(17.5% + 25px);
+      margin-left: calc(100% - 30px);
+      -webkit-transform-origin: top left;
+      -moz-transform-origin: top left;
+      -ms-transform-origin: top left;
+      -o-transform-origin: top left;
+      transform-origin: top left;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+
+    35% {
+      margin-left: 95%;
+      margin-top: 100%;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+
+    65% {
+      margin-left: 0px;
+      margin-top: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      margin-left: calc(37.5% - 10px);
+      margin-top: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
   }
 
-  64% {
-    margin-left: 0px;
-    margin-top: 0px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
+  @keyframes activeContactText {
+    0% {
+      margin-left: calc(37.5% - 10px);
+      margin-top: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
 
-  65% {
-    margin-left: 95%;
-    margin-top: 100%;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-  }
+    35% {
+      margin-left: 14.5%;
+      margin-top: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
 
-  100% {
-    margin-top: calc(17.5% + 25px);
-    margin-left: calc(100% - 30px);
-    -webkit-transform-origin: top left;
-    -moz-transform-origin: top left;
-    -ms-transform-origin: top left;
-    -o-transform-origin: top left;
-    transform-origin: top left;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+    64% {
+      margin-left: 0px;
+      margin-top: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    65% {
+      margin-left: 95%;
+      margin-top: 100%;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+
+    100% {
+      margin-top: calc(17.5% + 25px);
+      margin-left: calc(100% - 30px);
+      -webkit-transform-origin: top left;
+      -moz-transform-origin: top left;
+      -ms-transform-origin: top left;
+      -o-transform-origin: top left;
+      transform-origin: top left;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
   }
 }
 
@@ -625,53 +698,6 @@ h1 {
   animation-fill-mode: forwards;
 }
 
-@keyframes designTextReset {
-  0% {
-    margin-top: calc(29% + 25px);
-    margin-left: calc(100% - 30px);
-    -webkit-transform-origin: top left;
-    -moz-transform-origin: top left;
-    -ms-transform-origin: top left;
-    -o-transform-origin: top left;
-    transform-origin: top left;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-  }
-
-  35% {
-    margin-left: 95%;
-    margin-top: 100%;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-  }
-
-  65% {
-    margin-left: 0px;
-    margin-top: 0px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    margin-left: 60%;
-    margin-top: 0px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-}
-
 .active-design-link {
   margin-left: 60%;
   margin-top: 0px;
@@ -687,55 +713,104 @@ h1 {
   animation-fill-mode: forwards;
 }
 
-@keyframes activeDesignText {
-  0% {
-    margin-left: 60%;
-    margin-top: 0px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+@media (min-width: 750px) {
+  @keyframes designTextReset {
+    0% {
+      margin-top: calc(29% + 25px);
+      margin-left: calc(100% - 30px);
+      -webkit-transform-origin: top left;
+      -moz-transform-origin: top left;
+      -ms-transform-origin: top left;
+      -o-transform-origin: top left;
+      transform-origin: top left;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+
+    35% {
+      margin-left: 95%;
+      margin-top: 100%;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+
+    65% {
+      margin-left: 0px;
+      margin-top: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      margin-left: 60%;
+      margin-top: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
   }
 
-  35% {
-    margin-left: 27.5%;
-    margin-top: 0px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
+  @keyframes activeDesignText {
+    0% {
+      margin-left: 60%;
+      margin-top: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
 
-  64% {
-    margin-left: 0px;
-    margin-top: 0px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
+    35% {
+      margin-left: 27.5%;
+      margin-top: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
 
-  65% {
-    margin-left: 95%;
-    margin-top: 100%;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-  }
+    64% {
+      margin-left: 0px;
+      margin-top: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
 
-  100% {
-    margin-top: calc(29% + 25px);
-    margin-left: calc(100% - 30px);
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+    65% {
+      margin-left: 95%;
+      margin-top: 100%;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+
+    100% {
+      margin-top: calc(29% + 25px);
+      margin-left: calc(100% - 30px);
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
   }
 }
 
@@ -968,48 +1043,6 @@ h1 {
   animation-fill-mode: forwards;
 }
 
-@keyframes codeTextReset {
-  0% {
-    margin-top: calc(38% + 25px);
-    margin-left: calc(100% - 30px);
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-  }
-
-  35% {
-    margin-left: 95%;
-    margin-top: 100%;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-  }
-
-  65% {
-    margin-left: 0px;
-    margin-top: 0px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    margin-left: 82.5%;
-    margin-top: 0px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-}
-
 .active-code-link {
   margin-left: 82.5%;
   margin-top: 0px;
@@ -1025,58 +1058,101 @@ h1 {
   animation-fill-mode: forwards;
 }
 
-@keyframes activeCodeText {
-  0% {
-    margin-left: 82.5%;
-    margin-top: 0px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+@media (min-width: 750px) {
+  @keyframes codeTextReset {
+    0% {
+      margin-top: calc(38% + 25px);
+      margin-left: calc(100% - 30px);
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+
+    35% {
+      margin-left: 95%;
+      margin-top: 100%;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+
+    65% {
+      margin-left: 0px;
+      margin-top: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      margin-left: 82.5%;
+      margin-top: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
   }
 
-  35% {
-    margin-left: 50%;
-    margin-top: 0px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
+  @keyframes activeCodeText {
+    0% {
+      margin-left: 82.5%;
+      margin-top: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
 
-  50% {
-    margin-left: 50%;
-    margin-top: 0px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
+    35% {
+      margin-left: 50%;
+      margin-top: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
 
-  65% {
-    margin-left: 95%;
-    margin-top: 100%;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-  }
+    50% {
+      margin-left: 50%;
+      margin-top: 0px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
 
-  100% {
-    margin-top: calc(38% + 25px);
-    margin-left: calc(100% - 30px);
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+    65% {
+      margin-left: 95%;
+      margin-top: 100%;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+
+    100% {
+      margin-top: calc(38% + 25px);
+      margin-left: calc(100% - 30px);
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
   }
 }
-
 @media (max-width: 750px) {
   .stuck {
     top: 110vh;
@@ -1097,7 +1173,6 @@ h1 {
     height: 150vh;
   }
 }
-
 
 /* ----------------------------------LINK ADJUSTMENTS ------------ */
 @media (min-width: 1400px) {
@@ -1262,6 +1337,22 @@ h1 {
   }
 }
 
+@media (max-width: 750px) {
+  .contact-link {
+    font-size: 50px;
+    margin-left: 35%;
+  }
+
+  .design-link {
+    font-size: 50px;
+    margin-left: 52.5%;
+  }
+  .code-link {
+    margin-left: 72.5%;
+    font-size: 50px;
+  }
+}
+
 .border-on {
   border-radius: 20px;
 }
@@ -1344,6 +1435,11 @@ h1 {
   text-align: right;
 }
 
+
+@media (max-width: 523px) {
+  /*THIS IS FOR ABOUT ME TEXT THIS IS LOWEST IT CAN GO FOR NOW*/
+}
+
 @media (max-width: 900px) {
   .about-me-cont {
     margin-right: 15px;
@@ -1353,7 +1449,7 @@ h1 {
     margin-bottom: 10px;
     font-size: 40px;
   }
-  
+
   .about-me {
     font-size: 25px;
   }
@@ -1368,7 +1464,7 @@ h1 {
     margin-bottom: 10px;
     font-size: 40px;
   }
-  
+
   .about-me {
     font-size: 25px;
   }
@@ -1509,7 +1605,6 @@ h1 {
 @media (max-width: 750px) {
   .contact-cont {
     height: 100vh;
-    border: 1px solid red;
   }
   .contact-title {
     padding-right: 25px;
@@ -1523,7 +1618,6 @@ h1 {
     height: 100%;
     padding-right: 0px;
     padding-top: 50px;
-    border: 1px solid blue;
     float: right;
     padding-right: 25px;
   }
@@ -1534,9 +1628,9 @@ h1 {
     flex-direction: column;
     width: 25%;
     height: 75%;
-    border: 1px solid red;
   }
 }
+
 
 .gitHub-cont,
 .email-cont,

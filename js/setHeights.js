@@ -58,6 +58,7 @@ window.addEventListener("resize", () => {
     }
     else 
     {
+      window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION  
       portfolioCont.style.transform = null; // LIFTS UP PROTFOLIO SECTION TO GIVE FEEL OF MOVEMENT
     }
 
