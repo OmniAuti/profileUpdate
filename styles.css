@@ -1620,7 +1620,7 @@ h1 {
   -o-transition: all ease-out 500ms;
   transition: all ease-out 500ms;
   font-family: "Arapey", serif;
-  font-size: 7rem;
+  font-size: 110px;
   color: #f8f8ff;
   width: 100%;
   text-align: right;
@@ -1670,6 +1670,31 @@ h1 {
     flex-direction: column;
     width: 25%;
     height: 75%;
+  }
+}
+@media (max-width: 550px) {
+  .contact-cont {
+    height: 100vh;
+  }
+  .contact-title {
+    padding-right: 0px;
+    text-align: center;
+  }
+  .contact-content {
+    height: 75%;
+    padding-right: 50px;
+  }
+}
+@media (max-width: 400px) {
+  .contact-cont {
+    height: 100vh;
+  }
+  .contact-title {
+    padding-right: 0px;
+    font-size: 100px;
+  }
+  .contact-content {
+    height: 50%;
   }
 }
 
