@@ -1513,9 +1513,8 @@ h1 {
 }
 
 .theater {
-  min-height: -webkit-fill-available;
-  height: 100%;
-  width: 100%;
+  min-height: 100vh;
+  width: 100vw;
   border-radius: 0px;
   left: 0;
   top: 0;
