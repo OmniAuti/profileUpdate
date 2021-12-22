@@ -291,7 +291,7 @@ function handleContact() {
 function setScrollOnOpenTheater() {
   if (window.innerWidth < 750) {
     document.body.style.overflow = "hidden";
-    window.scrollTo({ top: (window.innerHeight + 100), left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
+    window.scrollTo({ top: (window.innerHeight + 200), left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
   } 
   else 
   {
