@@ -1340,8 +1340,8 @@ h1 {
     margin-left: 35%;
   }
 
-  .contact-link:focus,
-  .contact-link:active {
+  .contact-tab-link:focus,
+  .contact-tab-link:active {
     border: none;
     outline: none;
   }
@@ -1351,8 +1351,8 @@ h1 {
     margin-left: 52.5%;
   }
 
-  .design-link:focus,
-  .design-link:active {
+  .design-tab-link:focus,
+  .design-tab-link:active {
     border: none;
     outline: none;
   }
@@ -1361,8 +1361,8 @@ h1 {
     font-size: 50px;
   }
 
-  .code-link:focus,
-  .code-link:active {
+  .code-tab-link:focus,
+  .code-tab-link:active {
     border: none;
     outline: none;
   }
