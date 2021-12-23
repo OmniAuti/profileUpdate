@@ -290,7 +290,13 @@ function handleContact() {
 // SCROLL RESET FUNCTION
 function setScrollOnOpenTheater() {
       document.body.style.overflow = "hidden";
-      window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION  
+      if (window.width < 750) {
+        window.scrollTo({ top: (window.innerHeight + 125), left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION  
+      }
+      else 
+      {
+        window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION  
+      }
 }
 // CLOSE BTN EVENTS
 designCloseBtn.addEventListener("click", handleDesignCloseBtn);
