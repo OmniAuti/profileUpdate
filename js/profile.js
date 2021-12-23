@@ -319,14 +319,12 @@ contactCard.addEventListener("click", handleContact);
    window.addEventListener('resize', () => {
 
       if (codeCard.classList.contains("theater")) {
+        projectInfoCont.style.transform = null;
         if (window.innerWidth > 850) {
-          projectInfoCont.style.transform = null;
-
         projectInfoCont.style.transform = "translate(0vw, -50%)";
       }
       else 
       {
-        projectInfoCont.style.transform = null;
         projectInfoCont.style.transform = "translate(0vw, 25%)";
       }
     }
