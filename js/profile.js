@@ -294,7 +294,7 @@ function setScrollOnOpenTheater() {
         setTimeout(() => {
           document.body.style.overflow = "hidden";
           window.scrollTo({ top: window.innerHeight + 120, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION 
-        }, 100);
+        }, 50);
       }
       else 
       {
