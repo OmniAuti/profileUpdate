@@ -895,7 +895,7 @@ h1 {
 .project-information-cont {
   height: 350px;
   width: 250px;
-  top: calc(50%);
+  top: calc(0%);
   left: 50px;
   position: absolute;
   display: flex;
@@ -1983,7 +1983,6 @@ h1 {
     top: calc(55%);
   }
 }
-
 
 .code-project-less-btn,
 .code-project-add-btn {
@@ -3522,7 +3521,8 @@ h1 {
   .project-information-cont {
     height: 75%;
     width: 100%;
-    top: calc(25%);
+    margin-top: 25px;
+    top: calc(0%);
     left: 0;
     position: absolute;
     display: flex;

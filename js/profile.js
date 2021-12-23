@@ -62,6 +62,7 @@ function handleDesignCloseBtn() {
 }
 function handleCodeCloseBtn() {
   if (codeCard.classList.contains("theater")) {
+
     deleteGutsClose(); // GETS RID OF CURRENT PROJECT ON SCREEN
     projectInfoCont.style.transform = null // RESETS PROJECT INFORMATION BACK OUT OF VIEW
     contactTabLink.setAttribute("tabindex", "0"); // ENABLE LINKS
@@ -150,6 +151,7 @@ function handleActiveCodeCard() {
 
   //AVOID DOUBLE DECLARATIONS
   if (codeCard.classList.contains("theater")) {
+    
     return;
   }
 
@@ -313,3 +315,19 @@ contactCard.addEventListener("click", handleContact);
 
 
 
+    // DURING A RESIZE AND CARD OPEN - NEED TO ADJUST CODE INFO CONT
+   window.addEventListener('resize', () => {
+
+      if (codeCard.classList.contains("theater")) {
+        if (window.innerWidth > 850) {
+          projectInfoCont.style.transform = null;
+
+        projectInfoCont.style.transform = "translate(0vw, -50%)";
+      }
+      else 
+      {
+        projectInfoCont.style.transform = null;
+        projectInfoCont.style.transform = "translate(0vw, 25%)";
+      }
+    }
+  })
