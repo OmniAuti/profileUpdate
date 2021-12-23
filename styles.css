@@ -1340,13 +1340,31 @@ h1 {
     margin-left: 35%;
   }
 
+  .contact-link:focus,
+  .contact-link:active {
+    border: none;
+    outline: none;
+  }
+
   .design-link {
     font-size: 50px;
     margin-left: 52.5%;
   }
+
+  .design-link:focus,
+  .design-link:active {
+    border: none;
+    outline: none;
+  }
   .code-link {
     margin-left: 72.5%;
     font-size: 50px;
+  }
+
+  .code-link:focus,
+  .code-link:active {
+    border: none;
+    outline: none;
   }
 }
 
