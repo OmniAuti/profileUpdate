@@ -1615,6 +1615,44 @@ h1 {
   }
 }
 
+@media (max-width: 750px) {
+  @keyframes moveCardFwd {
+    0% {
+      -webkit-transform: translateX(-100vw) rotate(45deg);
+      -moz-transform: translateX(-100vw) rotate(45deg);
+      -ms-transform: translateX(-100vw) rotate(45deg);
+      -o-transform: translateX(-100vw) rotate(45deg);
+      transform: translateX(-100vw) rotate(45deg);
+    }
+
+    100% {
+      -webkit-transform: translateX(0vw) rotate(45deg);
+      -moz-transform: translateX(0vw) rotate(45deg);
+      -ms-transform: translateX(0vw) rotate(45deg);
+      -o-transform: translateX(0vw) rotate(45deg);
+      transform: translateX(0vw) rotate(45deg);
+    }
+  }
+
+  @keyframes moveCardBack {
+    0% {
+      -webkit-transform: translateX(0vw) rotate(45deg);
+      -moz-transform: translateX(0vw) rotate(45deg);
+      -ms-transform: translateX(0vw) rotate(45deg);
+      -o-transform: translateX(0vw) rotate(45deg);
+      transform: translateX(0vw) rotate(45deg);
+    }
+
+    100% {
+      -webkit-transform: translateX(-100vw) rotate(45deg);
+      -moz-transform: translateX(-100vw) rotate(45deg);
+      -ms-transform: translateX(-100vw) rotate(45deg);
+      -o-transform: translateX(-100vw) rotate(45deg);
+      transform: translateX(-100vw) rotate(45deg);
+    }
+  }
+}
+
 /* ------------- CONTACT MODE --------------- */
 
 .contact-cont {

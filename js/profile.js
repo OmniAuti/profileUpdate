@@ -289,9 +289,12 @@ function handleContact() {
 }
 // SCROLL RESET FUNCTION
 function setScrollOnOpenTheater() {
-      if (window.innerWidth < 750) {
-        document.body.style.overflow = "hidden";
-        window.scrollTo({ top: (window.innerHeight + 125), left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION  
+      if (window.innerWidth < 750) 
+      {
+        setTimeout(() => {
+          document.body.style.overflow = "hidden";
+          window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION 
+        }, 100);
       }
       else 
       {
