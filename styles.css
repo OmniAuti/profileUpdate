@@ -657,10 +657,14 @@ h1 {
 
 .coming-soon {
   position: absolute;
-  left: 150px;
+  left: 10px;
   top: 50%;
   transform: translate(0%, -50%);
-  font-size: 50px;
+  font-size: 25px;
+}
+.coming-soon p {
+  padding-left: 25px;
+  font-size: 20px;
 }
 
 .design-link {
@@ -2055,6 +2059,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
 }
 
 @media (max-width: 1025px) {
@@ -3512,7 +3517,6 @@ h1 {
     float:none;
     position: absolute;
     bottom: 15px;
-    pointer-events: none;
   }
 
   .project-information-cont {
@@ -3779,4 +3783,7 @@ h1 {
 
 @media (max-width: 575px) {
   /*THIS IS FOR THE SMALLEST SCREEN. IMAGES REPLACE CARDS NOW FOR MOBILE */
+  .code-info-section-cont {
+    display: none;
+  }
 }
