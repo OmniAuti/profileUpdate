@@ -653,6 +653,7 @@ h1 {
   top: 50vh;
   left: calc(-50vh - 50px);
   z-index: 1;
+  animation
 }
 
 .coming-soon {
@@ -849,6 +850,8 @@ h1 {
   left: calc(-50vh - 100px);
   z-index: 1;
 }
+
+
 
 .stacked-guts {
   height: 95%;
