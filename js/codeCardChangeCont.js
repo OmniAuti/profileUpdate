@@ -415,30 +415,14 @@ const projectDetails = document.querySelector(".project-details");
 
 function projectDetailsFirstOpen() {
   projectInfoCont.innerHTML = infoArr[0];
-  if (window.innerWidth > 850) {
-    projectInfoCont.style.transform = "translate(0vw, -50%)";
-    projectInfoCont.style.top = "50%)";
-  }
-  else 
-  {
-    projectInfoCont.style.transform = "translate(0vw, 25%)";
-    projectInfoCont.style.top = "0%";
-  }
-
+  projectInfoCont.style.transform = "translate(0vw, -50%)";
+  projectInfoCont.style.top = "50%)";
 }
 
 function projectInfoChange(idx) {
   projectInfoCont.style.transform = null;
   setTimeout(() => {
-   
-    if (window.innerWidth > 850) {
-      projectInfoCont.style.transform = "translate(0vw, -50%)";
-      projectInfoCont.innerHTML = infoArr[idx];
-    }
-    else 
-    {
-      projectInfoCont.style.transform = "translate(0vw, 25%)";
-      projectInfoCont.innerHTML = infoArr[idx];
-    }
+    projectInfoCont.style.transform = "translate(0vw, -50%)";
+    projectInfoCont.innerHTML = infoArr[idx];
   }, 500);
 }

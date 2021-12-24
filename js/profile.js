@@ -313,7 +313,7 @@ codeCard.addEventListener("click", handleActiveCodeCard);
 // CONTACT CARD CLICK EVENT
 contactCard.addEventListener("click", handleContact);
 
-
+/*
 
     // DURING A RESIZE AND CARD OPEN - NEED TO ADJUST CODE INFO CONT
    window.addEventListener('resize', () => {
@@ -322,10 +322,12 @@ contactCard.addEventListener("click", handleContact);
         projectInfoCont.style.transform = null;
         if (window.innerWidth > 850) {
         projectInfoCont.style.transform = "translate(0vw, -50%)";
-      }
-      else 
-      {
+        projectInfoCont.style.top = null;
+        }
+        else 
+        {
         projectInfoCont.style.transform = "translate(0vw, 25%)";
-      }
+        projectInfoCont.style.top = null;
+        }
     }
-  })
+  })*/

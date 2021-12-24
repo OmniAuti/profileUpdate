@@ -895,7 +895,7 @@ h1 {
 .project-information-cont {
   height: 350px;
   width: 250px;
-  top: calc(0%);
+  top: calc(50%);
   left: 50px;
   position: absolute;
   display: flex;
@@ -1983,6 +1983,7 @@ h1 {
     top: calc(55%);
   }
 }
+
 
 .code-project-less-btn,
 .code-project-add-btn {
@@ -3519,17 +3520,16 @@ h1 {
   }
 
   .project-information-cont {
-    height: 75%;
+    height: 65%;
     width: 100%;
-    margin-top: 25px;
-    top: calc(0%);
+    top: calc(50% + 50px);
     left: 0;
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    transform: translate(-100vw, 25%);
+    transform: translate(-100vw, 0%);
     transition: transform ease-in-out 1250ms;
     color: #1c1c25;
     border: 1px solid yellow;
@@ -3559,8 +3559,10 @@ h1 {
 }
 
 .used-code-icon-cont {
-  padding: 10px 10px;
-  border-right: 2.5px solid #1c1c25;
+  padding: 15px 10px;
+  margin-top: 15px;
+  border-top: 2.5px solid #1c1c25;
+  border-right: none;
   width: 40%;
   display: flex;
   flex-direction: row;
@@ -3632,6 +3634,7 @@ h1 {
   font-size: 25px;
   color: #1c1c25;
   transition: all ease 250ms;
+  display: none;
 }
 
 .project-card-out-link::before {
