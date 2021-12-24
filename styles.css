@@ -3512,10 +3512,10 @@ h1 {
 
   .stacked-guts {
     height: 50%;
-    width: 100%;
+    width: calc(100% - 50px);
     float:none;
     position: absolute;
-    bottom: 0;
+    bottom: 15px;
     pointer-events: none;
   }
 
@@ -3655,9 +3655,9 @@ h1 {
 }
   .change-project-cont {
     position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 15px;
+    top: 110%;
+    transform: translateY(0%);
     display: flex;
     align-items: center;
     justify-content: space-between;
