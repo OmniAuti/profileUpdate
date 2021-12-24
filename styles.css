@@ -653,7 +653,6 @@ h1 {
   top: 50vh;
   left: calc(-50vh - 50px);
   z-index: 1;
-  animation
 }
 
 .coming-soon {
@@ -3789,7 +3788,7 @@ h1 {
 
 @media (max-width: 600px) {
   /*THIS IS FOR THE SMALLEST SCREEN. IMAGES REPLACE CARDS NOW FOR MOBILE */
-  .code-info-section-cont {
-    display: none;
+  .project-information-cont, .change-project-cont,.stacked-guts {
+  display: none;
   }
 }
