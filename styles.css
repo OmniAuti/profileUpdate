@@ -2059,7 +2059,6 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  pointer-events: none;
 }
 
 @media (max-width: 1025px) {
@@ -3511,6 +3510,10 @@ h1 {
 
 @media (max-width: 850px) {
 
+  .card {
+    pointer-events: none;
+  }
+
   .stacked-guts {
     height: 50%;
     width: calc(100% - 50px);
@@ -3781,7 +3784,7 @@ h1 {
 }
 
 
-@media (max-width: 575px) {
+@media (max-width: 600px) {
   /*THIS IS FOR THE SMALLEST SCREEN. IMAGES REPLACE CARDS NOW FOR MOBILE */
   .code-info-section-cont {
     display: none;
