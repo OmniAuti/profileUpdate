@@ -3807,7 +3807,9 @@ h1 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 50px;
+    margin-top: 50px;
+    transform: translateY(100vh);
+    transition: transform ease-in 1000ms;
   }
 
   .port-mobile {

@@ -26,6 +26,9 @@ const linkedinContact = document.querySelector('.linkedin-cont')
 // CLOSE BUTTONS
 const designCloseBtn = document.querySelector(".design-close-btn");
 const codeCloseBtn = document.querySelector(".code-close-btn");
+// MOBILE SECTION 
+const mobilePortfolio = document.querySelector('.mobile-portfolio')
+
 
 // CLOSE BTN FUNCTIONS
 function handleDesignCloseBtn() {
@@ -77,6 +80,7 @@ function handleCodeCloseBtn() {
     }); // FORCED SCROLL TO CONTACT SECTION
 
     aboutMeCont.style.transform = null;
+    mobilePortfolio.style.transform = null;
 
     contactCard.classList.remove("move-card-back");
     designCard.classList.remove("move-card-back");
@@ -150,8 +154,7 @@ function handleActiveDesignCard() {
 function handleActiveCodeCard() {
 
   //AVOID DOUBLE DECLARATIONS
-  if (codeCard.classList.contains("theater")) {
-    
+  if (codeCard.classList.contains("theater")) { 
     return;
   }
 
@@ -175,6 +178,8 @@ function handleActiveCodeCard() {
 
   if (codeCard.classList.contains("theater")) {
     projectDetailsFirstOpen()
+    // MOBILE SECTION SET TO SEE
+    mobilePortfolio.style.transform = 'translateY(0)'
     // SET ACTIVE TAB ABLE LINKS
     codeCloseBtn.setAttribute("tabindex", "0"); // BRING UP CLOSE BTN
     codeProjectDownBtn.setAttribute("tabindex", "0"); // BRING UP CLOSE BTN
