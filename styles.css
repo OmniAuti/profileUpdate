@@ -261,6 +261,7 @@ h1 {
     padding-left: 0px;
     text-align: center;
   }
+
   .name-intro {
     line-height: 125px;
     font-size: 125px;
@@ -280,6 +281,7 @@ h1 {
 @media (max-width: 550px) {
   .coa-intro {
     font-size: 35px;
+   margin-bottom: 100px;
   }
   .name-intro {
     line-height: 100px;
