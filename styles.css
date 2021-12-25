@@ -3810,7 +3810,7 @@ h1 {
     padding-top: 50px;
   }
 
-  .port-one-mobile {
+  .port-mobile {
     width: 100%;
     display: flex;
     align-items: center;
@@ -3818,6 +3818,7 @@ h1 {
     height: 500px;
     flex-direction: column;
   }
+  
 
 }
 
