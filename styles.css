@@ -279,11 +279,29 @@ h1 {
 }
 @media (max-width: 550px) {
   .coa-intro {
+    font-size: 35px;
+  }
+  .name-intro {
+    line-height: 100px;
+    font-size: 85px;
+  }
+}
+@media (max-width: 450px) {
+  .coa-intro {
+    font-size: 30px;
+  }
+  .name-intro {
+    line-height: 100px;
+    font-size: 75px;
+  }
+}
+@media (max-width: 375px) {
+  .coa-intro {
     font-size: 25px;
   }
   .name-intro {
     line-height: 100px;
-    font-size: 70px;
+    font-size: 60px;
   }
 }
 
