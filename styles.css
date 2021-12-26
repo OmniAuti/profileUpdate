@@ -281,7 +281,7 @@ h1 {
 @media (max-width: 550px) {
   .coa-intro {
     font-size: 35px;
-   margin-bottom: 100px;
+    margin-bottom: 100px;
   }
   .name-intro {
     line-height: 100px;
@@ -1374,7 +1374,7 @@ h1 {
 @media (max-width: 750px) {
   .contact-link {
     font-size: 50px;
-    margin-left: 35%;
+    margin-left: 36%;
   }
 
   .contact-tab-link:focus,
@@ -1385,7 +1385,7 @@ h1 {
 
   .design-link {
     font-size: 50px;
-    margin-left: 52.5%;
+    margin-left: 53.5%;
   }
 
   .design-tab-link:focus,
@@ -1394,7 +1394,7 @@ h1 {
     outline: none;
   }
   .code-link {
-    margin-left: 72.5%;
+    margin-left: 70.5%;
     font-size: 50px;
   }
 
