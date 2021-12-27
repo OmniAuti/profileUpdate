@@ -3830,6 +3830,7 @@ h1 {
     margin-top: 50px;
     transform: translateY(100vh);
     transition: transform ease-in 1000ms;
+    margin-bottom: 50px;
   }
 
   .port-mobile {
