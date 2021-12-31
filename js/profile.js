@@ -23,12 +23,18 @@ const contactTitle = document.querySelector(".contact-title");
 const gitHubContact = document.querySelector('.gitHub-cont')
 const emailContact = document.querySelector('.email-cont')
 const linkedinContact = document.querySelector('.linkedin-cont')
+const emailModal =  document.querySelector('.email-modal')
 // CLOSE BUTTONS
 const designCloseBtn = document.querySelector(".design-close-btn");
 const codeCloseBtn = document.querySelector(".code-close-btn");
 // MOBILE SECTION 
 const mobilePortfolio = document.querySelector('.mobile-portfolio')
-
+// CONTACT DIRECT FORM 
+const nameContactInput = document.getElementById('name-contact-input')
+const emailContactInput = document.getElementById('email-contact-input')
+const phoneContactInput = document.getElementById('phone-contact-input')
+const descContactInput = document.getElementById('description-contact-input')
+const submitContactInput = document.getElementById('submit-contact-input')
 
 // CLOSE BTN FUNCTIONS
 function handleDesignCloseBtn() {
@@ -210,6 +216,13 @@ function handleActiveCodeCard() {
 // CONTACT ALL FUNCTION ACTIVE/NONACTIVE
 function handleContact() {
   if (contactCard.classList.contains("active-contact")) {
+    emailModal.classList.remove('active-email-modal') // CLOSE MODAL IF OPEN
+    // RESET ACTIVE MODAL TAB INDEX FOR FORM
+    nameContactInput.setAttribute("tabindex", "-1");
+    emailContactInput.setAttribute("tabindex", "-1");
+    phoneContactInput.setAttribute("tabindex", "-1");
+    descContactInput.setAttribute("tabindex", "-1");
+    submitContactInput.setAttribute("tabindex", "-1");
     // CHECK FOR ACTIVE CONTACT
     contactCard.classList.add("border-on"); // SETS BORDERS OF CARDS
     designCard.classList.add("border-on");
@@ -319,21 +332,24 @@ codeCard.addEventListener("click", handleActiveCodeCard);
 // CONTACT CARD CLICK EVENT
 contactCard.addEventListener("click", handleContact);
 
-/*
+// DIRECT EMAIL MODAL SETTINGS FOR ACTIVE AND NOT
+  emailContact.addEventListener('click', () => {
+    emailModal.classList.toggle('active-email-modal')
 
-    // DURING A RESIZE AND CARD OPEN - NEED TO ADJUST CODE INFO CONT
-   window.addEventListener('resize', () => {
-
-      if (codeCard.classList.contains("theater")) {
-        projectInfoCont.style.transform = null;
-        if (window.innerWidth > 850) {
-        projectInfoCont.style.transform = "translate(0vw, -50%)";
-        projectInfoCont.style.top = null;
-        }
-        else 
-        {
-        projectInfoCont.style.transform = "translate(0vw, 25%)";
-        projectInfoCont.style.top = null;
-        }
+    if (emailModal.classList.contains('active-email-modal')) {
+    nameContactInput.setAttribute("tabindex", "0");
+    emailContactInput.setAttribute("tabindex", "0");
+    phoneContactInput.setAttribute("tabindex", "0");
+    descContactInput.setAttribute("tabindex", "0");
+    submitContactInput.setAttribute("tabindex", "0");
     }
-  })*/
+    else
+    {
+      nameContactInput.setAttribute("tabindex", "-1");
+      emailContactInput.setAttribute("tabindex", "-1");
+      phoneContactInput.setAttribute("tabindex", "-1");
+      descContactInput.setAttribute("tabindex", "-1");
+      submitContactInput.setAttribute("tabindex", "-1");
+    }
+  })
+

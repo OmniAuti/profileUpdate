@@ -1701,6 +1701,68 @@ h1 {
   overflow: hidden;
 }
 
+.email-modal {
+  width: 400px;
+  height: 315px;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  z-index: 99;
+  background-color: #f8f8ff;
+  box-shadow:0px 0px 5px #232325;
+  display: block;
+  transition: all ease 250ms;
+  clip-path: circle(0%);
+  opacity: 1;
+  border-radius: 20px;
+  text-align: center;
+  font-family: "Forum", cursive;
+  font-size: 20px;
+  opacity: .5;
+}
+
+.email-modal h3 {
+  margin-top: 5px;
+}
+
+.active-email-modal {
+  clip-path: circle(100%);
+  opacity: 1;
+  transition: all ease 2000ms;
+}
+
+.email-modal div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email-modal input {
+  padding-left: 5px;
+}
+
+.email-modal input,
+.email-modal textarea {
+  background-color: #f8f8ff;
+  font-family: "Forum", cursive;
+  font-size: 20px;
+  margin-top: 13px;
+  border: 1px solid #232325;
+}
+
+.contact-submit-btn {
+  display: block;
+  margin: 6px 0px;
+  padding: 5px 25px;
+  background-color: #232325;
+  color: #f8f8ff;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
 .contact-title {
   -webkit-transform: translateX(100vw);
   -moz-transform: translateX(100vw);
