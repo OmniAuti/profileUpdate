@@ -874,6 +874,7 @@ h1 {
   height: 95%;
   width: 65%;
   float: right;
+  margin-right: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1982,7 +1983,7 @@ h1 {
 
 .change-project-cont {
   position: absolute;
-  right: 0;
+  right: 25px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -3598,6 +3599,7 @@ h1 {
     float: none;
     position: absolute;
     bottom: 15px;
+    margin-right: 0px;
   }
 
   .project-information-cont {
@@ -3736,7 +3738,7 @@ h1 {
   .change-project-cont {
     position: absolute;
     right: 15px;
-    top: 110%;
+    top: 55%;
     transform: translateY(0%);
     display: flex;
     align-items: center;
