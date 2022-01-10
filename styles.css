@@ -3418,7 +3418,7 @@ h1 {
   position: absolute;
   top: 59px;
   z-index: 5;
-  right: -0.75px;
+  right: -1px;
   padding-left: 25px;
   -webkit-transform-style: preserve-3d;
   -moz-transform-stle: preserve-3d;
