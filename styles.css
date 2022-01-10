@@ -874,14 +874,14 @@ h1 {
   height: 95%;
   width: 65%;
   float: right;
-  margin-right: 75px;
+  margin-right: 135px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform ease-in 350ms;
 }
 /* THIS IS WHEN THE CARD NEEDS TO CHANGE */
-@media (max-width: 1025px) {
+@media (max-width: 1100px) {
   .stackd-guts {
     width: 10%;
   }
@@ -919,7 +919,6 @@ h1 {
   height: 350px;
   width: 250px;
   top: calc(50%);
-  left: 50px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -930,23 +929,17 @@ h1 {
   color: #1c1c25;
 }
 
-@media (max-width: 1025px) {
-  .project-information-cont {
-    left: 0px;
-    top: calc(55%);
-  }
-}
-
 .project-title {
   width: 100%;
   font-size: 25px;
-  margin-left: 150px;
-  text-align: left;
+  text-align: center;
+  font-family: "Arapey", serif;
 }
 
 .text-used-code-cont {
   display: flex;
   justify-content: space-between;
+  font-family: "Forum", cursive;
 }
 
 .used-code-icon-cont {
@@ -1019,10 +1012,10 @@ h1 {
 .project-card-out-link {
   width: 93px;
   position: relative;
-  text-align: left;
   font-size: 25px;
   color: #1c1c25;
   transition: all ease 250ms;
+  font-family: "Arapey", serif;
 }
 
 .project-card-out-link::before {
@@ -1712,7 +1705,7 @@ h1 {
   transform: translate(-50%, -75%);
   z-index: 99;
   background-color: #f8f8ff;
-  box-shadow:0px 0px 5px #232325;
+  box-shadow: 0px 0px 5px #232325;
   display: block;
   transition: all ease 250ms;
   clip-path: circle(0%);
@@ -1721,7 +1714,7 @@ h1 {
   text-align: center;
   font-family: "Forum", cursive;
   font-size: 20px;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .email-modal h3 {
@@ -1983,7 +1976,7 @@ h1 {
 
 .change-project-cont {
   position: absolute;
-  right: 25px;
+  right: 60px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -1994,26 +1987,15 @@ h1 {
   width: 50px;
 }
 
-@media (max-width: 1025px) {
-  .change-project-cont {
-    top: 55%;
-  }
-}
-
 .stacked-guts {
   height: 95%;
   width: 65%;
+  margin-right: 115px;
   float: right;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform ease-in 350ms;
-}
-/* THIS IS WHEN THE CARD NEEDS TO CHANGE */
-@media (max-width: 1025px) {
-  .stackd-guts {
-    width: 10%;
-  }
 }
 
 .move-project-down {
@@ -2048,7 +2030,7 @@ h1 {
   height: 350px;
   width: 250px;
   top: calc(50%);
-  left: 50px;
+  left: 20px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -2057,13 +2039,6 @@ h1 {
   transform: translate(-100vw, -50%);
   transition: transform ease-in-out 1250ms;
   color: #1c1c25;
-}
-
-@media (max-width: 1025px) {
-  .project-information-cont {
-    left: 0px;
-    top: calc(55%);
-  }
 }
 
 .code-project-less-btn,
@@ -2075,17 +2050,19 @@ h1 {
   background-color: transparent;
   border: none;
   color: #1c1c25;
-  font-size: 10px;
+  font-size: 16px;
   font-family: sans-serif;
 }
 
-.text-mask {
+
+#text-mask {
   font-family: "Arapey", serif;
-  font-size: 10px;
+  font-weight: 100;
+  font-size: 25px;
 }
 
 .change-project-up-arrow {
-  padding-left: 11.25px;
+  padding-left: 10.65px;
 }
 
 .code-project-less-btn:disabled {
@@ -2093,13 +2070,13 @@ h1 {
 }
 
 .change-project-down-arrow {
-  margin-left: -1.25px;
+  margin-left: -25px;
 }
 
 .change-project-up-arrow::before {
   content: "";
   position: absolute;
-  width: 2px;
+  width: 3px;
   height: 95px;
   background-color: #1c1c25;
   top: 0;
@@ -2109,7 +2086,7 @@ h1 {
 .change-project-down-arrow::after {
   content: "";
   position: absolute;
-  width: 2px;
+  width: 3px;
   height: 95px;
   background-color: #1c1c25;
   right: 17px;
@@ -2124,6 +2101,35 @@ h1 {
 .code-project-less-btn:hover .change-project-up-arrow::before {
   height: 190px;
   top: -95px;
+}
+
+@media (max-width: 1100px) {
+
+  .change-project-cont {
+    right: 35px;
+  }
+
+  .project-information-cont {
+    left: 0px;
+  }
+
+  .stacked-guts {
+    margin-right: 75px;
+  }
+
+  .code-project-less-btn,
+  .code-project-add-btn {
+    font-size: 16px;
+  }
+
+  #text-mask {
+    font-size: 16px;
+  }
+
+  .change-project-down-arrow {
+    margin-left: -11px;
+  }
+
 }
 
 /* ------------- PROFILE PROJECT CARDS --------------- */
@@ -2142,7 +2148,7 @@ h1 {
   justify-content: center;
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1100px) {
   .card {
     width: 550px;
     height: 350px;
@@ -2241,7 +2247,7 @@ h1 {
   top: 50px;
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1100px) {
   .card-inner-dead-cat {
     width: 500px;
     height: 300px;
@@ -2446,7 +2452,7 @@ h1 {
   transform: translateZ(25px);
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1100px) {
   .card-inner-studio-silence {
     width: 500px;
     height: 300px;
@@ -2897,7 +2903,7 @@ h1 {
   transform-style: preserve-3d;
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1100px) {
   .card-inner-mad-bat {
     width: 500px;
     height: 300px;
@@ -3184,7 +3190,7 @@ h1 {
   border-radius: 5px 5px 20px 5px;
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1100px) {
   .card-inner-hoppy {
     width: 500px;
     height: 300px;
@@ -3462,7 +3468,7 @@ h1 {
   justify-content: center;
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1100px) {
   .card-inner-wheelers {
     height: 300px;
     width: 500px;
@@ -3595,8 +3601,9 @@ h1 {
 
   .stacked-guts {
     height: 50%;
-    width: calc(100% - 50px);
+    width: calc(100% - 225px);
     float: none;
+    margin-left: 100px;
     position: absolute;
     bottom: 15px;
     margin-right: 0px;
@@ -3606,7 +3613,7 @@ h1 {
     height: 65%;
     width: 100%;
     top: calc(50% + 50px);
-    left: 0;
+    left: 5px;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -3737,7 +3744,7 @@ h1 {
   }
   .change-project-cont {
     position: absolute;
-    right: 15px;
+    right: 60px;
     top: 55%;
     transform: translateY(0%);
     display: flex;
@@ -3757,7 +3764,7 @@ h1 {
     background-color: transparent;
     border: none;
     color: #1c1c25;
-    font-size: 10px;
+    font-size: 16px;
     font-family: sans-serif;
   }
 
@@ -3766,47 +3773,18 @@ h1 {
     font-size: 10px;
   }
 
-  .change-project-up-arrow {
-    padding-left: 11.25px;
-  }
-
-  .code-project-less-btn:disabled {
-    cursor: not-allowed;
+  .change-project-cont {
+    right: 30px;
   }
 
   .change-project-down-arrow {
-    margin-left: -1.25px;
+    margin-left: -11px;
+  }
+  .change-project-up-arrow {
+    margin-left: 0px;
   }
 
-  .change-project-up-arrow::before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 95px;
-    background-color: #1c1c25;
-    top: 0;
-    left: 17px;
-    transition: all ease-out 500ms;
-  }
-  .change-project-down-arrow::after {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 95px;
-    background-color: #1c1c25;
-    right: 17px;
-    bottom: 0;
-    transition: all ease-out 500ms;
-  }
 
-  .code-project-add-btn:hover .change-project-down-arrow::after {
-    height: 190px;
-    bottom: -95px;
-  }
-  .code-project-less-btn:hover .change-project-up-arrow::before {
-    height: 190px;
-    top: -95px;
-  }
 }
 /* used to rotate card on smaller screens  TOUCH DISABLED */
 .card-nft {
@@ -3873,9 +3851,9 @@ h1 {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   /*THIS IS FOR THE SMALLEST SCREEN. IMAGES REPLACE CARDS NOW FOR MOBILE */
-  
+
   .project-information-cont,
   .change-project-cont,
   .stacked-guts {
@@ -3905,11 +3883,9 @@ h1 {
     height: 500px;
     flex-direction: column;
   }
-  
-
 }
 
-@media (min-width: 601px) {
+@media (min-width: 651px) {
   /*THIS IS FOR THE SMALLEST SCREEN. IMAGES REPLACE CARDS NOW FOR MOBILE */
   .mobile-portfolio {
     display: none;
