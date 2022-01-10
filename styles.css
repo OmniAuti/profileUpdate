@@ -189,6 +189,18 @@ h1 {
   width: 100%;
 }
 
+#down-arrow-intro {
+  width: 75px;
+  fill: #f8f8ff;
+  text-align: center;
+  margin-left: 40%;
+  cursor: pointer;
+}
+
+#down-arrow-intro:active {
+  transform: scale(.98);
+}
+
 @media (min-width: 1400px) {
   .name-intro {
     line-height: 250px;
@@ -268,6 +280,13 @@ h1 {
     padding-left: 0;
     width: fit-content;
   }
+
+
+#down-arrow-intro {
+  margin-left: 0%;
+  margin-top: 25px;
+}
+
 }
 @media (max-width: 650px) {
   .coa-intro {
@@ -720,7 +739,7 @@ h1 {
 }
 
 .active-design-link {
-  margin-left: 60%;
+  margin-left: 80%;
   margin-top: 0px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -824,7 +843,7 @@ h1 {
     }
 
     100% {
-      margin-top: calc(29% + 25px);
+      margin-top: calc(30%);
       margin-left: calc(100% - 30px);
       -webkit-transform: rotate(-90deg);
       -moz-transform: rotate(-90deg);
@@ -1072,7 +1091,7 @@ h1 {
 }
 
 .active-code-link {
-  margin-left: 82.5%;
+  margin-left: 80%;
   margin-top: 0px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -1985,6 +2004,11 @@ h1 {
   flex-direction: column;
   height: 200px;
   width: 50px;
+  transition: transform ease 1000ms;
+}
+
+.move-change-btn-cont {
+  transform: translateY(100vh);
 }
 
 .stacked-guts {
