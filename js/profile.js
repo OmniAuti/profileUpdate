@@ -20,21 +20,23 @@ const aboutMeTitle = document.querySelector(".about-me-title");
 // CONTACT SECTION CONTENT
 const contactCont = document.querySelector(".contact-cont");
 const contactTitle = document.querySelector(".contact-title");
-const gitHubContact = document.querySelector('.gitHub-cont')
-const emailContact = document.querySelector('.email-cont')
-const linkedinContact = document.querySelector('.linkedin-cont')
-const emailModal =  document.querySelector('.email-modal')
+const gitHubContact = document.querySelector(".gitHub-cont");
+const emailContact = document.querySelector(".email-cont");
+const linkedinContact = document.querySelector(".linkedin-cont");
+const emailModal = document.querySelector(".email-modal");
 // CLOSE BUTTONS
 const designCloseBtn = document.querySelector(".design-close-btn");
 const codeCloseBtn = document.querySelector(".code-close-btn");
-// MOBILE SECTION 
-const mobilePortfolio = document.querySelector('.mobile-portfolio')
-// CONTACT DIRECT FORM 
-const nameContactInput = document.getElementById('name-contact-input')
-const emailContactInput = document.getElementById('email-contact-input')
-const phoneContactInput = document.getElementById('phone-contact-input')
-const descContactInput = document.getElementById('description-contact-input')
-const submitContactInput = document.getElementById('submit-contact-input')
+// MOBILE SECTION
+const mobilePortfolio = document.querySelector(".mobile-portfolio");
+// CONTACT DIRECT FORM
+const nameContactInput = document.getElementById("name-contact-input");
+const emailContactInput = document.getElementById("email-contact-input");
+const phoneContactInput = document.getElementById("phone-contact-input");
+const descContactInput = document.getElementById("description-contact-input");
+const submitContactInput = document.getElementById("submit-contact-input");
+// CHANGE BUTTONS CONT
+const changeBtnsCont = document.querySelector(".change-project-cont");
 
 // CLOSE BTN FUNCTIONS
 function handleDesignCloseBtn() {
@@ -71,12 +73,13 @@ function handleDesignCloseBtn() {
 }
 function handleCodeCloseBtn() {
   if (codeCard.classList.contains("theater")) {
-
     deleteGutsClose(); // GETS RID OF CURRENT PROJECT ON SCREEN
-    projectInfoCont.style.transform = null // RESETS PROJECT INFORMATION BACK OUT OF VIEW
+    projectInfoCont.style.transform = null; // RESETS PROJECT INFORMATION BACK OUT OF VIEW
     contactTabLink.setAttribute("tabindex", "0"); // ENABLE LINKS
     designTabLink.setAttribute("tabindex", "0");
     codeTabLink.setAttribute("tabindex", "0");
+    //CHANGE BUTTONS TO OPEN POSITION
+    changeBtnsCont.classList.add("move-change-btn-cont");
     //CHECK IF ACTIVE CARD
     codeCard.classList.add("close-theater"); // ADD CLASS TO CATCH SIZE RESET IF/ELSE
     window.scrollTo({
@@ -109,15 +112,14 @@ function handleCodeCloseBtn() {
 }
 // ACTIVE CONTACT HANDLERS
 function handleActiveDesignCard() {
-    //AVOID DOUBLE DECLARATIONS
+  //AVOID DOUBLE DECLARATIONS
   if (designCard.classList.contains("theater")) {
     return;
   }
 
   this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITION
-  codeCard.classList.add("curtain-closed")
-  contactCard.classList.add("curtain-closed")
- 
+  codeCard.classList.add("curtain-closed");
+  contactCard.classList.add("curtain-closed");
 
   if (contactCard.classList.contains("active-contact")) {
     designLink.style.opacity = 0;
@@ -153,20 +155,19 @@ function handleActiveDesignCard() {
   // REMOVES UNCLICKABLE CLASS
   setTimeout(() => {
     designCard.classList.remove("curtain-closed");
-    codeCard.classList.remove("curtain-closed")
+    codeCard.classList.remove("curtain-closed");
     contactCard.classList.remove("curtain-closed");
   }, 1000);
 }
 function handleActiveCodeCard() {
-
   //AVOID DOUBLE DECLARATIONS
-  if (codeCard.classList.contains("theater")) { 
+  if (codeCard.classList.contains("theater")) {
     return;
   }
 
   this.classList.add("curtain-closed"); // MAKES OTHER ELEMENTS UNCLICKABLE DURING TRANSITIONS
-  designCard.classList.add("curtain-closed")
-  contactCard.classList.add("curtain-closed")
+  designCard.classList.add("curtain-closed");
+  contactCard.classList.add("curtain-closed");
 
   if (contactCard.classList.contains("active-contact")) {
     designLink.style.opacity = 0;
@@ -183,9 +184,11 @@ function handleActiveCodeCard() {
   }
 
   if (codeCard.classList.contains("theater")) {
-    projectDetailsFirstOpen()
+    projectDetailsFirstOpen();
     // MOBILE SECTION SET TO SEE
-    mobilePortfolio.style.transform = 'translateY(0)'
+    mobilePortfolio.style.transform = "translateY(0)";
+    //CHANGE BUTTONS TO OPEN POSITION
+    changeBtnsCont.classList.remove("move-change-btn-cont");
     // SET ACTIVE TAB ABLE LINKS
     codeCloseBtn.setAttribute("tabindex", "0"); // BRING UP CLOSE BTN
     codeProjectDownBtn.setAttribute("tabindex", "0"); // BRING UP CLOSE BTN
@@ -209,14 +212,14 @@ function handleActiveCodeCard() {
   // REMOVES UNCLICKABLE CLASS
   setTimeout(() => {
     this.classList.remove("curtain-closed");
-    designCard.classList.remove("curtain-closed")
+    designCard.classList.remove("curtain-closed");
     contactCard.classList.remove("curtain-closed");
   }, 1000);
 }
 // CONTACT ALL FUNCTION ACTIVE/NONACTIVE
 function handleContact() {
   if (contactCard.classList.contains("active-contact")) {
-    emailModal.classList.remove('active-email-modal') // CLOSE MODAL IF OPEN
+    emailModal.classList.remove("active-email-modal"); // CLOSE MODAL IF OPEN
     // RESET ACTIVE MODAL TAB INDEX FOR FORM
     nameContactInput.setAttribute("tabindex", "-1");
     emailContactInput.setAttribute("tabindex", "-1");
@@ -241,16 +244,16 @@ function handleContact() {
     setTimeout(() => {
       aboutMeCont.style.transform = null; // NULL THIS TRANSFORM SO CSS PRESET WORKS
     }, 250);
-    
+
     contactTitle.style.transform = "translateX(100vw)"; // TAKES OUT HEADER OF CONTACT SECTION
 
-     gitHubContact.setAttribute("tabindex", "-1")
-     emailContact.setAttribute("tabindex", "-1")
-     linkedinContact.setAttribute("tabindex", "-1")
-      gitHubContact.style.transform = "translateY(100vh)"; //SETTIME FOR LINK TIMED TRANSITION
-      emailContact.style.transform = "translateY(100vh)"; 
-      linkedinContact.style.transform = "translateY(100vh)"; 
-  
+    gitHubContact.setAttribute("tabindex", "-1");
+    emailContact.setAttribute("tabindex", "-1");
+    linkedinContact.setAttribute("tabindex", "-1");
+    gitHubContact.style.transform = "translateY(100vh)"; //SETTIME FOR LINK TIMED TRANSITION
+    emailContact.style.transform = "translateY(100vh)";
+    linkedinContact.style.transform = "translateY(100vh)";
+
     contactCont.style.zIndex = "-1";
 
     portfolioCont.style.transform = "translateY(0vh)"; // BRINGS BACK PORTFOLIO SECTION TO ORIGINAL POSITION
@@ -277,30 +280,28 @@ function handleContact() {
     codeCard.classList.remove("border-on");
 
     setScrollOnOpenTheater();
-   
+
     aboutMeCont.style.transform = "translateY(-100vh)";
     setTimeout(() => {
-      linkedinContact.style.transform = "translateY(0vh)"; 
-    },100)
+      linkedinContact.style.transform = "translateY(0vh)";
+    }, 100);
     setTimeout(() => {
       gitHubContact.style.transform = "translateY(0vh)";
-    }, 200)
+    }, 200);
     setTimeout(() => {
-      emailContact.style.transform = "translateY(0vh)"; 
-     //SETTIME FOR LINK TIMED TRANSITION
+      emailContact.style.transform = "translateY(0vh)";
+      //SETTIME FOR LINK TIMED TRANSITION
     }, 300);
-    gitHubContact.setAttribute("tabindex", "0")
-    emailContact.setAttribute("tabindex", "0")
-    linkedinContact.setAttribute("tabindex", "0")
+    gitHubContact.setAttribute("tabindex", "0");
+    emailContact.setAttribute("tabindex", "0");
+    linkedinContact.setAttribute("tabindex", "0");
 
     contactCont.style.zIndex = "0";
-    
+
     if (window.innerWidth > 750) {
       contactTitle.style.transform = "translateX(0vw)"; // BRINGS IN HEADER OF SECTION
       portfolioCont.style.transform = "translateY(-50vh)"; // LIFTS UP PROTFOLIO SECTION TO GIVE FEEL OF MOVEMENT
-    } 
-    else 
-    {
+    } else {
       setTimeout(() => {
         contactTitle.style.transform = "translateX(0vw)"; // BRINGS IN HEADER OF SECTION
       }, 500);
@@ -310,18 +311,19 @@ function handleContact() {
 }
 // SCROLL RESET FUNCTION
 function setScrollOnOpenTheater() {
-      if (window.innerWidth < 750) 
-      {
-        setTimeout(() => {
-          document.body.style.overflow = "hidden";
-          window.scrollTo({ top: window.innerHeight + 120, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION 
-        }, 50);
-      }
-      else 
-      {
-        document.body.style.overflow = "hidden";
-        window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION  
-      }
+  if (window.innerWidth < 750) {
+    setTimeout(() => {
+      document.body.style.overflow = "hidden";
+      window.scrollTo({
+        top: window.innerHeight + 120,
+        left: 0,
+        behavior: "smooth",
+      }); // FORCED SCROLL TO CONTACT SECTION
+    }, 50);
+  } else {
+    document.body.style.overflow = "hidden";
+    window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION
+  }
 }
 // CLOSE BTN EVENTS
 designCloseBtn.addEventListener("click", handleDesignCloseBtn);
@@ -333,23 +335,20 @@ codeCard.addEventListener("click", handleActiveCodeCard);
 contactCard.addEventListener("click", handleContact);
 
 // DIRECT EMAIL MODAL SETTINGS FOR ACTIVE AND NOT
-  emailContact.addEventListener('click', () => {
-    emailModal.classList.toggle('active-email-modal')
+emailContact.addEventListener("click", () => {
+  emailModal.classList.toggle("active-email-modal");
 
-    if (emailModal.classList.contains('active-email-modal')) {
+  if (emailModal.classList.contains("active-email-modal")) {
     nameContactInput.setAttribute("tabindex", "0");
     emailContactInput.setAttribute("tabindex", "0");
     phoneContactInput.setAttribute("tabindex", "0");
     descContactInput.setAttribute("tabindex", "0");
     submitContactInput.setAttribute("tabindex", "0");
-    }
-    else
-    {
-      nameContactInput.setAttribute("tabindex", "-1");
-      emailContactInput.setAttribute("tabindex", "-1");
-      phoneContactInput.setAttribute("tabindex", "-1");
-      descContactInput.setAttribute("tabindex", "-1");
-      submitContactInput.setAttribute("tabindex", "-1");
-    }
-  })
-
+  } else {
+    nameContactInput.setAttribute("tabindex", "-1");
+    emailContactInput.setAttribute("tabindex", "-1");
+    phoneContactInput.setAttribute("tabindex", "-1");
+    descContactInput.setAttribute("tabindex", "-1");
+    submitContactInput.setAttribute("tabindex", "-1");
+  }
+});
