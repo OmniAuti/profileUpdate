@@ -1976,7 +1976,7 @@ h1 {
 
 .change-project-cont {
   position: absolute;
-  right: 60px;
+  right: 80px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -2106,7 +2106,7 @@ h1 {
 @media (max-width: 1100px) {
 
   .change-project-cont {
-    right: 35px;
+    right: 45px;
   }
 
   .project-information-cont {
@@ -3774,7 +3774,7 @@ h1 {
   }
 
   .change-project-cont {
-    right: 30px;
+    right: 40px;
   }
 
   .change-project-down-arrow {
