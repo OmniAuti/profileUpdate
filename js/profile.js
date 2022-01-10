@@ -80,6 +80,8 @@ function handleCodeCloseBtn() {
     codeTabLink.setAttribute("tabindex", "0");
     //CHANGE BUTTONS TO OPEN POSITION
     changeBtnsCont.classList.add("move-change-btn-cont");
+    //REVERT FONT FOR MOBILE
+    codeLink.style.fontSize = null
     //CHECK IF ACTIVE CARD
     codeCard.classList.add("close-theater"); // ADD CLASS TO CATCH SIZE RESET IF/ELSE
     window.scrollTo({
@@ -196,6 +198,8 @@ function handleActiveCodeCard() {
     contactTabLink.setAttribute("tabindex", "-1"); // DISABLE CONTACT LINK
     designTabLink.setAttribute("tabindex", "-1"); // DISABLE DESIGN LINK
     codeTabLink.setAttribute("tabindex", "-1"); // DISABLE CODE LINK
+
+    codeLink.style.fontSize = "25px" // CHANGES FONT SIZE ON MOBILE
 
     aboutMeTitle.style.zIndex = -1;
     // REPEATS SAME MOTIONS BUT FOR CODE CARD
