@@ -458,7 +458,7 @@ h1 {
   margin-left: calc(37.5% - 10px);
   font-family: "Arapey", serif;
   color: #1c1c25;
-  font-size: 25px;
+  font-size: 30px;
   margin-top: 0px;
   -webkit-transform-origin: top left;
   -moz-transform-origin: top left;
@@ -714,10 +714,10 @@ h1 {
 
 .design-link {
   width: fit-content;
-  margin-left: 60%;
+  margin-left: 59%;
   font-family: "Arapey", serif;
   color: #1c1c25;
-  font-size: 25px;
+  font-size: 30px;
   margin-top: 0px;
   -webkit-transform-origin: top left;
   -moz-transform-origin: top left;
@@ -797,7 +797,7 @@ h1 {
     }
 
     100% {
-      margin-left: 60%;
+      margin-left: 59%;
       margin-top: 0px;
       -webkit-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
@@ -809,7 +809,7 @@ h1 {
 
   @keyframes activeDesignText {
     0% {
-      margin-left: 60%;
+      margin-left: 59%;
       margin-top: 0px;
       -webkit-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
@@ -1066,10 +1066,10 @@ h1 {
 
 .code-link {
   width: fit-content;
-  margin-left: 82.5%;
+  margin-left: 80%;
   font-family: "Arapey", serif;
   color: #1c1c25;
-  font-size: 25px;
+  font-size: 30px;
   top: 0px;
   -webkit-transform-origin: top left;
   -moz-transform-origin: top left;
@@ -1144,7 +1144,7 @@ h1 {
     }
 
     100% {
-      margin-left: 82.5%;
+      margin-left: 80%;
       margin-top: 0px;
       -webkit-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
@@ -1156,7 +1156,7 @@ h1 {
 
   @keyframes activeCodeText {
     0% {
-      margin-left: 82.5%;
+      margin-left: 80%;
       margin-top: 0px;
       -webkit-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
