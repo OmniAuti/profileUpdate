@@ -398,7 +398,7 @@
         <p class="close-email-modal">X</p>
 
         <h3>Contact</h3>
-        <form action="">
+        <form method="POST" action="mail.php">
           <div>
             <input
               tabindex="-1"
@@ -418,15 +418,6 @@
             />
           </div>
           <div>
-            <input
-              tabindex="-1"
-              id="phone-contact-input"
-              type="tel"
-              placeholder="Phone"
-              name="phone"
-            />
-          </div>
-          <div>
             <textarea
               tabindex="-1"
               id="description-contact-input"
@@ -439,12 +430,12 @@
           </div>
           <div>
             <button
-              disabled="true"
               tabindex="-1"
               id="submit-contact-input"
               class="contact-submit-btn"
+              name="submit"
             >
-              Not Working Yet. Check Back Soon!
+              Say Hi
             </button>
           </div>
         </form>
