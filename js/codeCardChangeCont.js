@@ -3,7 +3,7 @@ const codeProjectDownBtn = document.querySelector(".code-project-add-btn");
 var i = 0;
 
 var deadCatCard = `
-<a href="https://omniauti.github.io/deadCat/" target="_blank">
+<a href="http://www.deadcatapp.com" target="_blank">
 <div class="card">
   <div class="card-inner-dead-cat">
     <div class="header-dead-cat">
@@ -205,7 +205,7 @@ var deadCatInfo = `<p class="project-title">Dead Cat</p>
       </p>
     </div>
   </div>
-<a class="project-card-out-link" href="https://omniauti.github.io/deadCat/" target="_blank">Visit Site</a>`;
+<a class="project-card-out-link" href="http://www.deadcatapp.com" target="_blank">Visit Site</a>`;
 var madBatInfo = `<p class="project-title">Restaurant Template</p>
 <div class="text-used-code-cont">
   <div class="used-code-icon-cont">
