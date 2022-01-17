@@ -3970,12 +3970,12 @@ h1 {
 
   .mobile-portfolio {
     position: absolute;
-    margin-top: 60px;
+    top:100px;
     transform: translateY(100vh);
     transition: transform ease-in 1000ms;
     width: fit-content;
     height: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
     padding-bottom: 50px;
   }
 
