@@ -204,7 +204,7 @@ h1 {
 }
 
 #down-arrow-intro:active {
-  transform: scale(.98);
+  transform: scale(0.98);
 }
 
 @media (min-width: 1400px) {
@@ -287,12 +287,10 @@ h1 {
     width: fit-content;
   }
 
-
-#down-arrow-intro {
-  margin-left: 0%;
-  margin-bottom: -100px;
-}
-
+  #down-arrow-intro {
+    margin-left: 0%;
+    margin-bottom: -100px;
+  }
 }
 @media (max-width: 650px) {
   .coa-intro {
@@ -893,6 +891,12 @@ h1 {
   top: 50vh;
   left: calc(-50vh - 100px);
   z-index: 1;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.stacked::-webkit-scrollbar {
+  display: none;
 }
 
 .stacked-guts {
@@ -1793,12 +1797,10 @@ h1 {
   font-size: 30px;
 }
 
-
-
 .sending-css {
   position: absolute;
   left: 50%;
-  top:50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
   height: 80%;
@@ -1807,7 +1809,7 @@ h1 {
 
 .circle-outter {
   background-color: #1c1c25;
-  width:100px;
+  width: 100px;
   height: 100px;
   border-radius: 50%;
   display: none;
@@ -1815,7 +1817,7 @@ h1 {
 
 .circle-inner {
   background-color: #f6f9ff;
-  width:90px;
+  width: 90px;
   height: 90px;
   border-radius: 50%;
   display: none;
@@ -1833,7 +1835,7 @@ h1 {
 
 @keyframes loading {
   0% {
-    transform:rotate(0deg);
+    transform: rotate(0deg);
     width: 25px;
   }
 
@@ -1849,7 +1851,7 @@ h1 {
   height: 50%;
   position: absolute;
   left: 50%;
-  top:50%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -2161,7 +2163,6 @@ h1 {
   font-family: sans-serif;
 }
 
-
 #text-mask {
   font-family: "Arapey", serif;
   font-weight: 100;
@@ -2211,7 +2212,6 @@ h1 {
 }
 
 @media (max-width: 1100px) {
-
   .change-project-cont {
     right: 45px;
   }
@@ -2236,7 +2236,6 @@ h1 {
   .change-project-down-arrow {
     margin-left: -11px;
   }
-
 }
 
 /* ------------- PROFILE PROJECT CARDS --------------- */
@@ -3890,8 +3889,6 @@ h1 {
   .change-project-up-arrow {
     margin-left: 0px;
   }
-
-
 }
 /* used to rotate card on smaller screens  TOUCH DISABLED */
 .card-nft {
