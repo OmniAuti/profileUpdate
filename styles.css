@@ -3972,14 +3972,14 @@ h1 {
   }
 
   .mobile-portfolio {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 50px;
+    position: absolute;
+    margin-top: 60px;
     transform: translateY(100vh);
     transition: transform ease-in 1000ms;
-    margin-bottom: 50px;
+    width: fit-content;
+    height: 100%;
+    overflow: scroll;
+    padding-bottom: 50px;
   }
 
   .port-mobile {
