@@ -394,35 +394,40 @@
       </section>
 
       <div class="email-modal">
-
         <p class="close-email-modal">X</p>
 
+ 
+
         <h3>Contact</h3>
-        <form method="POST" action="mail.php">
+        <form id="contact-form" method="POST" action="mail.php">
           <div>
             <input
               tabindex="-1"
               id="name-contact-input"
               type="text"
+              class="nameInput"
               placeholder="Name"
               name="name"
+              value=""
             />
           </div>
           <div>
             <input
               tabindex="-1"
               id="email-contact-input"
+              class="emailInput"
               type="email"
               placeholder="Email"
               name="email"
+              value=""
             />
           </div>
           <div>
             <textarea
               tabindex="-1"
               id="description-contact-input"
+              class="description-contact-input"
               name="description"
-              id=""
               cols="30"
               rows="5"
               placeholder="What can I do for you?"
@@ -439,6 +444,8 @@
             </button>
           </div>
         </form>
+
+       
       </div>
 
       <section id="contact" class="contact-cont">
@@ -474,6 +481,8 @@
     <script src="js/particleSettings.js"></script>
     <script src="js/profile.js"></script>
     <script src="js/moveLetter.js"></script>
+    <script class="formSubmitSrc" src="js/formSubmit.js"></script>
     <script src="js/codeCardChangeCont.js"></script>
+    <script class="closeModal" src="js/closeModal.js"></script>
   </body>
 </html>

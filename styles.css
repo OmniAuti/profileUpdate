@@ -1782,7 +1782,8 @@ h1 {
   outline: 2.5px solid #d87b6b;
 }
 
-.close-email-modal {
+.close-email-modal,
+.fin-close-email-modal {
   position: absolute;
   color: #d87b6b;
   right: 10px;
@@ -1791,6 +1792,72 @@ h1 {
   cursor: pointer;
   font-size: 30px;
 }
+
+
+
+.sending-css {
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  display: none;
+}
+
+.circle-outter {
+  background-color: #1c1c25;
+  width:100px;
+  height: 100px;
+  border-radius: 50%;
+  display: none;
+}
+
+.circle-inner {
+  background-color: #f6f9ff;
+  width:90px;
+  height: 90px;
+  border-radius: 50%;
+  display: none;
+}
+
+.rect-loading {
+  width: 25px;
+  height: 200px;
+  background-color: #f6f9ff;
+  animation-name: loading;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 1000ms;
+}
+
+@keyframes loading {
+  0% {
+    transform:rotate(0deg);
+    width: 25px;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    width: 25px;
+  }
+}
+
+.fin-email-send {
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+}
+
+.fin-email-send p {
+  margin-bottom: 15px;
+}
+
+/* ------ --------------- */
 
 .contact-title {
   -webkit-transform: translateX(100vw);

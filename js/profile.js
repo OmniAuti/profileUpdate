@@ -32,7 +32,6 @@ const mobilePortfolio = document.querySelector(".mobile-portfolio");
 // CONTACT DIRECT FORM
 const nameContactInput = document.getElementById("name-contact-input");
 const emailContactInput = document.getElementById("email-contact-input");
-const phoneContactInput = document.getElementById("phone-contact-input");
 const descContactInput = document.getElementById("description-contact-input");
 const submitContactInput = document.getElementById("submit-contact-input");
 // CHANGE BUTTONS CONT
@@ -227,7 +226,6 @@ function handleContact() {
     // RESET ACTIVE MODAL TAB INDEX FOR FORM
     nameContactInput.setAttribute("tabindex", "-1");
     emailContactInput.setAttribute("tabindex", "-1");
-    phoneContactInput.setAttribute("tabindex", "-1");
     descContactInput.setAttribute("tabindex", "-1");
     submitContactInput.setAttribute("tabindex", "-1");
     // CHECK FOR ACTIVE CONTACT
@@ -345,13 +343,11 @@ emailContact.addEventListener("click", () => {
   if (emailModal.classList.contains("active-email-modal")) {
     nameContactInput.setAttribute("tabindex", "0");
     emailContactInput.setAttribute("tabindex", "0");
-    phoneContactInput.setAttribute("tabindex", "0");
     descContactInput.setAttribute("tabindex", "0");
     submitContactInput.setAttribute("tabindex", "0");
   } else {
     nameContactInput.setAttribute("tabindex", "-1");
     emailContactInput.setAttribute("tabindex", "-1");
-    phoneContactInput.setAttribute("tabindex", "-1");
     descContactInput.setAttribute("tabindex", "-1");
     submitContactInput.setAttribute("tabindex", "-1");
   }
