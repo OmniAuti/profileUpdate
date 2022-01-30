@@ -328,7 +328,7 @@ function deleteGutsUp() {
   derp.classList.add("move-project-down");
   const moveDown = document.querySelector(".move-project-down");
   moveDown.classList.remove(".stacked-guts");
-  moveDown.style.transform = "translateY(-950px)";
+  moveDown.style.transform = "translateY(-2000px)";
   setTimeout(() => {
     moveDown.remove();
   }, 400);
@@ -340,7 +340,7 @@ function deleteGutsDown() {
   derp.classList.add("move-project-down");
   const moveDown = document.querySelector(".move-project-down");
   moveDown.classList.remove(".stacked-guts");
-  moveDown.style.transform = "translateY(950px)";
+  moveDown.style.transform = "translateY(2000px)";
   setTimeout(() => {
     moveDown.remove();
   }, 400);
