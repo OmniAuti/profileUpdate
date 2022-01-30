@@ -209,7 +209,8 @@ h1 {
 
 @media (min-width: 1400px) {
   .name-intro {
-    line-height: 250px;
+    padding-top: 50px;
+    line-height: 200px;
   }
 
   h1 {
@@ -2266,6 +2267,50 @@ h1 {
     width: 950px;
     height: 750px;
   }
+
+  .stacked-guts {
+    margin-right: 175px;
+  }
+
+  .project-information-cont {
+    height: 450px;
+    width: 300px;
+    top: calc(55%);
+  }
+
+  .project-information-details-cont {
+    height: 300px
+  }
+
+  .project-details {
+    width: 90%;
+  }
+
+  .text-used-code-cont {
+    font-size: 22px;
+  }
+
+  .used-code-icon-cont {
+    padding: 10px 10px;
+    width: 55px;
+
+  }
+
+  .project-title {
+    font-size: 30px;
+  }
+
+  .project-card-out-link {
+    font-size: 30px;
+    width: 106px;
+  }
+
+  .javascript-icon, .html-icon,.css-icon, .jquery-icon, .bootstrap-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+
 }
 
 /* -------------DEAD CAT CARD--------------- */
@@ -3971,6 +4016,8 @@ h1 {
   .mobile-portfolio {
     position: absolute;
     top:100px;
+    left:0;
+    right:0;
     transform: translateY(100vh);
     transition: transform ease-in 1000ms;
     width: fit-content;
