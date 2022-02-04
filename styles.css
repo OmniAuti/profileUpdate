@@ -896,6 +896,7 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
   z-index: 1;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  overflow-y: hidden;
 }
 
 .stacked::-webkit-scrollbar {
@@ -1231,7 +1232,6 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
     left: calc(-75vh - 200px);
     width: 150vh;
     height: 150vh;
-    overflow-y: hidden;
   }
 }
 
