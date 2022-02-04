@@ -198,7 +198,6 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
   text-align: center;
   margin-left: 40%;
   cursor: pointer;
-  margin-bottom: -25px;
   transition: transform ease 500ms;
 }
 
