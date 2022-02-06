@@ -851,7 +851,7 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
 
     100% {
       margin-top: calc(30%);
-      margin-left: calc(100% - 30px);
+      margin-left: calc(100% - 34px);
       -webkit-transform: rotate(-90deg);
       -moz-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
@@ -1331,8 +1331,8 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
     }
 
     100% {
-      margin-top: calc(30% + 25px);
-      margin-left: calc(100% - 30px);
+      margin-top: calc(30%);
+      margin-left: calc(100% - 34px);
       -webkit-transform: rotate(-90deg);
       -moz-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
