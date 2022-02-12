@@ -95,6 +95,15 @@ main {
   position: relative;
 }
 
+.sun-cont {
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .sun {
   position: absolute;
   background: radial-gradient(var(--main-yellow) 5%, #e30c3d, transparent 50%);
@@ -164,9 +173,8 @@ main {
 
 .intro {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -178,6 +186,7 @@ h1 {
   text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
     -0.045em 0.045em 0em #6d6d78, -0.06em 0.06em 0em #43424d;
   white-space: nowrap;
+  z-index: 99;
 }
 /*
 text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
@@ -1790,7 +1799,7 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
   display: block;
   margin: 15px 0px;
   padding: 5px 25px;
-  background-color: #232325;
+  background-color: Var;
   color: var(--main-white);
   font-size: 16px;
   cursor: pointer;
