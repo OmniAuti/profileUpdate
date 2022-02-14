@@ -215,6 +215,7 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
   margin-left: 42.5%;
   cursor: pointer;
   transition: transform ease 500ms;
+  z-index: 99;
 }
 
 #down-arrow-intro:hover {
@@ -244,8 +245,8 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
   .sun {
     width: 2000px;
     height: 2000px;
-    top: -1050px;
-    right: -1050px;
+    top: -1250px;
+    right: -150px;
   }
 
   @keyframes sun {
@@ -263,12 +264,12 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
       transform: rotate(90deg);
     }
     50% {
-      top: -975px;
-      right: -975px;
+      top: -1075px;
+      right: -1075px;
     }
     75% {
-      top: -1000px;
-      right: -1000px;
+      top: -1025px;
+      right: -1025px;
     }
     100% {
       top: -1050px;
