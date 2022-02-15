@@ -2798,8 +2798,8 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
     100% {
       border-radius: 0%;
       background-color: rgba(202, 13, 0, 0.5);
-      width: 200px;
-      height: 200px;
+      width: 450px;
+      height: 450px;
       -webkit-transform: rotate(45deg) translateZ(100px);
       -moz-transform: rotate(45deg) translateZ(100px);
       -ms-transform: rotate(45deg) translateZ(100px);
