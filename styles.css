@@ -1794,6 +1794,7 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
   margin-top: 20px;
   border: 1px solid #232325;
   padding-left: 5px;
+  border-radius: 5px;
 }
 
 .contact-submit-btn {
@@ -1804,6 +1805,9 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
   color: var(--main-white);
   font-size: 16px;
   cursor: pointer;
+  background-color: var(--main-black);
+  border: 0;
+  border-radius: 5px;
 }
 
 .contact-submit-btn:focus {
