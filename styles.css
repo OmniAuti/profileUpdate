@@ -472,6 +472,9 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
 }
 
 .contact-link {
+  font-weight: bold;
+  background-color: transparent; 
+  border: none;
   width: fit-content;
   margin-left: calc(37.5% - 10px);
   font-family: "Arapey", serif;
@@ -731,6 +734,9 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
 }
 
 .design-link {
+  font-weight: bold;
+  background-color: transparent;
+  border:  none;
   width: fit-content;
   margin-left: 59%;
   font-family: "Arapey", serif;
@@ -755,6 +761,7 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
 }
 
 .reverse-design-link {
+  font-weight: bold;
   animation-name: designTextReset;
   animation-iteration-count: 1;
   animation-duration: 1000ms;
@@ -1092,6 +1099,9 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
 }
 
 .code-link {
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
   width: fit-content;
   margin-left: 80%;
   font-family: "Arapey", serif;
@@ -1924,6 +1934,11 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
   width: 60%;
   height: 50%;
 }
+.contact-icon-cont button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 
 @media (max-width: 750px) {
   .contact-cont {
@@ -2037,17 +2052,14 @@ text-shadow: -0.015em 0.015em 0em #cccbd8, -0.03em 0.03em 0em #9b9ba7,
   height: 50px;
   width: fit-content;
   white-space: nowrap;
-  top: 0px;
+  top: 0;
+  left: 0;
   position: absolute;
   background-color: transparent;
   border: none;
   font-family: "Arapey", serif;
   color: var(--main-black);
   font-size: 25px;
-}
-
-.code-close-btn {
-  position: absolute;
 }
 
 .rtn-btn-text::before {
