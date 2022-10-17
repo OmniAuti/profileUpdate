@@ -28,7 +28,7 @@ const emailModal = document.querySelector(".email-modal");
 const designCloseBtn = document.querySelector(".design-close-btn");
 const codeCloseBtn = document.querySelector(".code-close-btn");
 // MOBILE SECTION
-const mobilePortfolio = document.querySelector(".mobile-portfolio");
+// const mobilePortfolio = document.querySelector(".mobile-portfolio");
 // CONTACT DIRECT FORM
 const nameContactInput = document.getElementById("name-contact-input");
 const emailContactInput = document.getElementById("email-contact-input");
@@ -90,7 +90,7 @@ function handleCodeCloseBtn() {
     }); // FORCED SCROLL TO CONTACT SECTION
 
     aboutMeCont.style.transform = null;
-    mobilePortfolio.style.transform = null;
+    // mobilePortfolio.style.transform = null;
 
     contactCard.classList.remove("move-card-back");
     designCard.classList.remove("move-card-back");
@@ -187,7 +187,7 @@ function handleActiveCodeCard() {
   if (codeCard.classList.contains("theater")) {
     projectDetailsFirstOpen();
     // MOBILE SECTION SET TO SEE
-    mobilePortfolio.style.transform = "translateY(0)";
+    // mobilePortfolio.style.transform = "translateY(0)";
     //CHANGE BUTTONS TO OPEN POSITION
     changeBtnsCont.classList.remove("move-change-btn-cont");
     // SET ACTIVE TAB ABLE LINKS
@@ -352,3 +352,5 @@ emailContact.addEventListener("click", () => {
     submitContactInput.setAttribute("tabindex", "-1");
   }
 });
+
+

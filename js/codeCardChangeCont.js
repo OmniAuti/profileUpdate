@@ -2,8 +2,49 @@ const codeProjectUpBtn = document.querySelector(".code-project-less-btn");
 const codeProjectDownBtn = document.querySelector(".code-project-add-btn");
 var i = 0;
 
+var borrowAPencil = `<a href="https://borrowapencil.herokuapp.com" target="_blank">
+<div class="card">
+  <div class="card-inner-borrow-a-pencil">
+    <div class="header-borrow-a-pencil">
+    <div class="borrow-a-pencil-card-logo-cont">
+    <img class="borrow-a-pencil-card-logo" src="imgsProfileCards/borrowAPencil/borrowAPencilLogo.svg">
+     <p class="borrow-a-pencil-logo-text">Borrow A Pencil</p>
+    </div>
+    <div class="borrow-a-pencil-nav">
+      <p>About</p>
+      <p>Borrow</p>
+      <p>Offer</p>
+      <p>Ask</p>
+      <p>Messages</p>
+      <img src="imgsProfileCards/borrowAPencil/user.svg"/>
+      </div>
+    </div>
+    <div class="card-title-borrow-a-pencil">
+      <h2 class="title-borrow-a-pencil">Can I </br> borrow</br> a <span class="borrow-a-pencil-red">pencil?</span></h2>
+      <p class="borrow-a-pencil-details">An easy and effortless community resource for those who are struggling to get the supplies they need to succeed in school</p>
+    </div>
+    <div class="borrow-a-pencil-btns-cont">
+    <div class="borrow-a-pencil-btns-borrow">
+      <p>Borrow</p>
+    </div>
+    <div class="borrow-a-pencil-btns-offer">
+    <p>Offer</p>
+    </div>
+    <div class="borrow-a-pencil-btns-ask">
+    <p>Ask</p>
+    </div>
+    </div>
+    <div class="borrow-a-pencil-triangle"></div>
+    <div class="borrow-a-pencil-rectangle"></div>
+    <div class="borrow-a-pencil-circle-cont">
+    <div class="borrow-a-pencil-circle"></div>
+    </div>
+  </div>
+</div>
+</a>`;
+
 var deadCatCard = `
-<a href="http://www.deadcatapp.com" target="_blank">
+<a href="https://www.deadcatapp.com" target="_blank">
 <div class="card">
   <div class="card-inner-dead-cat">
     <div class="header-dead-cat">
@@ -15,13 +56,110 @@ var deadCatCard = `
     <hr class="hr-dead-cat">
     <div class="card-title-dead-cat">
       <h1 class="title-dead-cat">Dead Cat</h1>
-      <p class="p-dead-cat">- Here for the pounce</p>
+      <p class="p-dead-cat"> Here for the pounce</p>
     </div>
     <div class="logo-dead-cat">
     </div>
   </div>
 </div>
 </a>`;
+
+var elevateOralCard = `
+<a href="https://www.elevateoralcareinternational.com/" target="_blank">
+<div class="card">
+  <div class="card-inner-elevate">
+      <div class="header-elevate">
+          <div>
+          <img class="elevate-logo" src="imgsProfileCards/elevateoralcare/elevate-logo.svg" />
+          </div>
+          <ul>
+          <li>Contact Us</li>
+          <li>Resources</li>
+          <img class="elevate-arrow" src="imgsProfileCards/elevateoralcare/elevate-arrow.svg" />
+          <li>Products</li>
+          <img class="elevate-arrow" src="imgsProfileCards/elevateoralcare/elevate-arrow.svg" />
+          <li>Downloads</li>
+          <img class="elevate-arrow" src="imgsProfileCards/elevateoralcare/elevate-arrow.svg" />
+          <li>Education</li>
+          <img class="elevate-arrow" src="imgsProfileCards/elevateoralcare/elevate-arrow.svg" />
+          </ul>
+      </div>
+      <div class="elevate-social">
+          <div class="elevate-facebook"></div>
+          <div class="elevate-insta"></div>
+          <div class="elevate-twitter"></div>
+          <div class="elevate-youtube"></div>
+          <div class="elevate-linkedIn"></div>
+      </div>
+      <div class="elevate-carousel">
+          <div>
+          <div class="elevate-carousel-circle"></div>
+          <div class="elevate-carousel-circle"></div>
+          <div class="elevate-carousel-circle"></div>
+          </div>
+      </div>
+      <div class="elevate-products">
+          <h2>Products</h2>
+          <div class="elevate-products-actual">
+          <div class="elevate-product-one">
+              <img src="imgsProfileCards/elevateoralcare/SilverDiamineFluoride5ml.png" />
+              <h3>
+              Advantage Arrest® Silver Diamine Fluoride 38% - 5 mL Bottle
+              </h3>
+          </div>
+          <div class="elevate-product-two">
+              <img src="imgsProfileCards/elevateoralcare/SilverDiamineFluorideCap.png" />
+              <h3>
+              Advantage Arrest® Silver Diamine Fluoride 38% - 50 Unit-Dose
+              Ampules
+              </h3>
+          </div>
+          <div class="elevate-product-three">
+              <img src="imgsProfileCards/elevateoralcare/FlouriMax-BubbleGum-Bottle.png" />
+              <h3>FluoriMax® NaF Varnish - 1 Bottle - Bubble Gum</h3>
+          </div>
+          <div class="elevate-product-four">
+              <img src="imgsProfileCards/elevateoralcare/FluoriMax-Varnish-Flow-Through.jpg" />
+              <h3>
+              FluoriMax® NaF Varnish - Flow-Through Unit-Dose Ampule -
+              Bubble Gum
+              </h3>
+          </div>
+          </div>
+      </div>
+  </div>
+</div>
+</a>
+`;
+
+var bitcoinLadiesCard = `
+<a href="https://omniauti.github.io/bitcoinladiesTest/" target="_blank">
+<div class="card">
+  <div class="card-inner-bitcoin-ladies">
+    <div class="bitcoin-ladies-header">
+        <div>
+      <h2>LADIES IN BITCOIN<span class="bitcoin-ladies-period">.</span></h2>
+      <ul>
+          <li>About Us</li>
+          <li>Resources</li>
+          <img class="bitcoin-ladies-arrow" src="imgsProfileCards/bitcoinladies/down-arrow-bitcoin-ladies.svg"/>
+          <li>Connect </li>
+          <img class="bitcoin-ladies-arrow" src="imgsProfileCards/bitcoinladies/down-arrow-bitcoin-ladies.svg"/>
+          <li>Blog</li>
+          <li>Shop</li>
+      </ul>
+      </div>
+      <div class="bitcoin-ladies-donate-btn">
+          <li>Donate</li>
+      </div>
+  </div>
+  <div class="bitcoin-ladies-main">
+  <h2>bitcoin</h2>
+  <h3>/'bit,koin/ noun</h3>
+  <p>bitcoin is a decentralized digital currency, without a central bank or single administrator, that can be sent from user to user on the peer-to-peer Bitcoin network without the need for intermediaries. <span class="bitcoin-ladies-typewriter">|</span></p>
+  </div>
+  </div>
+</div> </a>`;
 
 var studioSilenceCard = `  
 <a href="https://omniauti.github.io/studiosilence/" target="_blank">    
@@ -133,31 +271,6 @@ var madBatterCard = `
     </a>
 `;
 
-var hoppyBarberCard = `
-<a href="https://omniauti.github.io/barber/" target="_blank">
-
-<div class="card">
-  <div class="card-inner-hoppy">
-    <hr class="border-no-3d-hoppy" />
-    <div class="logo-hoppy"></div>
-    <div class="nav-hoppy">
-      <div class="name-holder-hoppy">
-        <h2>The Hoppy Barber</h2>
-      </div>
-      <div class="nav-nav-hoppy">
-        <p class="p-hoppy-one">Appointments</p>
-        <p class="p-hoppy-two">Gallery</p>
-        <p class="p-hoppy-three">About</p>
-      </div>
-    </div>
-    <div class="gallery-hoppy">
-      <div class="one-img-hoppy"></div>
-      <div class="two-img-hoppy"></div>
-    </div>
-  </div>
-</div>
-</a>`;
-
 var wheelersCard = `    
 <a href="https://omniauti.github.io/TwoWheelers/" target="_blank">
 
@@ -182,18 +295,62 @@ var wheelersCard = `
 </div>
 </a>`;
 
+// var hoppyBarberCard = `
+// <a href="https://omniauti.github.io/barber/" target="_blank">
+
+// <div class="card">
+//   <div class="card-inner-hoppy">
+//     <hr class="border-no-3d-hoppy" />
+//     <div class="logo-hoppy"></div>
+//     <div class="nav-hoppy">
+//       <div class="name-holder-hoppy">
+//         <h2>The Hoppy Barber</h2>
+//       </div>
+//       <div class="nav-nav-hoppy">
+//         <p class="p-hoppy-one">Appointments</p>
+//         <p class="p-hoppy-two">Gallery</p>
+//         <p class="p-hoppy-three">About</p>
+//       </div>
+//     </div>
+//     <div class="gallery-hoppy">
+//       <div class="one-img-hoppy"></div>
+//       <div class="two-img-hoppy"></div>
+//     </div>
+//   </div>
+// </div>
+// </a>`;
+
 var portfolioCardDeckArr = [
+  borrowAPencil,
   deadCatCard,
-  madBatterCard,
+  elevateOralCard,
+  bitcoinLadiesCard,
   studioSilenceCard,
-  wheelersCard,
-  hoppyBarberCard,
+  // madBatterCard
 ];
+
+var borrowAPencilInfo = `<p class="project-title">Borrow A Pencil</p>
+  <div class="text-used-code-cont">
+    <div class="used-code-icon-cont">
+      <div class="javascriptReact-icon"></div>
+      <div class="tailwind-icon"></div>
+      <div class="node-icon"></div>
+      <div class="mongodb-icon"></div>
+      <div class="firebase-icon"></div>
+
+    </div>
+    <div class="project-information-details-cont">
+      <p class="project-details">
+      A MERN stack web application built to connect teachers and students with the school supplies they need to create a better classroom for everyone.
+      </p>
+    </div>
+  </div>
+<a class="project-card-out-link" href="https://borrowapencil.herokuapp.com" target="_blank">Visit Site</a>`;
 
 var deadCatInfo = `<p class="project-title">Dead Cat</p>
   <div class="text-used-code-cont">
     <div class="used-code-icon-cont">
-      <div class="javascript-icon"></div>
+      <div class="javascriptReact-icon"></div>
       <div class="jquery-icon"></div>
       <div class="html-icon"></div>
       <div class="css-icon"></div>
@@ -201,11 +358,45 @@ var deadCatInfo = `<p class="project-title">Dead Cat</p>
     </div>
     <div class="project-information-details-cont">
       <p class="project-details">
-        A Google Chrome extension that provides technical indicators of stocks in the Nasdaq and NYSE markets with information pulled from the <u><a href="https://site.financialmodelingprep.com/" target="_blank">Financial Modeling Prep</a></u> API. View the most volatile stocks of the day as well your own stock tickers.
+        A website for a Google Chrome extension that provides technical indicators of stocks in the Nasdaq and NYSE markets with information pulled from the <u><a href="https://site.financialmodelingprep.com/" target="_blank">Financial Modeling Prep</a></u> API.
       </p>
     </div>
   </div>
 <a class="project-card-out-link" href="http://www.deadcatapp.com" target="_blank">Visit Site</a>`;
+
+var elevateOralInfo = `<p class="project-title">Elevate Oral Care</p>
+  <div class="text-used-code-cont">
+    <div class="used-code-icon-cont">
+    <div class="javascriptReact-icon"></div>
+      <div class="javascript-icon"></div>
+      <div class="html-icon"></div>
+      <div class="css-icon"></div>
+      <div class="php-icon"></div>
+    </div>
+    <div class="project-information-details-cont">
+      <p class="project-details">
+      A website for Elevate Oral Care's International business ventures. Built with React JS and using React Router. The contact form was handled with php.
+      </p>
+    </div>
+  </div>
+<a class="project-card-out-link" href="https://elevateoralcareinternational.com/" target="_blank">Visit Site</a>`;
+
+var bitcoinLadiesInfo = `<p class="project-title">Bitcoin Ladies</p>
+  <div class="text-used-code-cont">
+    <div class="used-code-icon-cont">
+      <div class="javascript-icon"></div>
+      <div class="html-icon"></div>
+      <div class="css-icon"></div>
+      <div class="bootstrap-icon"></div>
+    </div>
+    <div class="project-information-details-cont">
+      <p class="project-details">
+      A multi-page website for a nonprofit that utilizies HTML5, CSS3, and vanilla Javascript, as well as a variety of libraries and frameworks.
+      </p>
+    </div>
+  </div>
+<a class="project-card-out-link" href="https://bitcoinladies.org/" target="_blank">Visit Site</a>`;
+
 var madBatInfo = `<p class="project-title">Restaurant Template</p>
 <div class="text-used-code-cont">
   <div class="used-code-icon-cont">
@@ -220,6 +411,7 @@ var madBatInfo = `<p class="project-title">Restaurant Template</p>
   </div>
 </div>
 <a class="project-card-out-link" href="https://omniauti.github.io/madbatter/" target="_blank">Visit Site</a>`;
+
 var studioSilenceInfo = `<p class="project-title">Studio Silence</p>
 <div class="text-used-code-cont">
   <div class="used-code-icon-cont">
@@ -234,6 +426,7 @@ var studioSilenceInfo = `<p class="project-title">Studio Silence</p>
   </div>
 </div>
 <a class="project-card-out-link" href="https://omniauti.github.io/studiosilence/" target="_blank">Visit Site</a>`;
+
 var wheelersInfo = `<p class="project-title">Retail Store Template</p>
 <div class="text-used-code-cont">
   <div class="used-code-icon-cont">
@@ -248,28 +441,30 @@ var wheelersInfo = `<p class="project-title">Retail Store Template</p>
   </div>
 </div>
 <a class="project-card-out-link" href="https://omniauti.github.io/TwoWheelers/" target="_blank">Visit Site</a>`;
-var hoppyBarberInfo = `<p class="project-title">The Hoppy Barber</p>
-<div class="text-used-code-cont">
-  <div class="used-code-icon-cont">
-    <div class="javascript-icon"></div>
-    <div class="jquery-icon"></div>
-    <div class="html-icon"></div>
-    <div class="css-icon"></div>
-  </div>
-  <div class="project-information-details-cont">
-    <p class="project-details">
-      A local barber based in Chicago, Illinois. Form for making appointments with the ability to select a user's service, appointment time/date based on the barber's schedule, and an accompanying drink selection menu. 
-    </p>
-  </div>
-</div>
-<a class="project-card-out-link" href="https://omniauti.github.io/barber/" target="_blank">Visit Site</a>`;
+
+// var hoppyBarberInfo = `<p class="project-title">The Hoppy Barber</p>
+// <div class="text-used-code-cont">
+//   <div class="used-code-icon-cont">
+//     <div class="javascript-icon"></div>
+//     <div class="jquery-icon"></div>
+//     <div class="html-icon"></div>
+//     <div class="css-icon"></div>
+//   </div>
+//   <div class="project-information-details-cont">
+//     <p class="project-details">
+//       A local barber based in Chicago, Illinois. Form for making appointments with the ability to select a user's service, appointment time/date based on the barber's schedule, and an accompanying drink selection menu.
+//     </p>
+//   </div>
+// </div>
+// <a class="project-card-out-link" href="https://omniauti.github.io/barber/" target="_blank">Visit Site</a>`;
 
 var infoArr = [
+  borrowAPencilInfo,
   deadCatInfo,
-  madBatInfo,
+  elevateOralInfo,
+  bitcoinLadiesInfo,
   studioSilenceInfo,
-  wheelersInfo,
-  hoppyBarberInfo,
+  // madBatInfo
 ];
 
 // FUNCTIONALITY TO CHANGE CARDS
@@ -362,11 +557,11 @@ function deleteGutsClose() {
 var i = 0;
 
 function portfolioCardChange() {
-var i = 0
+  var i = 0;
 
-  codeCloseBtn.addEventListener('click', () => {
-    i = 0 // RESETS I FOR PROPER PROJECT ORDER DISPLAY WHEN OPEN
-  })
+  codeCloseBtn.addEventListener("click", () => {
+    i = 0; // RESETS I FOR PROPER PROJECT ORDER DISPLAY WHEN OPEN
+  });
 
   codeProjectUpBtn.addEventListener("click", () => {
     infoArr[i--];
@@ -385,11 +580,10 @@ var i = 0
     }
     changeCodeGutsPrev(i);
     projectInfoChange(i);
-    
   });
 }
 
-portfolioCardChange()
+portfolioCardChange();
 
 function createCodeGuts() {
   setTimeout(() => {

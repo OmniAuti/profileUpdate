@@ -32,6 +32,17 @@ closeFin.addEventListener("click", () => {
             />
           </div>
           <div>
+          <input
+            tabindex="-1"
+            id="email-honeypot"
+            class="emailInput"
+            type="email"
+            placeholder="Email"
+            name="email"
+            value=""
+          />
+        </div>
+          <div>
             <textarea
               tabindex="-1"
               id="description-contact-input"
@@ -42,6 +53,7 @@ closeFin.addEventListener("click", () => {
               placeholder="What can I do for you?"
             ></textarea>
           </div>
+          
           <div>
             <button
               tabindex="-1"

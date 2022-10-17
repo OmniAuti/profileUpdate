@@ -54,7 +54,7 @@ window.addEventListener("resize", () => {
   if (contactCard.classList.contains("active-contact")) {
     if (window.innerWidth > 750) {
       portfolioCont.style.transform = "translateY(-50vh)"; // LIFTS UP PROTFOLIO SECTION TO GIVE FEEL OF MOVEMENT
-      window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION  
+      window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" }); // FORCED SCROLL TO CONTACT SECTION 
     }
     else 
     {
